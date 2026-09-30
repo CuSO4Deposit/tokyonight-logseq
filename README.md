@@ -93,7 +93,8 @@ The theme is a Logseq theme plugin, so it is published the same way as any plugi
      "author": "CuSO4Deposit",
      "repo": "CuSO4Deposit/tokyonight-logseq",
      "icon": "icon.png",
-     "theme": true
+     "theme": true,
+     "supportsDB": true
    }
    ```
 
