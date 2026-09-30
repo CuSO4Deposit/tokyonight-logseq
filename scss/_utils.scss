@@ -1,0 +1,172 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:color";
+
+// Tokyo Night palettes.
+// Semantic key names mirror the roles used across the theme so that a single
+// set of mixins can emit the `--tn-*` custom properties for every flavor.
+$tn-palettes: (
+  night: (
+    base: #1a1b26,
+    mantle: #16161e,
+    crust: #0c0e14,
+    surface0: #292e42,
+    surface1: #3b4261,
+    surface2: #414868,
+    overlay0: #545c7e,
+    overlay1: #565f89,
+    overlay2: #737aa2,
+    subtext0: #a9b1d6,
+    subtext1: #a9b1d6,
+    text: #c0caf5,
+    rosewater: #b4f9f8,
+    flamingo: #bb9af7,
+    pink: #ff007c,
+    mauve: #9d7cd8,
+    red: #f7768e,
+    maroon: #db4b4b,
+    peach: #ff9e64,
+    yellow: #e0af68,
+    green: #9ece6a,
+    teal: #73daca,
+    sky: #7dcfff,
+    sapphire: #2ac3de,
+    blue: #7aa2f7,
+    lavender: #89ddff,
+  ),
+  storm: (
+    base: #24283b,
+    mantle: #1f2335,
+    crust: #1b1e2d,
+    surface0: #292e42,
+    surface1: #3b4261,
+    surface2: #414868,
+    overlay0: #545c7e,
+    overlay1: #565f89,
+    overlay2: #737aa2,
+    subtext0: #a9b1d6,
+    subtext1: #a9b1d6,
+    text: #c0caf5,
+    rosewater: #b4f9f8,
+    flamingo: #bb9af7,
+    pink: #ff007c,
+    mauve: #9d7cd8,
+    red: #f7768e,
+    maroon: #db4b4b,
+    peach: #ff9e64,
+    yellow: #e0af68,
+    green: #9ece6a,
+    teal: #73daca,
+    sky: #7dcfff,
+    sapphire: #2ac3de,
+    blue: #7aa2f7,
+    lavender: #89ddff,
+  ),
+  moon: (
+    base: #222436,
+    mantle: #1e2030,
+    crust: #191b29,
+    surface0: #2f334d,
+    surface1: #3b4261,
+    surface2: #444a73,
+    overlay0: #545c7e,
+    overlay1: #636da6,
+    overlay2: #737aa2,
+    subtext0: #828bb8,
+    subtext1: #828bb8,
+    text: #c8d3f5,
+    rosewater: #b4f9f8,
+    flamingo: #c099ff,
+    pink: #ff007c,
+    mauve: #fca7ea,
+    red: #ff757f,
+    maroon: #c53b53,
+    peach: #ff966c,
+    yellow: #ffc777,
+    green: #c3e88d,
+    teal: #4fd6be,
+    sky: #86e1fc,
+    sapphire: #65bcff,
+    blue: #82aaff,
+    lavender: #89ddff,
+  ),
+  day: (
+    base: #e1e2e7,
+    mantle: #d0d5e3,
+    crust: #c1c9df,
+    surface0: #c4c8da,
+    surface1: #a8aecb,
+    surface2: #a1a6c5,
+    overlay0: #8990b3,
+    overlay1: #848cb5,
+    overlay2: #68709a,
+    subtext0: #6172b0,
+    subtext1: #6172b0,
+    text: #3760bf,
+    rosewater: #2e5857,
+    flamingo: #9854f1,
+    pink: #d20065,
+    mauve: #7847bd,
+    red: #f52a65,
+    maroon: #c64343,
+    peach: #b15c00,
+    yellow: #8c6c3e,
+    green: #587539,
+    teal: #387068,
+    sky: #007197,
+    sapphire: #188092,
+    blue: #2e7de9,
+    lavender: #006a83,
+  ),
+  oled: (
+    base: #020202,
+    mantle: #010101,
+    crust: #000000,
+    surface0: #1d1d24,
+    surface1: #2e2e3a,
+    surface2: #3a3a48,
+    overlay0: #545c7e,
+    overlay1: #565f89,
+    overlay2: #737aa2,
+    subtext0: #a9b1d6,
+    subtext1: #a9b1d6,
+    text: #c0caf5,
+    rosewater: #b4f9f8,
+    flamingo: #bb9af7,
+    pink: #ff007c,
+    mauve: #9d7cd8,
+    red: #f7768e,
+    maroon: #db4b4b,
+    peach: #ff9e64,
+    yellow: #e0af68,
+    green: #9ece6a,
+    teal: #73daca,
+    sky: #7dcfff,
+    sapphire: #2ac3de,
+    blue: #7aa2f7,
+    lavender: #89ddff,
+  ),
+);
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function hex-to-rgb($hexColor) {
+  @return #{color.channel($hexColor, "red", $space: rgb)}, #{color.channel($hexColor, "green", $space: rgb)}, #{color.channel($hexColor, "blue", $space: rgb)};
+}
+
+@function get-flavor-color($flavor, $name) {
+  $map: map.get($tn-palettes, $flavor);
+  @return map.get($map, $name);
+}
+
+@function get-flavor-color-rgb($flavor, $name) {
+  @return #{hex-to-rgb(get-flavor-color($flavor, $name))};
+}
+
+@mixin tn-rgb-vars($flavor) {
+  @each $color, $hex in map.get($tn-palettes, $flavor) {
+    --tn-#{"" + $color}: #{hex-to-rgb($hex)};
+  }
+}

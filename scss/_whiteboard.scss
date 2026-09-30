@@ -1,0 +1,293 @@
+@use "utils.scss" as utils;
+@use "tn-vars" as tn;
+@use "ls-vars" as ls;
+@use "theme" as theme;
+
+@mixin day-override-vars {
+    @include utils.tn-rgb-vars(day);
+    @include tn.variables;
+    @include ls.variables;
+    @include theme.variables;
+}
+
+@mixin variables {
+    /* Color swatches */
+    --tn-wb-color-gray: rgb(var(--tn-overlay2));
+    --tn-wb-color-red: rgb(var(--tn-red));
+    --tn-wb-color-yellow: rgb(var(--tn-yellow));
+    --tn-wb-color-green: rgb(var(--tn-green));
+    --tn-wb-color-blue: rgb(var(--tn-blue));
+    --tn-wb-color-purple: rgb(var(--tn-mauve));
+    --tn-wb-color-pink: rgb(var(--tn-pink));
+
+    /* Whiteboard object colors */
+    --tn-wb-background-color-gray: color-mix(in srgb, var(--tn-wb-color-gray), rgb(var(--tn-base)) 70%);
+    --tn-wb-background-color-red: color-mix(in srgb, var(--tn-wb-color-red), rgb(var(--tn-base)) 60%);
+    --tn-wb-background-color-yellow: color-mix(in srgb, var(--tn-wb-color-yellow), rgb(var(--tn-base)) 60%);
+    --tn-wb-background-color-green: color-mix(in srgb, var(--tn-wb-color-green), rgb(var(--tn-base)) 60%);
+    --tn-wb-background-color-blue: color-mix(in srgb, var(--tn-wb-color-blue), rgb(var(--tn-base)) 60%);
+    --tn-wb-background-color-purple: color-mix(in srgb, var(--tn-wb-color-purple), rgb(var(--tn-base)) 60%);
+    --tn-wb-background-color-pink: color-mix(in srgb, var(--tn-wb-color-pink), rgb(var(--tn-base)) 60%);
+
+    // NOTE: drawn lines with the pencil use the text color
+    // and not this stroke color
+    --tn-wb-stroke-color-gray: var(--tn-wb-color-gray);
+    --tn-wb-stroke-color-red: var(--tn-wb-color-red);
+    --tn-wb-stroke-color-yellow: var(--tn-wb-color-yellow);
+    --tn-wb-stroke-color-green: var(--tn-wb-color-green);
+    --tn-wb-stroke-color-blue: var(--tn-wb-color-blue);
+    --tn-wb-stroke-color-purple: var(--tn-wb-color-purple);
+    --tn-wb-stroke-color-pink: var(--tn-wb-color-pink);
+
+    /* Pen path color */
+    --tn-wb-text-color-gray: var(--tn-wb-color-gray);
+    --tn-wb-text-color-red: var(--tn-wb-color-red);
+    --tn-wb-text-color-yellow: var(--tn-wb-color-yellow);
+    --tn-wb-text-color-green: var(--tn-wb-color-green);
+    --tn-wb-text-color-blue: var(--tn-wb-color-blue);
+    --tn-wb-text-color-purple: var(--tn-wb-color-purple);
+    --tn-wb-text-color-pink: var(--tn-wb-color-pink);
+
+    /* Shape label color */
+    --tn-wb-shape-label-color-gray: var(--tn-wb-color-gray);
+    --tn-wb-shape-label-color-red: var(--tn-wb-color-red);
+    --tn-wb-shape-label-color-yellow: var(--tn-wb-color-yellow);
+    --tn-wb-shape-label-color-green: var(--tn-wb-color-green);
+    --tn-wb-shape-label-color-blue: var(--tn-wb-color-blue);
+    --tn-wb-shape-label-color-purple: var(--tn-wb-color-purple);
+    --tn-wb-shape-label-color-pink: var(--tn-wb-color-pink);
+
+    // Whiteboard Buttons
+
+    // selected tool button
+    --tn-wb-button-selected-foreground: var(--tn-accent, var(--tn-mauve));
+    --tn-wb-button-selected-background: var(--tn-surface0);
+
+    // regular tool button
+    --tn-wb-button-foreground: var(--tn-text);
+    --tn-wb-button-menu-foreground: var(--tn-accent, var(--tn-teal));
+
+    // double click or "add block or page" from toolbar -> bottom icons
+    --tn-wb-button-type-tag-background-active: var(--tn-accent, var(--tn-mauve));
+    --tn-wb-button-type-tag-background-inactive: var(--tn-surface0);
+    --tn-wb-button-type-tag-foreground: var(--tn-text);
+
+    // page reference block -> hover -> below button to referenced page
+    --tn-wb-quick-links-button: var(--tn-accent, var(--tn-blue));
+    --tn-wb-quick-links-button-hover: var(--tn-sky);
+
+    // select multiple objects -> right click -> align buttons on top
+    --tn-wb-layout-button-foreground: var(--tn-accent, var(--tn-teal));
+
+    // selected item bg in e.g. a dropdown
+    --tn-tl-select-input-select-item: var(--tn-link-text-hover-color);
+    --tn-tl-selectFill: var(--tn-accent, var(--tn-blue));
+    --tn-tl-selectStroke: var(--tn-accent, var(--tn-blue));
+
+    /* logseq variables for whiteboard */
+    /* Shape background color */
+    --ls-wb-background-color-gray: var(--tn-wb-background-color-gray);
+    --ls-wb-background-color-red: var(--tn-wb-background-color-red);
+    --ls-wb-background-color-yellow: var(--tn-wb-background-color-yellow);
+    --ls-wb-background-color-green: var(--tn-wb-background-color-green);
+    --ls-wb-background-color-blue: var(--tn-wb-background-color-blue);
+    --ls-wb-background-color-purple: var(--tn-wb-background-color-purple);
+    --ls-wb-background-color-pink: var(--tn-wb-background-color-pink);
+
+    /* Shape outline color */
+    --ls-wb-stroke-color-gray: var(--tn-wb-stroke-color-gray);
+    --ls-wb-stroke-color-red: var(--tn-wb-stroke-color-red);
+    --ls-wb-stroke-color-yellow: var(--tn-wb-stroke-color-yellow);
+    --ls-wb-stroke-color-green: var(--tn-wb-stroke-color-green);
+    --ls-wb-stroke-color-blue: var(--tn-wb-stroke-color-blue);
+    --ls-wb-stroke-color-purple: var(--tn-wb-stroke-color-purple);
+    --ls-wb-stroke-color-pink: var(--tn-wb-stroke-color-pink);
+
+    /* Pen path color */
+    --ls-wb-text-color-gray: var(--tn-wb-text-color-gray);
+    --ls-wb-text-color-red: var(--tn-wb-text-color-red);
+    --ls-wb-text-color-yellow: var(--tn-wb-text-color-yellow);
+    --ls-wb-text-color-green: var(--tn-wb-text-color-green);
+    --ls-wb-text-color-blue: var(--tn-wb-text-color-blue);
+    --ls-wb-text-color-purple: var(--tn-wb-text-color-purple);
+    --ls-wb-text-color-pink: var(--tn-wb-text-color-pink);
+
+    --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+    --ls-wb-text-color-default: var(--ls-primary-text-color);
+    --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+    --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+    --ls-whiteboard-select-background-selected: var(--tn-color-level-5);
+}
+
+/* Below related to whiteboard latte override feature */
+html.whiteboard-day  {
+    div.dashboard-card, div.whiteboard-page {
+        @include day-override-vars;
+        @include variables;
+
+        background-color: var(--ls-primary-background-color);
+        color: var(--ls-primary-text-color);
+
+        .tl-button:hover {
+            background-color: var(--ls-menu-hover-color);
+        }
+
+        .dashboard-card-title {
+            color: rgb(var(--tn-text));
+        }
+    }
+    .tl-select-input-content {
+        @include day-override-vars;
+        @include variables;
+    }
+    .tl-tooltip-content {
+        @include day-override-vars;
+        @include variables;
+    }
+}
+/* Above related to whiteboard latte override feature */
+
+.light-theme, .white-theme, html[data-theme=light],
+.dark-theme, html[data-theme=dark],
+html:not(.whiteboard-day),
+:root:not([data-color]),
+:root[data-color='none'],
+:root[data-color='logseq'] {
+    @include variables;
+}
+
+html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
+html[data-color='none'] {
+    // selected item bg in e.g. a dropdown
+    .tl-select-input-select-item[data-state=checked] {
+        background: rgb(var(--tn-wb-button-selected-background));
+        color: var(--tn-link-text-hover-color);
+    }
+
+    div.whiteboard-page {
+
+        // these are the colors that appear when selecting a color (e.g. for fill)
+        .bg-gray-500 {
+            background-color: var(--tn-wb-color-gray);
+        }
+
+        .bg-red-500 {
+            background-color: var(--tn-wb-color-red);
+        }
+
+        .bg-yellow-500 {
+            background-color: var(--tn-wb-color-yellow);
+        }
+
+        .bg-green-500 {
+            background-color: var(--tn-wb-color-green);
+        }
+
+        .bg-blue-500 {
+            background-color: var(--tn-wb-color-blue);
+        }
+
+        .bg-purple-500 {
+            background-color: var(--tn-wb-color-purple);
+        }
+
+        .bg-pink-500 {
+            background-color: var(--tn-wb-color-pink);
+        }
+
+        // Whiteboard tool button
+        .tl-button[data-selected=true] {
+            background: rgb(var(--tn-wb-button-selected-background));
+
+            i {
+                color: rgb(var(--tn-wb-button-selected-foreground));
+            }
+        }
+
+        .ti,
+        .tie {
+            color: rgb(var(--tn-wb-button-foreground));
+        }
+
+        .tl-context-bar {
+
+            .ti,
+            .tie {
+                color: rgb(var(--tn-wb-button-menu-foreground));
+            }
+        }
+
+        // double click or "add block or page" from toolbar -> icons
+        // by default, bg color is hardcoded
+        .tl-type-tag {
+            background-color: rgb(var(--tn-wb-button-type-tag-background-inactive));
+            border-color: rgb(var(--tn-wb-button-type-tag-background-inactive));
+            // color: #ff00ff; // fg color has to be set on inner i element (.tie)
+
+            .tie {
+                color: rgb(var(--tn-wb-button-type-tag-foreground));
+            }
+        }
+
+        html[data-theme=dark] .tl-type-tag[data-active=true] {
+            background-color: rgba(var(--tn-wb-button-type-tag-background-active), 0.8);
+            border-color: rgb(var(--tn-wb-button-type-tag-background-active));
+
+            .tie {
+                color: rgb(var(--tn-wb-button-type-tag-foreground));
+            }
+        }
+
+        // Whiteboard context menu button icon
+        .tl-menu {
+            background-color: var(--tn-secondary-background-color);
+        }
+        .tl-menu-item i {
+            color: rgb(var(--tn-wb-button-menu-foreground));
+        }
+
+        // Button that appears below a page reference block (on hover)
+        .tl-quick-links-row:first-child {
+            background-color: rgb(var(--tn-wb-quick-links-button));
+
+            :hover {
+                background-color: rgb(var(--tn-wb-quick-links-button-hover));
+            }
+        }
+
+        // align-buttons that appear when right clicking after
+        // selecting multiple objects
+        i[class*="ti-layout-"] {
+            color: rgb(var(--tn-wb-layout-button-foreground));
+        }
+
+        .tl-container {
+            --ls-primary-background-color: var(--tn-primary-background-color);
+            --ls-secondary-background-color: var(--tn-secondary-background-color);
+            --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+            --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+        }
+
+        .tl-button:hover {
+            background-color: var(--tn-tertiary-background-color);
+        }
+
+        .tl-text-label-inner-wrapper {
+            // this is for overriding the text colors inside shapes (e.g. the label color of a rectangle)
+            --ls-wb-text-color-gray: var(--tn-wb-shape-label-color-gray);
+            --ls-wb-text-color-red: var(--tn-wb-shape-label-color-red);
+            --ls-wb-text-color-yellow: var(--tn-wb-shape-label-color-yellow);
+            --ls-wb-text-color-green: var(--tn-wb-shape-label-color-green);
+            --ls-wb-text-color-blue: var(--tn-wb-shape-label-color-blue);
+            --ls-wb-text-color-purple: var(--tn-wb-shape-label-color-purple);
+            --ls-wb-text-color-pink: var(--tn-wb-shape-label-color-pink);
+        }
+
+        .logseq-tldraw {
+            --tl-selectFill: rgba(var(--tn-tl-selectFill), 0.05);
+            --tl-selectStroke: rgb(var(--tn-tl-selectStroke));
+        }
+    }
+}

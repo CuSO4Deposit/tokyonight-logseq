@@ -1,0 +1,123 @@
+// highlight.js theme mapped from the Tokyo Night palette.
+
+code.hljs,
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  color: var(--tn-primary-text-color);
+}
+
+html:not(html[data-color]),
+html[data-color='logseq'],
+html[data-color='none'] {
+  code.hljs {
+    background-color: var(--tn-tertiary-background-color);
+  }
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: rgb(var(--tn-overlay1));
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: rgb(var(--tn-mauve));
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable {
+  color: rgb(var(--tn-peach));
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: rgb(var(--tn-green));
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: rgb(var(--tn-teal));
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: rgb(var(--tn-blue));
+  font-weight: 700;
+}
+
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: rgb(var(--tn-yellow));
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-selector-class {
+  color: rgb(var(--tn-red));
+}
+
+.hljs-attribute {
+  color: rgb(var(--tn-yellow));
+}
+
+.hljs-attr {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: rgb(var(--tn-orange));
+}
+
+.hljs-meta,
+.hljs-meta-keyword {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-meta-string {
+  color: rgb(var(--tn-green));
+}
+
+.hljs-operator,
+.hljs-punctuation {
+  color: rgb(var(--tn-lavender));
+}
+
+.hljs-template-tag {
+  color: rgb(var(--tn-mauve));
+}
+
+.hljs-params {
+  color: var(--tn-primary-text-color);
+}
+
+.hljs-addition {
+  color: rgb(var(--tn-green));
+  background-color: rgba(var(--tn-green), 0.1);
+}
+
+.hljs-deletion {
+  color: rgb(var(--tn-red));
+  background-color: rgba(var(--tn-red), 0.1);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}

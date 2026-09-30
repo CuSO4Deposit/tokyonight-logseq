@@ -1,0 +1,548 @@
+html:not(html[data-color]),
+html[data-theme=light][data-color='logseq'],
+html[data-theme=dark][data-color='logseq'],
+html[data-color='none'] {
+    // place for selection to customise elements not supported by default variables
+
+    #left-sidebar {
+        background-color: var(--tn-secondary-background-color);
+    }
+    // Search bar placeholder
+    div.input-wrap>input::placeholder {
+        color: var(--tn-search-input-placeholder);
+    }
+
+    // search result page icon
+    .recent-search {
+        a>div>div {
+            border-color: rgb(var(--tn-text));
+        }
+    }
+
+    // Switches
+    a.ui__toggle {
+        & .wrapper:focus {
+            --tw-shadow: 0 0 0 3px rgba(var(--tn-switch-handle-color), 0.5)
+        }
+
+        &>span {
+            background-color: var(--tn-switch-background);
+
+            &>span.switcher {
+                background-color: rgb(var(--tn-switch-handle-color));
+            }
+        }
+    }
+
+    // Buttons
+
+    a.ui__button, button.ui__button {
+        color: var(--tn-button-text);
+        background-color: rgb(var(--tn-button-background));
+
+        &[intent=logseq]:hover:not(.active) {
+            color: var(--tn-button-text);
+            background-color: rgb(var(--tn-button-background));
+        }
+
+        &.as-ghost:hover, &:hover {
+            background-color: rgb(var(--tn-button-background));
+        }
+    }
+
+    // Tooltip
+    .tippy-tooltip {
+        background: var(--tn-tooltip-background);
+        color: var(--tn-tooltip-text)
+    }
+
+    .tippy-popper .arrow-regular {
+        display: none;
+        /* Hide the arrow */
+    }
+
+
+    // Plugins page
+    .dark .ui__button[intent=logseq]:hover {
+        color: var(--ls-link-text-color);
+    }
+
+    svg.tip {
+        fill: rgb(var(--tn-blue));
+    }
+
+    svg.warning {
+        fill: rgb(var(--tn-warning-color));
+    }
+
+    svg.important {
+        fill: rgb(var(--tn-error-color));
+    }
+
+    svg.note {
+        fill: rgb(var(--tn-info-color));
+    }
+
+    // Global
+
+    div.nav-content-item:not(.is-expand) {
+        .header {
+            background-color: var(--ls-tertiary-background-color);
+        }
+
+        .header a {
+            color: var(--tn-link-text-hover-color);
+        }
+    }
+
+    .left-sidebar-inner a.item.active,
+    .left-sidebar-inner a.item:active {
+        color: var(--tn-link-text-hover-color);
+
+    }
+
+    .left-sidebar-inner a.item:hover {
+        background: var(--tn-color-level-3);
+
+        span {
+            color: var(--tn-blue);
+        }
+    }
+
+    .cp__sidebar-left-layout .header:hover a {
+        color: var(--tn-link-text-hover-color);
+    }
+
+    .ui__modal-panel {
+        border: 1px solid;
+        border-color: var(--tn-dropdown-border-color)
+    }
+
+    .dropdown-wrapper {
+        border: 1px solid;
+        border-color: var(--tn-dropdown-border-color)
+    }
+
+    .block-children-left-border:hover {
+        width: 2px;
+        background-color: var(--tn-bullet-thread-color);
+    }
+
+    mark {
+        background: var(--tn-text-highlight);
+        color: rgb(var(--ls-page-mark-color));
+
+        a {
+            color: rgb(var(--ls-page-mark-color));
+        }
+
+        a:hover {
+            opacity: .55;
+        }
+    }
+
+    .form-input:focus {
+        box-shadow: 0 0 0 2px rgba(var(--tn-accent, var(--tn-sapphire)), .5);
+        border-color: rgba(var(--tn-accent, var(--tn-sapphire)), .5);
+    }
+
+    .bullet-container.bullet-closed {
+        background-color: rgb(var(--tn-accent, var(--tn-blue)), .15);
+
+        &:hover {
+            background-color: rgb(var(--tn-accent, var(--tn-blue)), .65);
+        }
+    }
+
+    .bullet-container {
+        &:hover {
+            background-color: rgb(var(--tn-accent, var(--tn-blue)), .15);
+        }
+    }
+
+    // Header
+    button.button.icon:hover {
+        color: rgb(var(--tn-accent, var(--tn-pink)));
+        background-color: var(--tn-header-icon-background);
+
+        &>i {
+            color: var(--tn-header-icon);
+        }
+    }
+
+
+    // SideBar
+    .cp__sidebar-left-layout a {
+        color: inherit;
+    }
+
+    .left-sidebar-inner .nav-content-item .header {
+        background-color: var(--ls-tertiary-background-color);
+    }
+
+    html[data-theme=dark] .cp__header a,
+    html[data-theme=dark] .cp__header button.button,
+    html[data-theme=dark] .cp__right-sidebar-topbar button {
+        opacity: 1;
+    }
+
+    .inline.with-bg-color {
+        color: var(--tn-primary-background-color);
+
+        b,
+        .page-ref {
+            color: var(--tn-primary-background-color);
+        }
+
+        .page-reference:hover {
+            color: var(--tn-primary-text-color);
+
+            b,
+            .page-ref,
+            span {
+                color: var(--tn-primary-text-color);
+            }
+        }
+
+    }
+
+    .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6) {
+        color: var(--tn-primary-background-color);
+    }
+
+
+    // menu-links and dropdowns
+
+    .menu-links-wrapper,
+    .menu-link {
+        background-color: var(--tn-secondary-background-color);
+    }
+
+    .menu-link {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .menu-link:hover {
+        background-color: var(--tn-menu-hover-color);
+    }
+
+    .menu-link.chosen {
+        background-color: var(--ls-menu-hover-color);
+    }
+
+    .cp__settings-inner>aside ul>li>a>strong {
+        color: var(--tn-primary-text-color);
+    }
+
+    .cp__settings-inner>aside ul>li.active {
+
+        .ui__icon,
+        strong {
+            color: rgb(var(--tn-active-setting));
+        }
+    }
+
+    .cp__all_pages_table td>span {
+        color: var(--tn-primary-text-color);
+    }
+
+    // full pallete overrides
+    .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+    .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+    .ls-block :is(h1, h2, h3, h4, h5, h6) {
+        color: rgb(var(--tn-text-heading))
+    }
+
+    b,
+    strong {
+        color: var(--tn-text-bold);
+    }
+
+    i {
+        color: rgb(var(--tn-text-italics));
+    }
+
+    del {
+        color: rgb(var(--tn-text-strikethrough));
+    }
+
+    blockquote {
+        border-left: 2px solid;
+        border-left-color: rgb(var(--tn-blockquote-line));
+    }
+
+    $pallete: (
+        "Yellow": var(--ls-highlight-color-yellow),
+        "Red": var(--ls-highlight-color-red),
+        "Pink": var(--ls-highlight-color-pink),
+        "Green": var(--ls-highlight-color-green),
+        "Blue": var(--ls-highlight-color-blue),
+        "Purple": var(--ls-highlight-color-purple),
+        "Gray": var(--ls-highlight-color-gray),
+    );
+
+    // highlight color pallete in dropdown
+    @each $title, $value in $pallete {
+        a[title=#{$title}].shadow-sm>.heading-bg {
+            background-color: #{$value} !important;
+        }
+    }
+
+
+    // Dropdown option group
+    #ui__ac-inner {
+        background: var(--tn-secondary-background-color);
+    }
+
+    .ui__ac-group-name {
+        background: var(--tn-tertiary-background-color);
+    }
+
+    // Priorities custom styles
+
+    .block-marker {
+        background-color: rgb(var(--tn-priority-bg-color));
+        border-radius: var(--tn-marker-border-radius);
+        font-size: 75%;
+
+        &.TODO {
+            color: rgb(var(--tn-priority-todo));
+        }
+
+        &.DOING {
+            color: rgb(var(--tn-priority-doing));
+        }
+
+        &.NOW {
+            color: rgb(var(--tn-priority-now));
+        }
+
+        &.LATER {
+            color: rgb(var(--tn-priority-later));
+        }
+
+        &.waiting {
+            color: rgb(var(--tn-priority-waiting));
+        }
+    }
+
+    .form-checkbox,
+    .form-checkbox:focus {
+        border-radius: var(--tn-marker-border-radius);
+        border: 2px solid rgb(var(--tn-checkbox-color)) !important;
+        background-color: transparent !important;
+        height: var(--tn-marker-size);
+        width: var(--tn-marker-size);
+    }
+
+    .form-checkbox:checked {
+        background-color: rgb(var(--tn-checkbox-color)) !important;
+    }
+
+    .form-checkbox:hover {
+        transform: scale(1.1);
+    }
+
+    a[priority],
+    a.priority {
+        font-size: 0px;
+    }
+
+    a.priority[href="#/page/A" i],
+    [href="#/page/B" i],
+    [href="#/page/C" i] {
+        display: inline-flex;
+        opacity: 1 !important;
+    }
+
+    a[priority]::before,
+    a.priority::before {
+        transform: translateY(-1px);
+        border: 1px solid rgb(var(--tn-priority-bg-color));
+        border-radius: var(--tn-marker-border-radius);
+        font-size: 12px;
+        font-weight: 600;
+        height: calc(var(--tn-marker-size) + 4px);
+        width: calc(var(--tn-marker-size) + 4px);
+        line-height: 1.5;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a[priority=A]::before,
+    a.priority[href="#/page/A" i]:before {
+        content: "A";
+        background: rgb(var(--tn-priority-a));
+        color: var(--tn-primary-background-color);
+    }
+
+    a[priority=B]::before,
+    a.priority[href="#/page/B" i]:before {
+        content: "B";
+        background: rgb(var(--tn-priority-b));
+        color: var(--tn-primary-background-color);
+    }
+
+    a[priority=C]::before,
+    a.priority[href="#/page/C" i]:before {
+        content: "C";
+        background: rgb(var(--tn-priority-c));
+        color: var(--tn-primary-background-color);
+    }
+
+    a.priority:hover {
+        transform: scale(1.1);
+    }
+
+    .sidebar-item-header .item-actions {
+        button {
+            background-color: transparent;
+            .ui__icon {
+                color: var(--tn-primary-text-color);
+            }
+        }
+        button:hover {
+            background-color: var(--tn-menu-hover-color);
+        }
+    }
+    div.favorites, div.recent {
+        button.ui__button {
+            background: transparent;
+            &.as-ghost:hover, &:hover {
+                background: transparent;
+            }
+        }
+        span.ui__icon {
+            color: var(--tn-primary-text-color);
+        }
+    }
+
+    button.ui__button {
+        .ui__icon {
+            color: var(--tn-button-text);
+        }
+    }
+
+    .form-input:focus, .form-multiselect:focus, .form-select:focus, .form-textarea:focus {
+        --tw-ring-color: rgba(var(--tn-accent, var(--tn-sapphire)));
+        border-color: rgba(var(--tn-accent, var(--tn-sapphire)));
+    }
+
+    div[data-radix-popper-content-wrapper] div[role=menuitem]:focus {
+        background-color: var(--tn-menu-hover-color);
+    }
+
+    div.ui__dropdown-menu-content {
+        border-color: var(--tn-dropdown-border-color);
+    }
+
+    .form-input {
+        background-color: var(--ls-primary-background-color);
+        border-color: var(--ls-border-color);
+        color: var(--ls-primary-text-color);
+    }
+
+    .dropdown-wrapper {
+        background-color: var(--ls-primary-background-color);
+    }
+
+    .cp__settings-inner aside {
+        background-color: var(--tn-tertiary-background-color);
+    }
+
+    label[for='toggle_radix_theme']+div.text-xs {
+        color: var(--ls-primary-text-color);
+        opacity: 0.6;
+    }
+
+    .cp__plugins-page {
+        .tabs-inner, div.secondary-tabs, .control-tabs {
+            .ui__button, .ui__icon {
+                color: var(--ls-primary-text-color);
+                background-color: transparent;
+                &:hover {
+                    background-color: var(--tn-menu-hover-color);
+                }
+            }
+            .ui__button {
+                &.bg-primary\/90, &.active {
+                    background-color: var(--color-level-4);
+                }
+            }
+        }
+
+    }
+
+    .cp__themes-installed .it.is-active, .cp__themes-installed .it:hover {
+        background-color: var(--tn-menu-hover-color);
+        opacity: 1;
+    }
+
+    .search-results {
+        .text-gray-12 {
+            color: var(--tn-primary-text-color);
+        }
+    }
+
+    .input-wrap > input {
+        background-color: var(--ls-primary-background-color);
+        border-color: var(--ls-border-color);
+        color: var(--ls-primary-text-color);
+    }
+
+    /* #35 make bold+italics text color same as italics */
+    i b {
+        color: rgb(var(--tn-text-italics));
+    }
+
+    /* #35 make plugin icons in header consistent with other icons in header */
+    .ui-items-container,
+    .toolbar-plugin-manager {
+        .button {
+            color: var(--ls-header-button-background);
+
+            i {
+                color: var(--ls-header-button-background);
+            }
+
+            &:hover {
+                color: rgb(var(--tn-accent, var(--tn-pink)));
+                background-color: var(--tn-header-icon-background);
+
+                i, span.ui__icon {
+                    color: rgb(var(--tn-accent, var(--tn-pink)));
+                }
+            }
+        }
+    }
+
+    /* #32 theme search modal */
+    .ui__modal[label="ls-modal-search"] {
+        color: var(--tn-primary-text-color);
+        // TODO: port all the new design system variables once its stable
+        .text-gray-12, .text-gray-11, input {
+            color: var(--tn-primary-text-color);
+        }
+        input::placeholder {
+            color: var(--tn-primary-text-color);
+            opacity: .75;
+
+        }
+    }
+
+    .cp__settings-inner {
+        min-height: 70dvh;
+        max-height: 70dvh;
+    }
+
+    ::selection {
+        background-color: var(--ls-selection-background-color);
+        color: var(--ls-selection-text-color);
+    }
+}

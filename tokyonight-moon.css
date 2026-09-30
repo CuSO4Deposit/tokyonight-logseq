@@ -1,0 +1,2890 @@
+:root:not([data-color]), :root[data-color=none], :root[data-color=logseq] {
+  --color-base-00: rgb(var(--tn-crust));
+  --color-base-10: rgb(var(--tn-mantle));
+  --color-base-20: rgb(var(--tn-base));
+  --color-base-30: rgb(var(--tn-surface0));
+  --color-base-40: rgb(var(--tn-surface1));
+  --color-base-50: rgb(var(--tn-surface2));
+  --color-base-60: rgb(var(--tn-overlay0));
+  --color-base-70: rgb(var(--tn-overlay1));
+  --color-base-80: rgb(var(--tn-overlay2));
+  --color-base-90: rgb(var(--tn-subtext0));
+  --color-base-100: rgb(var(--tn-text));
+}
+
+:root:not([data-color]), :root[data-color=none], :root[data-color=logseq] {
+  --tn-primary-background-color: rgb(var(--tn-base));
+  --tn-secondary-background-color: rgb(var(--tn-mantle));
+  --tn-tertiary-background-color: rgb(var(--tn-crust));
+  --tn-quaternary-background-color: rgb(var(--tn-surface0));
+  --tn-color-level-1: var(--color-base-10);
+  --tn-color-level-2: var(--color-base-20);
+  --tn-color-level-3: var(--color-base-30);
+  --tn-color-level-4: var(--color-base-40);
+  --tn-color-level-5: var(--color-base-50);
+  --tn-color-level-6: var(--color-base-60);
+  --tn-active-primary-color: rgb(var(--tn-accent));
+  --tn-active-secondary-color: rgb(var(--tn-accent), 0.9);
+  --tn-table-tr-even-background-color: var(--tn-secondary-background-color);
+  --tn-block-properties-background-color: var(--tn-secondary-background-color);
+  --tn-page-properties-background-color: var(--tn-secondary-background-color);
+  --tn-block-ref-link-text-color: rgb(var(--tn-subtext0));
+  --tn-search-background-color: var(--tn-primary-background-color);
+  --tn-border-color: rgb(var(--tn-surface0));
+  --tn-secondary-border-color: rgb(var(--tn-surface0));
+  --tn-tertiary-border-color: rgba(var(--tn-surface0), 0.10);
+  --tn-guideline-color: rgb(var(--tn-surface1));
+  --tn-menu-hover-color: var(--tn-color-level-3);
+  --tn-primary-text-color: rgb(var(--tn-text));
+  --tn-secondary-text-color: rgb(var(--tn-subtext0));
+  --tn-title-text-color: rgb(var(--tn-subtext1));
+  --tn-link-text-color: rgb(var(--tn-accent, var(--tn-teal)));
+  --tn-link-text-hover-color: rgb(var(--tn-accent, var(--tn-mauve)));
+  --tn-link-ref-text-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-link-ref-text-hover-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-tag-text-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-tag-text-hover-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-slide-background-color: var(--tn-primary-background-color);
+  --tn-block-bullet-border-color: rgba(var(--tn-accent, var(--tn-flamingo)), 0.4);
+  --tn-block-bullet-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-block-highlight-color: var(--color-base-30);
+  --tn-selection-background-color: rgba(var(--tn-yellow), 0.9);
+  --tn-selection-text-color: var(--color-base-00);
+  --tn-page-checkbox-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-page-checkbox-border-color: var(--tn-primary-background-color);
+  --tn-page-blockquote-color: var(--tn-primary-text-color);
+  --tn-page-blockquote-bg-color: var(--tn-secondary-background-color);
+  --tn-page-blockquote-border-color: var(--tn-border-color);
+  --tn-page-inline-code-color: var(--tn-primary-text-color);
+  --tn-page-inline-code-bg-color: var(--color-base-10);
+  --tn-scrollbar-foreground-color: rgba(var(--tn-text), 0.2);
+  --tn-scrollbar-background-color: rgba(var(--tn-text), 0.05);
+  --tn-scrollbar-thumb-hover-color: rgba(var(--tn-text), 0.2);
+  --tn-head-text-color: var(--tn-link-text-color);
+  --tn-cloze-text-color: rgb(var(--tn-accent));
+  --tn-icon-color: var(--tn-link-text-color);
+  --tn-search-icon-color: var(--tn-link-text-color);
+  --tn-a-chosen-bg: var(--tn-quaternary-background-color);
+  --tn-right-sidebar-code-bg-color: var(--color-base-30);
+  --tn-pie-bg-color: var(--tn-primary-background-color);
+  --tn-pie-fg-color: var(--tn-secondary-background-color);
+  --tn-highlight-color-gray: rgb(var(--tn-overlay2));
+  --tn-highlight-color-red: rgb(var(--tn-red));
+  --tn-highlight-color-yellow: rgb(var(--tn-yellow));
+  --tn-highlight-color-green: rgb(var(--tn-green));
+  --tn-highlight-color-blue: rgb(var(--tn-blue));
+  --tn-highlight-color-purple: rgb(var(--tn-mauve));
+  --tn-highlight-color-pink: rgb(var(--tn-pink));
+  --tn-error-text-color: var(--color-red-100);
+  --tn-error-background-color: rgb(var(--tn-red));
+  --tn-warning-text-color: var(--color-yellow-100);
+  --tn-warning-background-color: rgb(var(--tn-yellow));
+  --tn-success-text-color: var(--color-green-100);
+  --tn-success-background-color: rgb(var(--tn-green));
+  --tn-focus-ring-color: rgb(var(--tn-overlay2));
+  --tn-header-button-background: rgb(var(--tn-text));
+  --tn-error-color: var(--tn-red);
+  --tn-warning-color: var(--tn-peach);
+  --tn-success-color: var(--tn-green);
+  --tn-info-color: var(--tn-yellow);
+  --tn-switch-background: var(--color-base-50);
+  --tn-switch-handle-color: var(--tn-accent, var(--tn-blue));
+  --tn-button-background: var(--tn-accent, var(--tn-blue));
+  --tn-button-text: var(--color-base-10);
+  --tn-tooltip-background: var(--tn-tertiary-background-color);
+  --tn-tooltip-text: rgb(var(--tn-text));
+  --tn-search-input-placeholder: rgb(var(--tn-text));
+  --tn-header-icon: rgb(var(--tn-accent));
+  --tn-header-icon-background: var(--tn-menu-hover-color);
+  --tn-text-highlight: rgb(var(--tn-yellow));
+  --tn-bullet-thread-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-dropdown-border-color: var(--color-base-50);
+  --tn-text-bold: var(--tn-primary-text-color);
+  --tn-text-heading: var(--tn-primary-text-color);
+  --tn-text-italics: var(--tn-accent, var(--tn-green));
+  --tn-text-underline: var(--tn-primary-text-color);
+  --tn-text-strikethrough: var(--tn-accent, var(--tn-maroon));
+  --tn-blockquote-line: var(--tn-accent);
+  --tn-active-setting: var(--tn-accent, var(--tn-blue));
+  --tn-priority-bg-color: var(--tn-crust);
+  --tn-priority-todo: var(--tn-teal);
+  --tn-priority-doing: var(--tn-blue);
+  --tn-priority-done: var(--tn-green);
+  --tn-priority-now: var(--tn-teal);
+  --tn-priority-later: var(--tn-yellow);
+  --tn-priority-waiting: var(--tn-maroon);
+  --tn-priority-a: var(--tn-red);
+  --tn-priority-b: var(--tn-yellow);
+  --tn-priority-c: var(--tn-green);
+  --tn-marker-border-radius: 4px;
+  --tn-checkbox-color: var(--tn-accent, var(--tn-teal));
+  --tn-marker-size: 16px;
+}
+
+html:not(html[data-color]),
+html[data-theme=dark][data-color=logseq],
+html[data-theme=light][data-color=logseq],
+html[data-theme=dark],
+html[data-theme=light],
+html[data-color=none] {
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+  --color-level-1: var(--tn-color-level-1);
+  --color-level-2: var(--tn-color-level-2);
+  --color-level-3: var(--tn-color-level-3);
+  --color-level-4: var(--tn-color-level-4);
+  --color-level-5: var(--tn-color-level-5);
+  --color-level-6: var(--tn-color-level-6);
+  --ls-active-primary-color: var(--tn-active-primary-color);
+  --ls-active-secondary-color: var(--tn-active-secondary-color);
+  --ls-table-tr-even-background-color: var(--tn-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--tn-block-properties-background-color);
+  --ls-page-properties-background-color: var(--tn-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--tn-block-ref-link-text-color);
+  --ls-search-background-color: var(--tn-search-background-color);
+  --ls-border-color: var(--tn-border-color);
+  --ls-secondary-border-color: var(--tn-secondary-border-color);
+  --ls-tertiary-border-color: var(--tn-tertiary-border-color);
+  --ls-guideline-color: var(--tn-guideline-color);
+  --ls-menu-hover-color: var(--tn-menu-hover-color);
+  --ls-primary-text-color: var(--tn-primary-text-color);
+  --ls-secondary-text-color: var(--tn-secondary-text-color);
+  --ls-title-text-color: var(--tn-title-text-color);
+  --ls-link-text-color: var(--tn-link-text-color);
+  --ls-link-text-hover-color: var(--tn-link-text-hover-color);
+  --ls-link-ref-text-color: var(--tn-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--tn-link-ref-text-hover-color);
+  --ls-tag-text-color: var(--tn-tag-text-color);
+  --ls-tag-text-hover-color: var(--tn-tag-text-hover-color);
+  --ls-slide-background-color: var(--tn-slide-background-color);
+  --ls-block-bullet-border-color: var(--tn-block-bullet-border-color);
+  --ls-block-bullet-color: var(--tn-block-bullet-color);
+  --ls-block-highlight-color: var(--tn-block-highlight-color);
+  --ls-selection-background-color: var(--tn-selection-background-color);
+  --ls-selection-text-color: var(--tn-selection-text-color);
+  --ls-page-checkbox-color: var(--tn-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--tn-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--tn-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--tn-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--tn-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--tn-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--tn-page-inline-code-bg-color);
+  --ls-page-mark-color: var(--tn-base);
+  --ls-scrollbar-foreground-color: var(--tn-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--tn-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--tn-scrollbar-thumb-hover-color);
+  --ls-head-text-color: var(--tn-head-text-color);
+  --ls-cloze-text-color: var(--tn-cloze-text-color);
+  --ls-icon-color: var(--tn-icon-color);
+  --ls-search-icon-color: var(--tn-search-icon-color);
+  --ls-a-chosen-bg: var(--tn-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--tn-right-sidebar-code-bg-color);
+  --ls-pie-bg-color: var(--tn-pie-bg-color);
+  --ls-pie-fg-color: var(--tn-pie-fg-color);
+  --ls-highlight-color-gray: var(--tn-highlight-color-gray);
+  --ls-highlight-color-red: var(--tn-highlight-color-red);
+  --ls-highlight-color-yellow: var(--tn-highlight-color-yellow);
+  --ls-highlight-color-green: var(--tn-highlight-color-green);
+  --ls-highlight-color-blue: var(--tn-highlight-color-blue);
+  --ls-highlight-color-purple: var(--tn-highlight-color-purple);
+  --ls-highlight-color-pink: var(--tn-highlight-color-pink);
+  --ls-error-text-color: var(--tn-error-text-color);
+  --ls-error-background-color: var(--tn-error-background-color);
+  --ls-warning-text-color: var(--tn-warning-text-color);
+  --ls-warning-background-color: var(--tn-warning-background-color);
+  --ls-success-text-color: var(--tn-success-text-color);
+  --ls-success-background-color: var(--tn-success-background-color);
+  --ls-focus-ring-color: var(--tn-focus-ring-color);
+  --ls-header-button-background: var(--tn-header-button-background);
+  --ls-left-sidebar-active-background: var(--tn-color-level-4);
+  --ls-color-file-sync-error: rgb(var(--tn-red));
+  --ls-color-file-sync-pending: rgb(var(--tn-yellow));
+  --ls-color-file-sync-idle: rgb(var(--tn-green));
+}
+
+:root:not([data-color]), :root[data-color=none], :root[data-color=logseq] {
+  --ls-error-color: var(--tn-error-color);
+  --ls-warning-color: var(--tn-warning-color);
+  --ls-success-color: var(--tn-success-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(html[data-color]), html[data-color=logseq], html[data-color=none] {
+    background-color: var(--tn-primary-background-color);
+  }
+  html[data-theme=light] {
+    background-color: transparent;
+  }
+}
+:root:not([data-color]), :root[data-color=none], :root[data-theme=dark][data-color=logseq] {
+  /*
+  --background: 192 100% 11%;
+  --foreground: 0 0% 95%;
+  --accent: 192 80% 10%;
+  --accent-foreground: 255 92% 100%;
+  --primary: 200 97% 37%;
+  --primary-foreground: 255 92% 100%;
+  --ring: 200 97% 37%;
+  --secondary: 203 50% 20%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 192 100% 13%;
+  --card: 192 100% 10%;
+  --card-foreground: 0 0% 95%;
+  --input: 203 35% 25%;
+  */
+  --popover: rgb(var(--tn-mantle));
+  --border: rgb(var(--tn-surface0));
+  --lx-popover-bg: var(--tn-secondary-background-color);
+}
+
+:root:not([data-color]) .light-theme,
+:root:not([data-color]) .white-theme, :root[data-color=none] .light-theme,
+:root[data-color=none] .white-theme {
+  --color-level-1: var(--color-base-10);
+  --color-level-2: var(--color-base-20);
+  --color-level-3: var(--color-base-30);
+  --color-level-4: var(--color-base-40);
+  --color-level-5: var(--color-base-50);
+  --color-level-6: var(--color-base-60);
+}
+
+html[data-color=logseq][data-theme=light] {
+  /*
+  --primary: 200 97% 37%;
+  --primary-foreground: 255 92% 100%;
+  --accent: 200 97% 37%;
+  --accent-foreground: 255 92% 100%;
+  --ring: 200 97% 37%;
+  */
+  --lx-gray-01: initial;
+  --lx-gray-02: initial;
+  --lx-gray-03: initial;
+  --lx-gray-04: initial;
+  --lx-gray-05: initial;
+  --lx-gray-06: initial;
+  --lx-gray-07: initial;
+  --lx-gray-08: initial;
+  --lx-gray-09: initial;
+  --lx-gray-10: initial;
+  --lx-gray-11: initial;
+  --lx-gray-12: initial;
+}
+
+html[data-color=logseq] {
+  --lx-accent-01: initial;
+  --lx-accent-02: initial;
+  --lx-accent-03: initial;
+  --lx-accent-04: initial;
+  --lx-accent-05: initial;
+  --lx-accent-06: initial;
+  --lx-accent-07: initial;
+  --lx-accent-08: initial;
+  --lx-accent-09: initial;
+  --lx-accent-10: initial;
+  --lx-accent-11: initial;
+  --lx-accent-12: initial;
+}
+
+html:not(html[data-color]) #left-sidebar,
+html[data-theme=light][data-color=logseq] #left-sidebar,
+html[data-theme=dark][data-color=logseq] #left-sidebar,
+html[data-color=none] #left-sidebar {
+  background-color: var(--tn-secondary-background-color);
+}
+html:not(html[data-color]) div.input-wrap > input::placeholder,
+html[data-theme=light][data-color=logseq] div.input-wrap > input::placeholder,
+html[data-theme=dark][data-color=logseq] div.input-wrap > input::placeholder,
+html[data-color=none] div.input-wrap > input::placeholder {
+  color: var(--tn-search-input-placeholder);
+}
+html:not(html[data-color]) .recent-search a > div > div,
+html[data-theme=light][data-color=logseq] .recent-search a > div > div,
+html[data-theme=dark][data-color=logseq] .recent-search a > div > div,
+html[data-color=none] .recent-search a > div > div {
+  border-color: rgb(var(--tn-text));
+}
+html:not(html[data-color]) a.ui__toggle .wrapper:focus,
+html[data-theme=light][data-color=logseq] a.ui__toggle .wrapper:focus,
+html[data-theme=dark][data-color=logseq] a.ui__toggle .wrapper:focus,
+html[data-color=none] a.ui__toggle .wrapper:focus {
+  --tw-shadow: 0 0 0 3px rgba(var(--tn-switch-handle-color), 0.5) ;
+}
+html:not(html[data-color]) a.ui__toggle > span,
+html[data-theme=light][data-color=logseq] a.ui__toggle > span,
+html[data-theme=dark][data-color=logseq] a.ui__toggle > span,
+html[data-color=none] a.ui__toggle > span {
+  background-color: var(--tn-switch-background);
+}
+html:not(html[data-color]) a.ui__toggle > span > span.switcher,
+html[data-theme=light][data-color=logseq] a.ui__toggle > span > span.switcher,
+html[data-theme=dark][data-color=logseq] a.ui__toggle > span > span.switcher,
+html[data-color=none] a.ui__toggle > span > span.switcher {
+  background-color: rgb(var(--tn-switch-handle-color));
+}
+html:not(html[data-color]) a.ui__button, html:not(html[data-color]) button.ui__button,
+html[data-theme=light][data-color=logseq] a.ui__button,
+html[data-theme=light][data-color=logseq] button.ui__button,
+html[data-theme=dark][data-color=logseq] a.ui__button,
+html[data-theme=dark][data-color=logseq] button.ui__button,
+html[data-color=none] a.ui__button,
+html[data-color=none] button.ui__button {
+  color: var(--tn-button-text);
+  background-color: rgb(var(--tn-button-background));
+}
+html:not(html[data-color]) a.ui__button[intent=logseq]:hover:not(.active), html:not(html[data-color]) button.ui__button[intent=logseq]:hover:not(.active),
+html[data-theme=light][data-color=logseq] a.ui__button[intent=logseq]:hover:not(.active),
+html[data-theme=light][data-color=logseq] button.ui__button[intent=logseq]:hover:not(.active),
+html[data-theme=dark][data-color=logseq] a.ui__button[intent=logseq]:hover:not(.active),
+html[data-theme=dark][data-color=logseq] button.ui__button[intent=logseq]:hover:not(.active),
+html[data-color=none] a.ui__button[intent=logseq]:hover:not(.active),
+html[data-color=none] button.ui__button[intent=logseq]:hover:not(.active) {
+  color: var(--tn-button-text);
+  background-color: rgb(var(--tn-button-background));
+}
+html:not(html[data-color]) a.ui__button.as-ghost:hover, html:not(html[data-color]) a.ui__button:hover, html:not(html[data-color]) button.ui__button.as-ghost:hover, html:not(html[data-color]) button.ui__button:hover,
+html[data-theme=light][data-color=logseq] a.ui__button.as-ghost:hover,
+html[data-theme=light][data-color=logseq] a.ui__button:hover,
+html[data-theme=light][data-color=logseq] button.ui__button.as-ghost:hover,
+html[data-theme=light][data-color=logseq] button.ui__button:hover,
+html[data-theme=dark][data-color=logseq] a.ui__button.as-ghost:hover,
+html[data-theme=dark][data-color=logseq] a.ui__button:hover,
+html[data-theme=dark][data-color=logseq] button.ui__button.as-ghost:hover,
+html[data-theme=dark][data-color=logseq] button.ui__button:hover,
+html[data-color=none] a.ui__button.as-ghost:hover,
+html[data-color=none] a.ui__button:hover,
+html[data-color=none] button.ui__button.as-ghost:hover,
+html[data-color=none] button.ui__button:hover {
+  background-color: rgb(var(--tn-button-background));
+}
+html:not(html[data-color]) .tippy-tooltip,
+html[data-theme=light][data-color=logseq] .tippy-tooltip,
+html[data-theme=dark][data-color=logseq] .tippy-tooltip,
+html[data-color=none] .tippy-tooltip {
+  background: var(--tn-tooltip-background);
+  color: var(--tn-tooltip-text);
+}
+html:not(html[data-color]) .tippy-popper .arrow-regular,
+html[data-theme=light][data-color=logseq] .tippy-popper .arrow-regular,
+html[data-theme=dark][data-color=logseq] .tippy-popper .arrow-regular,
+html[data-color=none] .tippy-popper .arrow-regular {
+  display: none;
+  /* Hide the arrow */
+}
+html:not(html[data-color]) .dark .ui__button[intent=logseq]:hover,
+html[data-theme=light][data-color=logseq] .dark .ui__button[intent=logseq]:hover,
+html[data-theme=dark][data-color=logseq] .dark .ui__button[intent=logseq]:hover,
+html[data-color=none] .dark .ui__button[intent=logseq]:hover {
+  color: var(--ls-link-text-color);
+}
+html:not(html[data-color]) svg.tip,
+html[data-theme=light][data-color=logseq] svg.tip,
+html[data-theme=dark][data-color=logseq] svg.tip,
+html[data-color=none] svg.tip {
+  fill: rgb(var(--tn-blue));
+}
+html:not(html[data-color]) svg.warning,
+html[data-theme=light][data-color=logseq] svg.warning,
+html[data-theme=dark][data-color=logseq] svg.warning,
+html[data-color=none] svg.warning {
+  fill: rgb(var(--tn-warning-color));
+}
+html:not(html[data-color]) svg.important,
+html[data-theme=light][data-color=logseq] svg.important,
+html[data-theme=dark][data-color=logseq] svg.important,
+html[data-color=none] svg.important {
+  fill: rgb(var(--tn-error-color));
+}
+html:not(html[data-color]) svg.note,
+html[data-theme=light][data-color=logseq] svg.note,
+html[data-theme=dark][data-color=logseq] svg.note,
+html[data-color=none] svg.note {
+  fill: rgb(var(--tn-info-color));
+}
+html:not(html[data-color]) div.nav-content-item:not(.is-expand) .header,
+html[data-theme=light][data-color=logseq] div.nav-content-item:not(.is-expand) .header,
+html[data-theme=dark][data-color=logseq] div.nav-content-item:not(.is-expand) .header,
+html[data-color=none] div.nav-content-item:not(.is-expand) .header {
+  background-color: var(--ls-tertiary-background-color);
+}
+html:not(html[data-color]) div.nav-content-item:not(.is-expand) .header a,
+html[data-theme=light][data-color=logseq] div.nav-content-item:not(.is-expand) .header a,
+html[data-theme=dark][data-color=logseq] div.nav-content-item:not(.is-expand) .header a,
+html[data-color=none] div.nav-content-item:not(.is-expand) .header a {
+  color: var(--tn-link-text-hover-color);
+}
+html:not(html[data-color]) .left-sidebar-inner a.item.active,
+html:not(html[data-color]) .left-sidebar-inner a.item:active,
+html[data-theme=light][data-color=logseq] .left-sidebar-inner a.item.active,
+html[data-theme=light][data-color=logseq] .left-sidebar-inner a.item:active,
+html[data-theme=dark][data-color=logseq] .left-sidebar-inner a.item.active,
+html[data-theme=dark][data-color=logseq] .left-sidebar-inner a.item:active,
+html[data-color=none] .left-sidebar-inner a.item.active,
+html[data-color=none] .left-sidebar-inner a.item:active {
+  color: var(--tn-link-text-hover-color);
+}
+html:not(html[data-color]) .left-sidebar-inner a.item:hover,
+html[data-theme=light][data-color=logseq] .left-sidebar-inner a.item:hover,
+html[data-theme=dark][data-color=logseq] .left-sidebar-inner a.item:hover,
+html[data-color=none] .left-sidebar-inner a.item:hover {
+  background: var(--tn-color-level-3);
+}
+html:not(html[data-color]) .left-sidebar-inner a.item:hover span,
+html[data-theme=light][data-color=logseq] .left-sidebar-inner a.item:hover span,
+html[data-theme=dark][data-color=logseq] .left-sidebar-inner a.item:hover span,
+html[data-color=none] .left-sidebar-inner a.item:hover span {
+  color: var(--tn-blue);
+}
+html:not(html[data-color]) .cp__sidebar-left-layout .header:hover a,
+html[data-theme=light][data-color=logseq] .cp__sidebar-left-layout .header:hover a,
+html[data-theme=dark][data-color=logseq] .cp__sidebar-left-layout .header:hover a,
+html[data-color=none] .cp__sidebar-left-layout .header:hover a {
+  color: var(--tn-link-text-hover-color);
+}
+html:not(html[data-color]) .ui__modal-panel,
+html[data-theme=light][data-color=logseq] .ui__modal-panel,
+html[data-theme=dark][data-color=logseq] .ui__modal-panel,
+html[data-color=none] .ui__modal-panel {
+  border: 1px solid;
+  border-color: var(--tn-dropdown-border-color);
+}
+html:not(html[data-color]) .dropdown-wrapper,
+html[data-theme=light][data-color=logseq] .dropdown-wrapper,
+html[data-theme=dark][data-color=logseq] .dropdown-wrapper,
+html[data-color=none] .dropdown-wrapper {
+  border: 1px solid;
+  border-color: var(--tn-dropdown-border-color);
+}
+html:not(html[data-color]) .block-children-left-border:hover,
+html[data-theme=light][data-color=logseq] .block-children-left-border:hover,
+html[data-theme=dark][data-color=logseq] .block-children-left-border:hover,
+html[data-color=none] .block-children-left-border:hover {
+  width: 2px;
+  background-color: var(--tn-bullet-thread-color);
+}
+html:not(html[data-color]) mark,
+html[data-theme=light][data-color=logseq] mark,
+html[data-theme=dark][data-color=logseq] mark,
+html[data-color=none] mark {
+  background: var(--tn-text-highlight);
+  color: rgb(var(--ls-page-mark-color));
+}
+html:not(html[data-color]) mark a,
+html[data-theme=light][data-color=logseq] mark a,
+html[data-theme=dark][data-color=logseq] mark a,
+html[data-color=none] mark a {
+  color: rgb(var(--ls-page-mark-color));
+}
+html:not(html[data-color]) mark a:hover,
+html[data-theme=light][data-color=logseq] mark a:hover,
+html[data-theme=dark][data-color=logseq] mark a:hover,
+html[data-color=none] mark a:hover {
+  opacity: 0.55;
+}
+html:not(html[data-color]) .form-input:focus,
+html[data-theme=light][data-color=logseq] .form-input:focus,
+html[data-theme=dark][data-color=logseq] .form-input:focus,
+html[data-color=none] .form-input:focus {
+  box-shadow: 0 0 0 2px rgba(var(--tn-accent, var(--tn-sapphire)), 0.5);
+  border-color: rgba(var(--tn-accent, var(--tn-sapphire)), 0.5);
+}
+html:not(html[data-color]) .bullet-container.bullet-closed,
+html[data-theme=light][data-color=logseq] .bullet-container.bullet-closed,
+html[data-theme=dark][data-color=logseq] .bullet-container.bullet-closed,
+html[data-color=none] .bullet-container.bullet-closed {
+  background-color: rgb(var(--tn-accent, var(--tn-blue)), 0.15);
+}
+html:not(html[data-color]) .bullet-container.bullet-closed:hover,
+html[data-theme=light][data-color=logseq] .bullet-container.bullet-closed:hover,
+html[data-theme=dark][data-color=logseq] .bullet-container.bullet-closed:hover,
+html[data-color=none] .bullet-container.bullet-closed:hover {
+  background-color: rgb(var(--tn-accent, var(--tn-blue)), 0.65);
+}
+html:not(html[data-color]) .bullet-container:hover,
+html[data-theme=light][data-color=logseq] .bullet-container:hover,
+html[data-theme=dark][data-color=logseq] .bullet-container:hover,
+html[data-color=none] .bullet-container:hover {
+  background-color: rgb(var(--tn-accent, var(--tn-blue)), 0.15);
+}
+html:not(html[data-color]) button.button.icon:hover,
+html[data-theme=light][data-color=logseq] button.button.icon:hover,
+html[data-theme=dark][data-color=logseq] button.button.icon:hover,
+html[data-color=none] button.button.icon:hover {
+  color: rgb(var(--tn-accent, var(--tn-pink)));
+  background-color: var(--tn-header-icon-background);
+}
+html:not(html[data-color]) button.button.icon:hover > i,
+html[data-theme=light][data-color=logseq] button.button.icon:hover > i,
+html[data-theme=dark][data-color=logseq] button.button.icon:hover > i,
+html[data-color=none] button.button.icon:hover > i {
+  color: var(--tn-header-icon);
+}
+html:not(html[data-color]) .cp__sidebar-left-layout a,
+html[data-theme=light][data-color=logseq] .cp__sidebar-left-layout a,
+html[data-theme=dark][data-color=logseq] .cp__sidebar-left-layout a,
+html[data-color=none] .cp__sidebar-left-layout a {
+  color: inherit;
+}
+html:not(html[data-color]) .left-sidebar-inner .nav-content-item .header,
+html[data-theme=light][data-color=logseq] .left-sidebar-inner .nav-content-item .header,
+html[data-theme=dark][data-color=logseq] .left-sidebar-inner .nav-content-item .header,
+html[data-color=none] .left-sidebar-inner .nav-content-item .header {
+  background-color: var(--ls-tertiary-background-color);
+}
+html:not(html[data-color]) html[data-theme=dark] .cp__header a,
+html:not(html[data-color]) html[data-theme=dark] .cp__header button.button,
+html:not(html[data-color]) html[data-theme=dark] .cp__right-sidebar-topbar button,
+html[data-theme=light][data-color=logseq] html[data-theme=dark] .cp__header a,
+html[data-theme=light][data-color=logseq] html[data-theme=dark] .cp__header button.button,
+html[data-theme=light][data-color=logseq] html[data-theme=dark] .cp__right-sidebar-topbar button,
+html[data-theme=dark][data-color=logseq] html[data-theme=dark] .cp__header a,
+html[data-theme=dark][data-color=logseq] html[data-theme=dark] .cp__header button.button,
+html[data-theme=dark][data-color=logseq] html[data-theme=dark] .cp__right-sidebar-topbar button,
+html[data-color=none] html[data-theme=dark] .cp__header a,
+html[data-color=none] html[data-theme=dark] .cp__header button.button,
+html[data-color=none] html[data-theme=dark] .cp__right-sidebar-topbar button {
+  opacity: 1;
+}
+html:not(html[data-color]) .inline.with-bg-color,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color,
+html[data-color=none] .inline.with-bg-color {
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) .inline.with-bg-color b,
+html:not(html[data-color]) .inline.with-bg-color .page-ref,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color b,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color .page-ref,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color b,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color .page-ref,
+html[data-color=none] .inline.with-bg-color b,
+html[data-color=none] .inline.with-bg-color .page-ref {
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) .inline.with-bg-color .page-reference:hover,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color .page-reference:hover,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color .page-reference:hover,
+html[data-color=none] .inline.with-bg-color .page-reference:hover {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .inline.with-bg-color .page-reference:hover b,
+html:not(html[data-color]) .inline.with-bg-color .page-reference:hover .page-ref,
+html:not(html[data-color]) .inline.with-bg-color .page-reference:hover span,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color .page-reference:hover b,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color .page-reference:hover .page-ref,
+html[data-theme=light][data-color=logseq] .inline.with-bg-color .page-reference:hover span,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color .page-reference:hover b,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color .page-reference:hover .page-ref,
+html[data-theme=dark][data-color=logseq] .inline.with-bg-color .page-reference:hover span,
+html[data-color=none] .inline.with-bg-color .page-reference:hover b,
+html[data-color=none] .inline.with-bg-color .page-reference:hover .page-ref,
+html[data-color=none] .inline.with-bg-color .page-reference:hover span {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6),
+html[data-theme=light][data-color=logseq] .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6),
+html[data-theme=dark][data-color=logseq] .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6),
+html[data-color=none] .ls-block .with-bg-color:is(h1, h2, h3, h4, h5, h6) {
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) .menu-links-wrapper,
+html:not(html[data-color]) .menu-link,
+html[data-theme=light][data-color=logseq] .menu-links-wrapper,
+html[data-theme=light][data-color=logseq] .menu-link,
+html[data-theme=dark][data-color=logseq] .menu-links-wrapper,
+html[data-theme=dark][data-color=logseq] .menu-link,
+html[data-color=none] .menu-links-wrapper,
+html[data-color=none] .menu-link {
+  background-color: var(--tn-secondary-background-color);
+}
+html:not(html[data-color]) .menu-link,
+html[data-theme=light][data-color=logseq] .menu-link,
+html[data-theme=dark][data-color=logseq] .menu-link,
+html[data-color=none] .menu-link {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 5px;
+}
+html:not(html[data-color]) .menu-link:hover,
+html[data-theme=light][data-color=logseq] .menu-link:hover,
+html[data-theme=dark][data-color=logseq] .menu-link:hover,
+html[data-color=none] .menu-link:hover {
+  background-color: var(--tn-menu-hover-color);
+}
+html:not(html[data-color]) .menu-link.chosen,
+html[data-theme=light][data-color=logseq] .menu-link.chosen,
+html[data-theme=dark][data-color=logseq] .menu-link.chosen,
+html[data-color=none] .menu-link.chosen {
+  background-color: var(--ls-menu-hover-color);
+}
+html:not(html[data-color]) .cp__settings-inner > aside ul > li > a > strong,
+html[data-theme=light][data-color=logseq] .cp__settings-inner > aside ul > li > a > strong,
+html[data-theme=dark][data-color=logseq] .cp__settings-inner > aside ul > li > a > strong,
+html[data-color=none] .cp__settings-inner > aside ul > li > a > strong {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .cp__settings-inner > aside ul > li.active .ui__icon,
+html:not(html[data-color]) .cp__settings-inner > aside ul > li.active strong,
+html[data-theme=light][data-color=logseq] .cp__settings-inner > aside ul > li.active .ui__icon,
+html[data-theme=light][data-color=logseq] .cp__settings-inner > aside ul > li.active strong,
+html[data-theme=dark][data-color=logseq] .cp__settings-inner > aside ul > li.active .ui__icon,
+html[data-theme=dark][data-color=logseq] .cp__settings-inner > aside ul > li.active strong,
+html[data-color=none] .cp__settings-inner > aside ul > li.active .ui__icon,
+html[data-color=none] .cp__settings-inner > aside ul > li.active strong {
+  color: rgb(var(--tn-active-setting));
+}
+html:not(html[data-color]) .cp__all_pages_table td > span,
+html[data-theme=light][data-color=logseq] .cp__all_pages_table td > span,
+html[data-theme=dark][data-color=logseq] .cp__all_pages_table td > span,
+html[data-color=none] .cp__all_pages_table td > span {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+html:not(html[data-color]) .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+html:not(html[data-color]) .ls-block :is(h1, h2, h3, h4, h5, h6),
+html[data-theme=light][data-color=logseq] .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+html[data-theme=light][data-color=logseq] .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+html[data-theme=light][data-color=logseq] .ls-block :is(h1, h2, h3, h4, h5, h6),
+html[data-theme=dark][data-color=logseq] .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+html[data-theme=dark][data-color=logseq] .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+html[data-theme=dark][data-color=logseq] .ls-block :is(h1, h2, h3, h4, h5, h6),
+html[data-color=none] .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
+html[data-color=none] .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
+html[data-color=none] .ls-block :is(h1, h2, h3, h4, h5, h6) {
+  color: rgb(var(--tn-text-heading));
+}
+html:not(html[data-color]) b,
+html:not(html[data-color]) strong,
+html[data-theme=light][data-color=logseq] b,
+html[data-theme=light][data-color=logseq] strong,
+html[data-theme=dark][data-color=logseq] b,
+html[data-theme=dark][data-color=logseq] strong,
+html[data-color=none] b,
+html[data-color=none] strong {
+  color: var(--tn-text-bold);
+}
+html:not(html[data-color]) i,
+html[data-theme=light][data-color=logseq] i,
+html[data-theme=dark][data-color=logseq] i,
+html[data-color=none] i {
+  color: rgb(var(--tn-text-italics));
+}
+html:not(html[data-color]) del,
+html[data-theme=light][data-color=logseq] del,
+html[data-theme=dark][data-color=logseq] del,
+html[data-color=none] del {
+  color: rgb(var(--tn-text-strikethrough));
+}
+html:not(html[data-color]) blockquote,
+html[data-theme=light][data-color=logseq] blockquote,
+html[data-theme=dark][data-color=logseq] blockquote,
+html[data-color=none] blockquote {
+  border-left: 2px solid;
+  border-left-color: rgb(var(--tn-blockquote-line));
+}
+html:not(html[data-color]) a[title=Yellow].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Yellow].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Yellow].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Yellow].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-yellow) !important;
+}
+html:not(html[data-color]) a[title=Red].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Red].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Red].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Red].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-red) !important;
+}
+html:not(html[data-color]) a[title=Pink].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Pink].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Pink].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Pink].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-pink) !important;
+}
+html:not(html[data-color]) a[title=Green].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Green].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Green].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Green].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-green) !important;
+}
+html:not(html[data-color]) a[title=Blue].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Blue].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Blue].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Blue].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-blue) !important;
+}
+html:not(html[data-color]) a[title=Purple].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Purple].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Purple].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Purple].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-purple) !important;
+}
+html:not(html[data-color]) a[title=Gray].shadow-sm > .heading-bg,
+html[data-theme=light][data-color=logseq] a[title=Gray].shadow-sm > .heading-bg,
+html[data-theme=dark][data-color=logseq] a[title=Gray].shadow-sm > .heading-bg,
+html[data-color=none] a[title=Gray].shadow-sm > .heading-bg {
+  background-color: var(--ls-highlight-color-gray) !important;
+}
+html:not(html[data-color]) #ui__ac-inner,
+html[data-theme=light][data-color=logseq] #ui__ac-inner,
+html[data-theme=dark][data-color=logseq] #ui__ac-inner,
+html[data-color=none] #ui__ac-inner {
+  background: var(--tn-secondary-background-color);
+}
+html:not(html[data-color]) .ui__ac-group-name,
+html[data-theme=light][data-color=logseq] .ui__ac-group-name,
+html[data-theme=dark][data-color=logseq] .ui__ac-group-name,
+html[data-color=none] .ui__ac-group-name {
+  background: var(--tn-tertiary-background-color);
+}
+html:not(html[data-color]) .block-marker,
+html[data-theme=light][data-color=logseq] .block-marker,
+html[data-theme=dark][data-color=logseq] .block-marker,
+html[data-color=none] .block-marker {
+  background-color: rgb(var(--tn-priority-bg-color));
+  border-radius: var(--tn-marker-border-radius);
+  font-size: 75%;
+}
+html:not(html[data-color]) .block-marker.TODO,
+html[data-theme=light][data-color=logseq] .block-marker.TODO,
+html[data-theme=dark][data-color=logseq] .block-marker.TODO,
+html[data-color=none] .block-marker.TODO {
+  color: rgb(var(--tn-priority-todo));
+}
+html:not(html[data-color]) .block-marker.DOING,
+html[data-theme=light][data-color=logseq] .block-marker.DOING,
+html[data-theme=dark][data-color=logseq] .block-marker.DOING,
+html[data-color=none] .block-marker.DOING {
+  color: rgb(var(--tn-priority-doing));
+}
+html:not(html[data-color]) .block-marker.NOW,
+html[data-theme=light][data-color=logseq] .block-marker.NOW,
+html[data-theme=dark][data-color=logseq] .block-marker.NOW,
+html[data-color=none] .block-marker.NOW {
+  color: rgb(var(--tn-priority-now));
+}
+html:not(html[data-color]) .block-marker.LATER,
+html[data-theme=light][data-color=logseq] .block-marker.LATER,
+html[data-theme=dark][data-color=logseq] .block-marker.LATER,
+html[data-color=none] .block-marker.LATER {
+  color: rgb(var(--tn-priority-later));
+}
+html:not(html[data-color]) .block-marker.waiting,
+html[data-theme=light][data-color=logseq] .block-marker.waiting,
+html[data-theme=dark][data-color=logseq] .block-marker.waiting,
+html[data-color=none] .block-marker.waiting {
+  color: rgb(var(--tn-priority-waiting));
+}
+html:not(html[data-color]) .form-checkbox,
+html:not(html[data-color]) .form-checkbox:focus,
+html[data-theme=light][data-color=logseq] .form-checkbox,
+html[data-theme=light][data-color=logseq] .form-checkbox:focus,
+html[data-theme=dark][data-color=logseq] .form-checkbox,
+html[data-theme=dark][data-color=logseq] .form-checkbox:focus,
+html[data-color=none] .form-checkbox,
+html[data-color=none] .form-checkbox:focus {
+  border-radius: var(--tn-marker-border-radius);
+  border: 2px solid rgb(var(--tn-checkbox-color)) !important;
+  background-color: transparent !important;
+  height: var(--tn-marker-size);
+  width: var(--tn-marker-size);
+}
+html:not(html[data-color]) .form-checkbox:checked,
+html[data-theme=light][data-color=logseq] .form-checkbox:checked,
+html[data-theme=dark][data-color=logseq] .form-checkbox:checked,
+html[data-color=none] .form-checkbox:checked {
+  background-color: rgb(var(--tn-checkbox-color)) !important;
+}
+html:not(html[data-color]) .form-checkbox:hover,
+html[data-theme=light][data-color=logseq] .form-checkbox:hover,
+html[data-theme=dark][data-color=logseq] .form-checkbox:hover,
+html[data-color=none] .form-checkbox:hover {
+  transform: scale(1.1);
+}
+html:not(html[data-color]) a[priority],
+html:not(html[data-color]) a.priority,
+html[data-theme=light][data-color=logseq] a[priority],
+html[data-theme=light][data-color=logseq] a.priority,
+html[data-theme=dark][data-color=logseq] a[priority],
+html[data-theme=dark][data-color=logseq] a.priority,
+html[data-color=none] a[priority],
+html[data-color=none] a.priority {
+  font-size: 0px;
+}
+html:not(html[data-color]) a.priority[href="#/page/A" i],
+html:not(html[data-color]) [href="#/page/B" i],
+html:not(html[data-color]) [href="#/page/C" i],
+html[data-theme=light][data-color=logseq] a.priority[href="#/page/A" i],
+html[data-theme=light][data-color=logseq] [href="#/page/B" i],
+html[data-theme=light][data-color=logseq] [href="#/page/C" i],
+html[data-theme=dark][data-color=logseq] a.priority[href="#/page/A" i],
+html[data-theme=dark][data-color=logseq] [href="#/page/B" i],
+html[data-theme=dark][data-color=logseq] [href="#/page/C" i],
+html[data-color=none] a.priority[href="#/page/A" i],
+html[data-color=none] [href="#/page/B" i],
+html[data-color=none] [href="#/page/C" i] {
+  display: inline-flex;
+  opacity: 1 !important;
+}
+html:not(html[data-color]) a[priority]::before,
+html:not(html[data-color]) a.priority::before,
+html[data-theme=light][data-color=logseq] a[priority]::before,
+html[data-theme=light][data-color=logseq] a.priority::before,
+html[data-theme=dark][data-color=logseq] a[priority]::before,
+html[data-theme=dark][data-color=logseq] a.priority::before,
+html[data-color=none] a[priority]::before,
+html[data-color=none] a.priority::before {
+  transform: translateY(-1px);
+  border: 1px solid rgb(var(--tn-priority-bg-color));
+  border-radius: var(--tn-marker-border-radius);
+  font-size: 12px;
+  font-weight: 600;
+  height: calc(var(--tn-marker-size) + 4px);
+  width: calc(var(--tn-marker-size) + 4px);
+  line-height: 1.5;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+html:not(html[data-color]) a[priority=A]::before,
+html:not(html[data-color]) a.priority[href="#/page/A" i]:before,
+html[data-theme=light][data-color=logseq] a[priority=A]::before,
+html[data-theme=light][data-color=logseq] a.priority[href="#/page/A" i]:before,
+html[data-theme=dark][data-color=logseq] a[priority=A]::before,
+html[data-theme=dark][data-color=logseq] a.priority[href="#/page/A" i]:before,
+html[data-color=none] a[priority=A]::before,
+html[data-color=none] a.priority[href="#/page/A" i]:before {
+  content: "A";
+  background: rgb(var(--tn-priority-a));
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) a[priority=B]::before,
+html:not(html[data-color]) a.priority[href="#/page/B" i]:before,
+html[data-theme=light][data-color=logseq] a[priority=B]::before,
+html[data-theme=light][data-color=logseq] a.priority[href="#/page/B" i]:before,
+html[data-theme=dark][data-color=logseq] a[priority=B]::before,
+html[data-theme=dark][data-color=logseq] a.priority[href="#/page/B" i]:before,
+html[data-color=none] a[priority=B]::before,
+html[data-color=none] a.priority[href="#/page/B" i]:before {
+  content: "B";
+  background: rgb(var(--tn-priority-b));
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) a[priority=C]::before,
+html:not(html[data-color]) a.priority[href="#/page/C" i]:before,
+html[data-theme=light][data-color=logseq] a[priority=C]::before,
+html[data-theme=light][data-color=logseq] a.priority[href="#/page/C" i]:before,
+html[data-theme=dark][data-color=logseq] a[priority=C]::before,
+html[data-theme=dark][data-color=logseq] a.priority[href="#/page/C" i]:before,
+html[data-color=none] a[priority=C]::before,
+html[data-color=none] a.priority[href="#/page/C" i]:before {
+  content: "C";
+  background: rgb(var(--tn-priority-c));
+  color: var(--tn-primary-background-color);
+}
+html:not(html[data-color]) a.priority:hover,
+html[data-theme=light][data-color=logseq] a.priority:hover,
+html[data-theme=dark][data-color=logseq] a.priority:hover,
+html[data-color=none] a.priority:hover {
+  transform: scale(1.1);
+}
+html:not(html[data-color]) .sidebar-item-header .item-actions button,
+html[data-theme=light][data-color=logseq] .sidebar-item-header .item-actions button,
+html[data-theme=dark][data-color=logseq] .sidebar-item-header .item-actions button,
+html[data-color=none] .sidebar-item-header .item-actions button {
+  background-color: transparent;
+}
+html:not(html[data-color]) .sidebar-item-header .item-actions button .ui__icon,
+html[data-theme=light][data-color=logseq] .sidebar-item-header .item-actions button .ui__icon,
+html[data-theme=dark][data-color=logseq] .sidebar-item-header .item-actions button .ui__icon,
+html[data-color=none] .sidebar-item-header .item-actions button .ui__icon {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .sidebar-item-header .item-actions button:hover,
+html[data-theme=light][data-color=logseq] .sidebar-item-header .item-actions button:hover,
+html[data-theme=dark][data-color=logseq] .sidebar-item-header .item-actions button:hover,
+html[data-color=none] .sidebar-item-header .item-actions button:hover {
+  background-color: var(--tn-menu-hover-color);
+}
+html:not(html[data-color]) div.favorites button.ui__button, html:not(html[data-color]) div.recent button.ui__button,
+html[data-theme=light][data-color=logseq] div.favorites button.ui__button,
+html[data-theme=light][data-color=logseq] div.recent button.ui__button,
+html[data-theme=dark][data-color=logseq] div.favorites button.ui__button,
+html[data-theme=dark][data-color=logseq] div.recent button.ui__button,
+html[data-color=none] div.favorites button.ui__button,
+html[data-color=none] div.recent button.ui__button {
+  background: transparent;
+}
+html:not(html[data-color]) div.favorites button.ui__button.as-ghost:hover, html:not(html[data-color]) div.favorites button.ui__button:hover, html:not(html[data-color]) div.recent button.ui__button.as-ghost:hover, html:not(html[data-color]) div.recent button.ui__button:hover,
+html[data-theme=light][data-color=logseq] div.favorites button.ui__button.as-ghost:hover,
+html[data-theme=light][data-color=logseq] div.favorites button.ui__button:hover,
+html[data-theme=light][data-color=logseq] div.recent button.ui__button.as-ghost:hover,
+html[data-theme=light][data-color=logseq] div.recent button.ui__button:hover,
+html[data-theme=dark][data-color=logseq] div.favorites button.ui__button.as-ghost:hover,
+html[data-theme=dark][data-color=logseq] div.favorites button.ui__button:hover,
+html[data-theme=dark][data-color=logseq] div.recent button.ui__button.as-ghost:hover,
+html[data-theme=dark][data-color=logseq] div.recent button.ui__button:hover,
+html[data-color=none] div.favorites button.ui__button.as-ghost:hover,
+html[data-color=none] div.favorites button.ui__button:hover,
+html[data-color=none] div.recent button.ui__button.as-ghost:hover,
+html[data-color=none] div.recent button.ui__button:hover {
+  background: transparent;
+}
+html:not(html[data-color]) div.favorites span.ui__icon, html:not(html[data-color]) div.recent span.ui__icon,
+html[data-theme=light][data-color=logseq] div.favorites span.ui__icon,
+html[data-theme=light][data-color=logseq] div.recent span.ui__icon,
+html[data-theme=dark][data-color=logseq] div.favorites span.ui__icon,
+html[data-theme=dark][data-color=logseq] div.recent span.ui__icon,
+html[data-color=none] div.favorites span.ui__icon,
+html[data-color=none] div.recent span.ui__icon {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) button.ui__button .ui__icon,
+html[data-theme=light][data-color=logseq] button.ui__button .ui__icon,
+html[data-theme=dark][data-color=logseq] button.ui__button .ui__icon,
+html[data-color=none] button.ui__button .ui__icon {
+  color: var(--tn-button-text);
+}
+html:not(html[data-color]) .form-input:focus, html:not(html[data-color]) .form-multiselect:focus, html:not(html[data-color]) .form-select:focus, html:not(html[data-color]) .form-textarea:focus,
+html[data-theme=light][data-color=logseq] .form-input:focus,
+html[data-theme=light][data-color=logseq] .form-multiselect:focus,
+html[data-theme=light][data-color=logseq] .form-select:focus,
+html[data-theme=light][data-color=logseq] .form-textarea:focus,
+html[data-theme=dark][data-color=logseq] .form-input:focus,
+html[data-theme=dark][data-color=logseq] .form-multiselect:focus,
+html[data-theme=dark][data-color=logseq] .form-select:focus,
+html[data-theme=dark][data-color=logseq] .form-textarea:focus,
+html[data-color=none] .form-input:focus,
+html[data-color=none] .form-multiselect:focus,
+html[data-color=none] .form-select:focus,
+html[data-color=none] .form-textarea:focus {
+  --tw-ring-color: rgba(var(--tn-accent, var(--tn-sapphire)));
+  border-color: rgba(var(--tn-accent, var(--tn-sapphire)));
+}
+html:not(html[data-color]) div[data-radix-popper-content-wrapper] div[role=menuitem]:focus,
+html[data-theme=light][data-color=logseq] div[data-radix-popper-content-wrapper] div[role=menuitem]:focus,
+html[data-theme=dark][data-color=logseq] div[data-radix-popper-content-wrapper] div[role=menuitem]:focus,
+html[data-color=none] div[data-radix-popper-content-wrapper] div[role=menuitem]:focus {
+  background-color: var(--tn-menu-hover-color);
+}
+html:not(html[data-color]) div.ui__dropdown-menu-content,
+html[data-theme=light][data-color=logseq] div.ui__dropdown-menu-content,
+html[data-theme=dark][data-color=logseq] div.ui__dropdown-menu-content,
+html[data-color=none] div.ui__dropdown-menu-content {
+  border-color: var(--tn-dropdown-border-color);
+}
+html:not(html[data-color]) .form-input,
+html[data-theme=light][data-color=logseq] .form-input,
+html[data-theme=dark][data-color=logseq] .form-input,
+html[data-color=none] .form-input {
+  background-color: var(--ls-primary-background-color);
+  border-color: var(--ls-border-color);
+  color: var(--ls-primary-text-color);
+}
+html:not(html[data-color]) .dropdown-wrapper,
+html[data-theme=light][data-color=logseq] .dropdown-wrapper,
+html[data-theme=dark][data-color=logseq] .dropdown-wrapper,
+html[data-color=none] .dropdown-wrapper {
+  background-color: var(--ls-primary-background-color);
+}
+html:not(html[data-color]) .cp__settings-inner aside,
+html[data-theme=light][data-color=logseq] .cp__settings-inner aside,
+html[data-theme=dark][data-color=logseq] .cp__settings-inner aside,
+html[data-color=none] .cp__settings-inner aside {
+  background-color: var(--tn-tertiary-background-color);
+}
+html:not(html[data-color]) label[for=toggle_radix_theme] + div.text-xs,
+html[data-theme=light][data-color=logseq] label[for=toggle_radix_theme] + div.text-xs,
+html[data-theme=dark][data-color=logseq] label[for=toggle_radix_theme] + div.text-xs,
+html[data-color=none] label[for=toggle_radix_theme] + div.text-xs {
+  color: var(--ls-primary-text-color);
+  opacity: 0.6;
+}
+html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__button, html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__icon, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__button, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__icon, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__button, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__icon,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__icon,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__icon,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__button,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__icon,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__icon,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__icon,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__button,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__icon,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__button,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__icon,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__button,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__icon,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__button,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__icon {
+  color: var(--ls-primary-text-color);
+  background-color: transparent;
+}
+html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__button:hover, html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__icon:hover, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__button:hover, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__icon:hover, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__button:hover, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__icon:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__icon:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__icon:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__button:hover,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__icon:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__icon:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__icon:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__button:hover,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__icon:hover,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__button:hover,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__icon:hover,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__button:hover,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__icon:hover,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__button:hover,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__icon:hover {
+  background-color: var(--tn-menu-hover-color);
+}
+html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__button.bg-primary\/90, html:not(html[data-color]) .cp__plugins-page .tabs-inner .ui__button.active, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__button.bg-primary\/90, html:not(html[data-color]) .cp__plugins-page div.secondary-tabs .ui__button.active, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__button.bg-primary\/90, html:not(html[data-color]) .cp__plugins-page .control-tabs .ui__button.active,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button.bg-primary\/90,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button.active,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button.bg-primary\/90,
+html[data-theme=light][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button.active,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__button.bg-primary\/90,
+html[data-theme=light][data-color=logseq] .cp__plugins-page .control-tabs .ui__button.active,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button.bg-primary\/90,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .tabs-inner .ui__button.active,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button.bg-primary\/90,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page div.secondary-tabs .ui__button.active,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__button.bg-primary\/90,
+html[data-theme=dark][data-color=logseq] .cp__plugins-page .control-tabs .ui__button.active,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__button.bg-primary\/90,
+html[data-color=none] .cp__plugins-page .tabs-inner .ui__button.active,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__button.bg-primary\/90,
+html[data-color=none] .cp__plugins-page div.secondary-tabs .ui__button.active,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__button.bg-primary\/90,
+html[data-color=none] .cp__plugins-page .control-tabs .ui__button.active {
+  background-color: var(--color-level-4);
+}
+html:not(html[data-color]) .cp__themes-installed .it.is-active, html:not(html[data-color]) .cp__themes-installed .it:hover,
+html[data-theme=light][data-color=logseq] .cp__themes-installed .it.is-active,
+html[data-theme=light][data-color=logseq] .cp__themes-installed .it:hover,
+html[data-theme=dark][data-color=logseq] .cp__themes-installed .it.is-active,
+html[data-theme=dark][data-color=logseq] .cp__themes-installed .it:hover,
+html[data-color=none] .cp__themes-installed .it.is-active,
+html[data-color=none] .cp__themes-installed .it:hover {
+  background-color: var(--tn-menu-hover-color);
+  opacity: 1;
+}
+html:not(html[data-color]) .search-results .text-gray-12,
+html[data-theme=light][data-color=logseq] .search-results .text-gray-12,
+html[data-theme=dark][data-color=logseq] .search-results .text-gray-12,
+html[data-color=none] .search-results .text-gray-12 {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .input-wrap > input,
+html[data-theme=light][data-color=logseq] .input-wrap > input,
+html[data-theme=dark][data-color=logseq] .input-wrap > input,
+html[data-color=none] .input-wrap > input {
+  background-color: var(--ls-primary-background-color);
+  border-color: var(--ls-border-color);
+  color: var(--ls-primary-text-color);
+}
+html:not(html[data-color]),
+html[data-theme=light][data-color=logseq],
+html[data-theme=dark][data-color=logseq],
+html[data-color=none] {
+  /* #35 make bold+italics text color same as italics */
+}
+html:not(html[data-color]) i b,
+html[data-theme=light][data-color=logseq] i b,
+html[data-theme=dark][data-color=logseq] i b,
+html[data-color=none] i b {
+  color: rgb(var(--tn-text-italics));
+}
+html:not(html[data-color]),
+html[data-theme=light][data-color=logseq],
+html[data-theme=dark][data-color=logseq],
+html[data-color=none] {
+  /* #35 make plugin icons in header consistent with other icons in header */
+}
+html:not(html[data-color]) .ui-items-container .button,
+html:not(html[data-color]) .toolbar-plugin-manager .button,
+html[data-theme=light][data-color=logseq] .ui-items-container .button,
+html[data-theme=light][data-color=logseq] .toolbar-plugin-manager .button,
+html[data-theme=dark][data-color=logseq] .ui-items-container .button,
+html[data-theme=dark][data-color=logseq] .toolbar-plugin-manager .button,
+html[data-color=none] .ui-items-container .button,
+html[data-color=none] .toolbar-plugin-manager .button {
+  color: var(--ls-header-button-background);
+}
+html:not(html[data-color]) .ui-items-container .button i,
+html:not(html[data-color]) .toolbar-plugin-manager .button i,
+html[data-theme=light][data-color=logseq] .ui-items-container .button i,
+html[data-theme=light][data-color=logseq] .toolbar-plugin-manager .button i,
+html[data-theme=dark][data-color=logseq] .ui-items-container .button i,
+html[data-theme=dark][data-color=logseq] .toolbar-plugin-manager .button i,
+html[data-color=none] .ui-items-container .button i,
+html[data-color=none] .toolbar-plugin-manager .button i {
+  color: var(--ls-header-button-background);
+}
+html:not(html[data-color]) .ui-items-container .button:hover,
+html:not(html[data-color]) .toolbar-plugin-manager .button:hover,
+html[data-theme=light][data-color=logseq] .ui-items-container .button:hover,
+html[data-theme=light][data-color=logseq] .toolbar-plugin-manager .button:hover,
+html[data-theme=dark][data-color=logseq] .ui-items-container .button:hover,
+html[data-theme=dark][data-color=logseq] .toolbar-plugin-manager .button:hover,
+html[data-color=none] .ui-items-container .button:hover,
+html[data-color=none] .toolbar-plugin-manager .button:hover {
+  color: rgb(var(--tn-accent, var(--tn-pink)));
+  background-color: var(--tn-header-icon-background);
+}
+html:not(html[data-color]) .ui-items-container .button:hover i, html:not(html[data-color]) .ui-items-container .button:hover span.ui__icon,
+html:not(html[data-color]) .toolbar-plugin-manager .button:hover i,
+html:not(html[data-color]) .toolbar-plugin-manager .button:hover span.ui__icon,
+html[data-theme=light][data-color=logseq] .ui-items-container .button:hover i,
+html[data-theme=light][data-color=logseq] .ui-items-container .button:hover span.ui__icon,
+html[data-theme=light][data-color=logseq] .toolbar-plugin-manager .button:hover i,
+html[data-theme=light][data-color=logseq] .toolbar-plugin-manager .button:hover span.ui__icon,
+html[data-theme=dark][data-color=logseq] .ui-items-container .button:hover i,
+html[data-theme=dark][data-color=logseq] .ui-items-container .button:hover span.ui__icon,
+html[data-theme=dark][data-color=logseq] .toolbar-plugin-manager .button:hover i,
+html[data-theme=dark][data-color=logseq] .toolbar-plugin-manager .button:hover span.ui__icon,
+html[data-color=none] .ui-items-container .button:hover i,
+html[data-color=none] .ui-items-container .button:hover span.ui__icon,
+html[data-color=none] .toolbar-plugin-manager .button:hover i,
+html[data-color=none] .toolbar-plugin-manager .button:hover span.ui__icon {
+  color: rgb(var(--tn-accent, var(--tn-pink)));
+}
+html:not(html[data-color]),
+html[data-theme=light][data-color=logseq],
+html[data-theme=dark][data-color=logseq],
+html[data-color=none] {
+  /* #32 theme search modal */
+}
+html:not(html[data-color]) .ui__modal[label=ls-modal-search],
+html[data-theme=light][data-color=logseq] .ui__modal[label=ls-modal-search],
+html[data-theme=dark][data-color=logseq] .ui__modal[label=ls-modal-search],
+html[data-color=none] .ui__modal[label=ls-modal-search] {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .ui__modal[label=ls-modal-search] .text-gray-12, html:not(html[data-color]) .ui__modal[label=ls-modal-search] .text-gray-11, html:not(html[data-color]) .ui__modal[label=ls-modal-search] input,
+html[data-theme=light][data-color=logseq] .ui__modal[label=ls-modal-search] .text-gray-12,
+html[data-theme=light][data-color=logseq] .ui__modal[label=ls-modal-search] .text-gray-11,
+html[data-theme=light][data-color=logseq] .ui__modal[label=ls-modal-search] input,
+html[data-theme=dark][data-color=logseq] .ui__modal[label=ls-modal-search] .text-gray-12,
+html[data-theme=dark][data-color=logseq] .ui__modal[label=ls-modal-search] .text-gray-11,
+html[data-theme=dark][data-color=logseq] .ui__modal[label=ls-modal-search] input,
+html[data-color=none] .ui__modal[label=ls-modal-search] .text-gray-12,
+html[data-color=none] .ui__modal[label=ls-modal-search] .text-gray-11,
+html[data-color=none] .ui__modal[label=ls-modal-search] input {
+  color: var(--tn-primary-text-color);
+}
+html:not(html[data-color]) .ui__modal[label=ls-modal-search] input::placeholder,
+html[data-theme=light][data-color=logseq] .ui__modal[label=ls-modal-search] input::placeholder,
+html[data-theme=dark][data-color=logseq] .ui__modal[label=ls-modal-search] input::placeholder,
+html[data-color=none] .ui__modal[label=ls-modal-search] input::placeholder {
+  color: var(--tn-primary-text-color);
+  opacity: 0.75;
+}
+html:not(html[data-color]) .cp__settings-inner,
+html[data-theme=light][data-color=logseq] .cp__settings-inner,
+html[data-theme=dark][data-color=logseq] .cp__settings-inner,
+html[data-color=none] .cp__settings-inner {
+  min-height: 70dvh;
+  max-height: 70dvh;
+}
+html:not(html[data-color]) ::selection,
+html[data-theme=light][data-color=logseq] ::selection,
+html[data-theme=dark][data-color=logseq] ::selection,
+html[data-color=none] ::selection {
+  background-color: var(--ls-selection-background-color);
+  color: var(--ls-selection-text-color);
+}
+
+div.cm-s-solarized.CodeMirror.cm-s-light, div.cm-s-solarized.CodeMirror.cm-s-dark,
+div.cm-s-lsradix.CodeMirror.cm-s-light,
+div.cm-s-lsradix.CodeMirror.cm-s-dark,
+.cm-s-solarized.cm-s-light,
+.cm-s-solarized.cm-s-dark,
+.cm-s-lsradix.cm-s-light,
+.cm-s-lsradix.cm-s-dark {
+  background-color: var(--tn-secondary-background-color);
+  color: var(--tn-primary-text-color);
+  text-shadow: unset;
+  box-shadow: inset 7px 0 12px -6px var(--tn-secondary-background-color);
+}
+div.cm-s-solarized.CodeMirror.cm-s-light.CodeMirror,
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-gutters, div.cm-s-solarized.CodeMirror.cm-s-dark.CodeMirror,
+div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-gutters,
+div.cm-s-lsradix.CodeMirror.cm-s-light.CodeMirror,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-gutters,
+div.cm-s-lsradix.CodeMirror.cm-s-dark.CodeMirror,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-gutters,
+.cm-s-solarized.cm-s-light.CodeMirror,
+.cm-s-solarized.cm-s-light .CodeMirror-gutters,
+.cm-s-solarized.cm-s-dark.CodeMirror,
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters,
+.cm-s-lsradix.cm-s-light.CodeMirror,
+.cm-s-lsradix.cm-s-light .CodeMirror-gutters,
+.cm-s-lsradix.cm-s-dark.CodeMirror,
+.cm-s-lsradix.cm-s-dark .CodeMirror-gutters {
+  background-color: var(--tn-secondary-background-color);
+  border: none;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-linenumber, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-linenumber,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-linenumber,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
+.cm-s-lsradix.cm-s-light .CodeMirror-linenumber,
+.cm-s-lsradix.cm-s-dark .CodeMirror-linenumber {
+  color: rgb(var(--tn-overlay1));
+  text-shadow: unset;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-cursor, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-cursor,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-cursor,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-cursor,
+.cm-s-solarized.cm-s-light .CodeMirror-cursor,
+.cm-s-solarized.cm-s-dark .CodeMirror-cursor,
+.cm-s-lsradix.cm-s-light .CodeMirror-cursor,
+.cm-s-lsradix.cm-s-dark .CodeMirror-cursor {
+  border-left: 2px solid rgb(var(--tn-lavender)) !important;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-selected,
+div.cm-s-solarized.CodeMirror.cm-s-light div.CodeMirror-selected, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-selected,
+div.cm-s-solarized.CodeMirror.cm-s-dark div.CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-light div.CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-dark div.CodeMirror-selected,
+.cm-s-solarized.cm-s-light .CodeMirror-selected,
+.cm-s-solarized.cm-s-light div.CodeMirror-selected,
+.cm-s-solarized.cm-s-dark .CodeMirror-selected,
+.cm-s-solarized.cm-s-dark div.CodeMirror-selected,
+.cm-s-lsradix.cm-s-light .CodeMirror-selected,
+.cm-s-lsradix.cm-s-light div.CodeMirror-selected,
+.cm-s-lsradix.cm-s-dark .CodeMirror-selected,
+.cm-s-lsradix.cm-s-dark div.CodeMirror-selected {
+  background-color: var(--tn-selection-background-color) !important;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-focused .CodeMirror-selected, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-focused .CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-focused .CodeMirror-selected,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-focused .CodeMirror-selected,
+.cm-s-solarized.cm-s-light .CodeMirror-focused .CodeMirror-selected,
+.cm-s-solarized.cm-s-dark .CodeMirror-focused .CodeMirror-selected,
+.cm-s-lsradix.cm-s-light .CodeMirror-focused .CodeMirror-selected,
+.cm-s-lsradix.cm-s-dark .CodeMirror-focused .CodeMirror-selected {
+  background-color: var(--tn-selection-background-color) !important;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-activeline-background, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-activeline-background,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-activeline-background,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-activeline-background,
+.cm-s-solarized.cm-s-light .CodeMirror-activeline-background,
+.cm-s-solarized.cm-s-dark .CodeMirror-activeline-background,
+.cm-s-lsradix.cm-s-light .CodeMirror-activeline-background,
+.cm-s-lsradix.cm-s-dark .CodeMirror-activeline-background {
+  background-color: var(--tn-color-level-2);
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-matchingbracket, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-matchingbracket,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-matchingbracket,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-matchingbracket,
+.cm-s-solarized.cm-s-light .CodeMirror-matchingbracket,
+.cm-s-solarized.cm-s-dark .CodeMirror-matchingbracket,
+.cm-s-lsradix.cm-s-light .CodeMirror-matchingbracket,
+.cm-s-lsradix.cm-s-dark .CodeMirror-matchingbracket {
+  color: rgb(var(--tn-sapphire)) !important;
+  font-weight: bold;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .CodeMirror-nonmatchingbracket, div.cm-s-solarized.CodeMirror.cm-s-dark .CodeMirror-nonmatchingbracket,
+div.cm-s-lsradix.CodeMirror.cm-s-light .CodeMirror-nonmatchingbracket,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .CodeMirror-nonmatchingbracket,
+.cm-s-solarized.cm-s-light .CodeMirror-nonmatchingbracket,
+.cm-s-solarized.cm-s-dark .CodeMirror-nonmatchingbracket,
+.cm-s-lsradix.cm-s-light .CodeMirror-nonmatchingbracket,
+.cm-s-lsradix.cm-s-dark .CodeMirror-nonmatchingbracket {
+  color: rgb(var(--tn-red)) !important;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-keyword, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-keyword,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-keyword,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-keyword,
+.cm-s-solarized.cm-s-light .cm-keyword,
+.cm-s-solarized.cm-s-dark .cm-keyword,
+.cm-s-lsradix.cm-s-light .cm-keyword,
+.cm-s-lsradix.cm-s-dark .cm-keyword {
+  color: rgb(var(--tn-mauve));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-atom,
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-number,
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-literal, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-atom,
+div.cm-s-solarized.CodeMirror.cm-s-dark .cm-number,
+div.cm-s-solarized.CodeMirror.cm-s-dark .cm-literal,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-atom,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-number,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-literal,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-atom,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-number,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-literal,
+.cm-s-solarized.cm-s-light .cm-atom,
+.cm-s-solarized.cm-s-light .cm-number,
+.cm-s-solarized.cm-s-light .cm-literal,
+.cm-s-solarized.cm-s-dark .cm-atom,
+.cm-s-solarized.cm-s-dark .cm-number,
+.cm-s-solarized.cm-s-dark .cm-literal,
+.cm-s-lsradix.cm-s-light .cm-atom,
+.cm-s-lsradix.cm-s-light .cm-number,
+.cm-s-lsradix.cm-s-light .cm-literal,
+.cm-s-lsradix.cm-s-dark .cm-atom,
+.cm-s-lsradix.cm-s-dark .cm-number,
+.cm-s-lsradix.cm-s-dark .cm-literal {
+  color: rgb(var(--tn-peach));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-def, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-def,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-def,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-def,
+.cm-s-solarized.cm-s-light .cm-def,
+.cm-s-solarized.cm-s-dark .cm-def,
+.cm-s-lsradix.cm-s-light .cm-def,
+.cm-s-lsradix.cm-s-dark .cm-def {
+  color: rgb(var(--tn-blue));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-variable, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-variable,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-variable,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-variable,
+.cm-s-solarized.cm-s-light .cm-variable,
+.cm-s-solarized.cm-s-dark .cm-variable,
+.cm-s-lsradix.cm-s-light .cm-variable,
+.cm-s-lsradix.cm-s-dark .cm-variable {
+  color: var(--tn-primary-text-color);
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-variable-2,
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-variable-3,
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-property, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-variable-2,
+div.cm-s-solarized.CodeMirror.cm-s-dark .cm-variable-3,
+div.cm-s-solarized.CodeMirror.cm-s-dark .cm-property,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-variable-2,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-variable-3,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-property,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-variable-2,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-variable-3,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-property,
+.cm-s-solarized.cm-s-light .cm-variable-2,
+.cm-s-solarized.cm-s-light .cm-variable-3,
+.cm-s-solarized.cm-s-light .cm-property,
+.cm-s-solarized.cm-s-dark .cm-variable-2,
+.cm-s-solarized.cm-s-dark .cm-variable-3,
+.cm-s-solarized.cm-s-dark .cm-property,
+.cm-s-lsradix.cm-s-light .cm-variable-2,
+.cm-s-lsradix.cm-s-light .cm-variable-3,
+.cm-s-lsradix.cm-s-light .cm-property,
+.cm-s-lsradix.cm-s-dark .cm-variable-2,
+.cm-s-lsradix.cm-s-dark .cm-variable-3,
+.cm-s-lsradix.cm-s-dark .cm-property {
+  color: rgb(var(--tn-sky));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-type, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-type,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-type,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-type,
+.cm-s-solarized.cm-s-light .cm-type,
+.cm-s-solarized.cm-s-dark .cm-type,
+.cm-s-lsradix.cm-s-light .cm-type,
+.cm-s-lsradix.cm-s-dark .cm-type {
+  color: rgb(var(--tn-yellow));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-builtin, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-builtin,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-builtin,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-builtin,
+.cm-s-solarized.cm-s-light .cm-builtin,
+.cm-s-solarized.cm-s-dark .cm-builtin,
+.cm-s-lsradix.cm-s-light .cm-builtin,
+.cm-s-lsradix.cm-s-dark .cm-builtin {
+  color: rgb(var(--tn-teal));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-comment, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-comment,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-comment,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-comment,
+.cm-s-solarized.cm-s-light .cm-comment,
+.cm-s-solarized.cm-s-dark .cm-comment,
+.cm-s-lsradix.cm-s-light .cm-comment,
+.cm-s-lsradix.cm-s-dark .cm-comment {
+  color: rgb(var(--tn-overlay1));
+  font-style: italic;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-string, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-string,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-string,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-string,
+.cm-s-solarized.cm-s-light .cm-string,
+.cm-s-solarized.cm-s-dark .cm-string,
+.cm-s-lsradix.cm-s-light .cm-string,
+.cm-s-lsradix.cm-s-dark .cm-string {
+  color: rgb(var(--tn-green));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-string-2, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-string-2,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-string-2,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-string-2,
+.cm-s-solarized.cm-s-light .cm-string-2,
+.cm-s-solarized.cm-s-dark .cm-string-2,
+.cm-s-lsradix.cm-s-light .cm-string-2,
+.cm-s-lsradix.cm-s-dark .cm-string-2 {
+  color: rgb(var(--tn-teal));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-meta,
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-qualifier, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-meta,
+div.cm-s-solarized.CodeMirror.cm-s-dark .cm-qualifier,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-meta,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-qualifier,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-meta,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-qualifier,
+.cm-s-solarized.cm-s-light .cm-meta,
+.cm-s-solarized.cm-s-light .cm-qualifier,
+.cm-s-solarized.cm-s-dark .cm-meta,
+.cm-s-solarized.cm-s-dark .cm-qualifier,
+.cm-s-lsradix.cm-s-light .cm-meta,
+.cm-s-lsradix.cm-s-light .cm-qualifier,
+.cm-s-lsradix.cm-s-dark .cm-meta,
+.cm-s-lsradix.cm-s-dark .cm-qualifier {
+  color: rgb(var(--tn-lavender));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-operator, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-operator,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-operator,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-operator,
+.cm-s-solarized.cm-s-light .cm-operator,
+.cm-s-solarized.cm-s-dark .cm-operator,
+.cm-s-lsradix.cm-s-light .cm-operator,
+.cm-s-lsradix.cm-s-dark .cm-operator {
+  color: rgb(var(--tn-lavender));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-bracket, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-bracket,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-bracket,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-bracket,
+.cm-s-solarized.cm-s-light .cm-bracket,
+.cm-s-solarized.cm-s-dark .cm-bracket,
+.cm-s-lsradix.cm-s-light .cm-bracket,
+.cm-s-lsradix.cm-s-dark .cm-bracket {
+  color: rgb(var(--tn-text));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-tag, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-tag,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-tag,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-tag,
+.cm-s-solarized.cm-s-light .cm-tag,
+.cm-s-solarized.cm-s-dark .cm-tag,
+.cm-s-lsradix.cm-s-light .cm-tag,
+.cm-s-lsradix.cm-s-dark .cm-tag {
+  color: rgb(var(--tn-red));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-attribute, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-attribute,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-attribute,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-attribute,
+.cm-s-solarized.cm-s-light .cm-attribute,
+.cm-s-solarized.cm-s-dark .cm-attribute,
+.cm-s-lsradix.cm-s-light .cm-attribute,
+.cm-s-lsradix.cm-s-dark .cm-attribute {
+  color: rgb(var(--tn-yellow));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-header, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-header,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-header,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-header,
+.cm-s-solarized.cm-s-light .cm-header,
+.cm-s-solarized.cm-s-dark .cm-header,
+.cm-s-lsradix.cm-s-light .cm-header,
+.cm-s-lsradix.cm-s-dark .cm-header {
+  color: var(--tn-primary-text-color);
+  font-weight: bold;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-quote, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-quote,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-quote,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-quote,
+.cm-s-solarized.cm-s-light .cm-quote,
+.cm-s-solarized.cm-s-dark .cm-quote,
+.cm-s-lsradix.cm-s-light .cm-quote,
+.cm-s-lsradix.cm-s-dark .cm-quote {
+  color: rgb(var(--tn-overlay1));
+  font-style: italic;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-hr, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-hr,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-hr,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-hr,
+.cm-s-solarized.cm-s-light .cm-hr,
+.cm-s-solarized.cm-s-dark .cm-hr,
+.cm-s-lsradix.cm-s-light .cm-hr,
+.cm-s-lsradix.cm-s-dark .cm-hr {
+  color: rgb(var(--tn-overlay0));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-link, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-link,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-link,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-link,
+.cm-s-solarized.cm-s-light .cm-link,
+.cm-s-solarized.cm-s-dark .cm-link,
+.cm-s-lsradix.cm-s-light .cm-link,
+.cm-s-lsradix.cm-s-dark .cm-link {
+  color: rgb(var(--tn-blue));
+  text-decoration: underline;
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-error, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-error,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-error,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-error,
+.cm-s-solarized.cm-s-light .cm-error,
+.cm-s-solarized.cm-s-dark .cm-error,
+.cm-s-lsradix.cm-s-light .cm-error,
+.cm-s-lsradix.cm-s-dark .cm-error {
+  color: var(--tn-primary-background-color);
+  background-color: rgb(var(--tn-red));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-negative, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-negative,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-negative,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-negative,
+.cm-s-solarized.cm-s-light .cm-negative,
+.cm-s-solarized.cm-s-dark .cm-negative,
+.cm-s-lsradix.cm-s-light .cm-negative,
+.cm-s-lsradix.cm-s-dark .cm-negative {
+  color: rgb(var(--tn-red));
+}
+div.cm-s-solarized.CodeMirror.cm-s-light .cm-positive, div.cm-s-solarized.CodeMirror.cm-s-dark .cm-positive,
+div.cm-s-lsradix.CodeMirror.cm-s-light .cm-positive,
+div.cm-s-lsradix.CodeMirror.cm-s-dark .cm-positive,
+.cm-s-solarized.cm-s-light .cm-positive,
+.cm-s-solarized.cm-s-dark .cm-positive,
+.cm-s-lsradix.cm-s-light .cm-positive,
+.cm-s-lsradix.cm-s-dark .cm-positive {
+  color: rgb(var(--tn-green));
+}
+
+.embed.embed-page .cm-s-solarized.cm-s-dark.CodeMirror,
+.embed.embed-page .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .embed.embed-page .cm-s-solarized.cm-s-light.CodeMirror,
+.embed.embed-page .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: var(--tn-tertiary-background-color);
+}
+
+code.hljs,
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  color: var(--tn-primary-text-color);
+}
+
+html:not(html[data-color]) code.hljs,
+html[data-color=logseq] code.hljs,
+html[data-color=none] code.hljs {
+  background-color: var(--tn-tertiary-background-color);
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: rgb(var(--tn-overlay1));
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: rgb(var(--tn-mauve));
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable {
+  color: rgb(var(--tn-peach));
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: rgb(var(--tn-green));
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: rgb(var(--tn-teal));
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: rgb(var(--tn-blue));
+  font-weight: 700;
+}
+
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: rgb(var(--tn-yellow));
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-selector-class {
+  color: rgb(var(--tn-red));
+}
+
+.hljs-attribute {
+  color: rgb(var(--tn-yellow));
+}
+
+.hljs-attr {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: rgb(var(--tn-orange));
+}
+
+.hljs-meta,
+.hljs-meta-keyword {
+  color: rgb(var(--tn-sky));
+}
+
+.hljs-meta-string {
+  color: rgb(var(--tn-green));
+}
+
+.hljs-operator,
+.hljs-punctuation {
+  color: rgb(var(--tn-lavender));
+}
+
+.hljs-template-tag {
+  color: rgb(var(--tn-mauve));
+}
+
+.hljs-params {
+  color: var(--tn-primary-text-color);
+}
+
+.hljs-addition {
+  color: rgb(var(--tn-green));
+  background-color: rgba(var(--tn-green), 0.1);
+}
+
+.hljs-deletion {
+  color: rgb(var(--tn-red));
+  background-color: rgba(var(--tn-red), 0.1);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+/* Below related to whiteboard latte override feature */
+html.whiteboard-day div.dashboard-card, html.whiteboard-day div.whiteboard-page {
+  --tn-base: 225, 226, 231;
+  --tn-mantle: 208, 213, 227;
+  --tn-crust: 193, 201, 223;
+  --tn-surface0: 196, 200, 218;
+  --tn-surface1: 168, 174, 203;
+  --tn-surface2: 161, 166, 197;
+  --tn-overlay0: 137, 144, 179;
+  --tn-overlay1: 132, 140, 181;
+  --tn-overlay2: 104, 112, 154;
+  --tn-subtext0: 97, 114, 176;
+  --tn-subtext1: 97, 114, 176;
+  --tn-text: 55, 96, 191;
+  --tn-rosewater: 46, 88, 87;
+  --tn-flamingo: 152, 84, 241;
+  --tn-pink: 210, 0, 101;
+  --tn-mauve: 120, 71, 189;
+  --tn-red: 245, 42, 101;
+  --tn-maroon: 198, 67, 67;
+  --tn-peach: 177, 92, 0;
+  --tn-yellow: 140, 108, 62;
+  --tn-green: 88, 117, 57;
+  --tn-teal: 56, 112, 104;
+  --tn-sky: 0, 113, 151;
+  --tn-sapphire: 24, 128, 146;
+  --tn-blue: 46, 125, 233;
+  --tn-lavender: 0, 106, 131;
+  --tn-primary-background-color: rgb(var(--tn-base));
+  --tn-secondary-background-color: rgb(var(--tn-mantle));
+  --tn-tertiary-background-color: rgb(var(--tn-crust));
+  --tn-quaternary-background-color: rgb(var(--tn-surface0));
+  --tn-color-level-1: var(--color-base-10);
+  --tn-color-level-2: var(--color-base-20);
+  --tn-color-level-3: var(--color-base-30);
+  --tn-color-level-4: var(--color-base-40);
+  --tn-color-level-5: var(--color-base-50);
+  --tn-color-level-6: var(--color-base-60);
+  --tn-active-primary-color: rgb(var(--tn-accent));
+  --tn-active-secondary-color: rgb(var(--tn-accent), 0.9);
+  --tn-table-tr-even-background-color: var(--tn-secondary-background-color);
+  --tn-block-properties-background-color: var(--tn-secondary-background-color);
+  --tn-page-properties-background-color: var(--tn-secondary-background-color);
+  --tn-block-ref-link-text-color: rgb(var(--tn-subtext0));
+  --tn-search-background-color: var(--tn-primary-background-color);
+  --tn-border-color: rgb(var(--tn-surface0));
+  --tn-secondary-border-color: rgb(var(--tn-surface0));
+  --tn-tertiary-border-color: rgba(var(--tn-surface0), 0.10);
+  --tn-guideline-color: rgb(var(--tn-surface1));
+  --tn-menu-hover-color: var(--tn-color-level-3);
+  --tn-primary-text-color: rgb(var(--tn-text));
+  --tn-secondary-text-color: rgb(var(--tn-subtext0));
+  --tn-title-text-color: rgb(var(--tn-subtext1));
+  --tn-link-text-color: rgb(var(--tn-accent, var(--tn-teal)));
+  --tn-link-text-hover-color: rgb(var(--tn-accent, var(--tn-mauve)));
+  --tn-link-ref-text-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-link-ref-text-hover-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-tag-text-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-tag-text-hover-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-slide-background-color: var(--tn-primary-background-color);
+  --tn-block-bullet-border-color: rgba(var(--tn-accent, var(--tn-flamingo)), 0.4);
+  --tn-block-bullet-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-block-highlight-color: var(--color-base-30);
+  --tn-selection-background-color: rgba(var(--tn-yellow), 0.9);
+  --tn-selection-text-color: var(--color-base-00);
+  --tn-page-checkbox-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-page-checkbox-border-color: var(--tn-primary-background-color);
+  --tn-page-blockquote-color: var(--tn-primary-text-color);
+  --tn-page-blockquote-bg-color: var(--tn-secondary-background-color);
+  --tn-page-blockquote-border-color: var(--tn-border-color);
+  --tn-page-inline-code-color: var(--tn-primary-text-color);
+  --tn-page-inline-code-bg-color: var(--color-base-10);
+  --tn-scrollbar-foreground-color: rgba(var(--tn-text), 0.2);
+  --tn-scrollbar-background-color: rgba(var(--tn-text), 0.05);
+  --tn-scrollbar-thumb-hover-color: rgba(var(--tn-text), 0.2);
+  --tn-head-text-color: var(--tn-link-text-color);
+  --tn-cloze-text-color: rgb(var(--tn-accent));
+  --tn-icon-color: var(--tn-link-text-color);
+  --tn-search-icon-color: var(--tn-link-text-color);
+  --tn-a-chosen-bg: var(--tn-quaternary-background-color);
+  --tn-right-sidebar-code-bg-color: var(--color-base-30);
+  --tn-pie-bg-color: var(--tn-primary-background-color);
+  --tn-pie-fg-color: var(--tn-secondary-background-color);
+  --tn-highlight-color-gray: rgb(var(--tn-overlay2));
+  --tn-highlight-color-red: rgb(var(--tn-red));
+  --tn-highlight-color-yellow: rgb(var(--tn-yellow));
+  --tn-highlight-color-green: rgb(var(--tn-green));
+  --tn-highlight-color-blue: rgb(var(--tn-blue));
+  --tn-highlight-color-purple: rgb(var(--tn-mauve));
+  --tn-highlight-color-pink: rgb(var(--tn-pink));
+  --tn-error-text-color: var(--color-red-100);
+  --tn-error-background-color: rgb(var(--tn-red));
+  --tn-warning-text-color: var(--color-yellow-100);
+  --tn-warning-background-color: rgb(var(--tn-yellow));
+  --tn-success-text-color: var(--color-green-100);
+  --tn-success-background-color: rgb(var(--tn-green));
+  --tn-focus-ring-color: rgb(var(--tn-overlay2));
+  --tn-header-button-background: rgb(var(--tn-text));
+  --tn-error-color: var(--tn-red);
+  --tn-warning-color: var(--tn-peach);
+  --tn-success-color: var(--tn-green);
+  --tn-info-color: var(--tn-yellow);
+  --tn-switch-background: var(--color-base-50);
+  --tn-switch-handle-color: var(--tn-accent, var(--tn-blue));
+  --tn-button-background: var(--tn-accent, var(--tn-blue));
+  --tn-button-text: var(--color-base-10);
+  --tn-tooltip-background: var(--tn-tertiary-background-color);
+  --tn-tooltip-text: rgb(var(--tn-text));
+  --tn-search-input-placeholder: rgb(var(--tn-text));
+  --tn-header-icon: rgb(var(--tn-accent));
+  --tn-header-icon-background: var(--tn-menu-hover-color);
+  --tn-text-highlight: rgb(var(--tn-yellow));
+  --tn-bullet-thread-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-dropdown-border-color: var(--color-base-50);
+  --tn-text-bold: var(--tn-primary-text-color);
+  --tn-text-heading: var(--tn-primary-text-color);
+  --tn-text-italics: var(--tn-accent, var(--tn-green));
+  --tn-text-underline: var(--tn-primary-text-color);
+  --tn-text-strikethrough: var(--tn-accent, var(--tn-maroon));
+  --tn-blockquote-line: var(--tn-accent);
+  --tn-active-setting: var(--tn-accent, var(--tn-blue));
+  --tn-priority-bg-color: var(--tn-crust);
+  --tn-priority-todo: var(--tn-teal);
+  --tn-priority-doing: var(--tn-blue);
+  --tn-priority-done: var(--tn-green);
+  --tn-priority-now: var(--tn-teal);
+  --tn-priority-later: var(--tn-yellow);
+  --tn-priority-waiting: var(--tn-maroon);
+  --tn-priority-a: var(--tn-red);
+  --tn-priority-b: var(--tn-yellow);
+  --tn-priority-c: var(--tn-green);
+  --tn-marker-border-radius: 4px;
+  --tn-checkbox-color: var(--tn-accent, var(--tn-teal));
+  --tn-marker-size: 16px;
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+  --color-level-1: var(--tn-color-level-1);
+  --color-level-2: var(--tn-color-level-2);
+  --color-level-3: var(--tn-color-level-3);
+  --color-level-4: var(--tn-color-level-4);
+  --color-level-5: var(--tn-color-level-5);
+  --color-level-6: var(--tn-color-level-6);
+  --ls-active-primary-color: var(--tn-active-primary-color);
+  --ls-active-secondary-color: var(--tn-active-secondary-color);
+  --ls-table-tr-even-background-color: var(--tn-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--tn-block-properties-background-color);
+  --ls-page-properties-background-color: var(--tn-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--tn-block-ref-link-text-color);
+  --ls-search-background-color: var(--tn-search-background-color);
+  --ls-border-color: var(--tn-border-color);
+  --ls-secondary-border-color: var(--tn-secondary-border-color);
+  --ls-tertiary-border-color: var(--tn-tertiary-border-color);
+  --ls-guideline-color: var(--tn-guideline-color);
+  --ls-menu-hover-color: var(--tn-menu-hover-color);
+  --ls-primary-text-color: var(--tn-primary-text-color);
+  --ls-secondary-text-color: var(--tn-secondary-text-color);
+  --ls-title-text-color: var(--tn-title-text-color);
+  --ls-link-text-color: var(--tn-link-text-color);
+  --ls-link-text-hover-color: var(--tn-link-text-hover-color);
+  --ls-link-ref-text-color: var(--tn-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--tn-link-ref-text-hover-color);
+  --ls-tag-text-color: var(--tn-tag-text-color);
+  --ls-tag-text-hover-color: var(--tn-tag-text-hover-color);
+  --ls-slide-background-color: var(--tn-slide-background-color);
+  --ls-block-bullet-border-color: var(--tn-block-bullet-border-color);
+  --ls-block-bullet-color: var(--tn-block-bullet-color);
+  --ls-block-highlight-color: var(--tn-block-highlight-color);
+  --ls-selection-background-color: var(--tn-selection-background-color);
+  --ls-selection-text-color: var(--tn-selection-text-color);
+  --ls-page-checkbox-color: var(--tn-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--tn-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--tn-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--tn-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--tn-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--tn-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--tn-page-inline-code-bg-color);
+  --ls-page-mark-color: var(--tn-base);
+  --ls-scrollbar-foreground-color: var(--tn-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--tn-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--tn-scrollbar-thumb-hover-color);
+  --ls-head-text-color: var(--tn-head-text-color);
+  --ls-cloze-text-color: var(--tn-cloze-text-color);
+  --ls-icon-color: var(--tn-icon-color);
+  --ls-search-icon-color: var(--tn-search-icon-color);
+  --ls-a-chosen-bg: var(--tn-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--tn-right-sidebar-code-bg-color);
+  --ls-pie-bg-color: var(--tn-pie-bg-color);
+  --ls-pie-fg-color: var(--tn-pie-fg-color);
+  --ls-highlight-color-gray: var(--tn-highlight-color-gray);
+  --ls-highlight-color-red: var(--tn-highlight-color-red);
+  --ls-highlight-color-yellow: var(--tn-highlight-color-yellow);
+  --ls-highlight-color-green: var(--tn-highlight-color-green);
+  --ls-highlight-color-blue: var(--tn-highlight-color-blue);
+  --ls-highlight-color-purple: var(--tn-highlight-color-purple);
+  --ls-highlight-color-pink: var(--tn-highlight-color-pink);
+  --ls-error-text-color: var(--tn-error-text-color);
+  --ls-error-background-color: var(--tn-error-background-color);
+  --ls-warning-text-color: var(--tn-warning-text-color);
+  --ls-warning-background-color: var(--tn-warning-background-color);
+  --ls-success-text-color: var(--tn-success-text-color);
+  --ls-success-background-color: var(--tn-success-background-color);
+  --ls-focus-ring-color: var(--tn-focus-ring-color);
+  --ls-header-button-background: var(--tn-header-button-background);
+  --ls-left-sidebar-active-background: var(--tn-color-level-4);
+  --ls-color-file-sync-error: rgb(var(--tn-red));
+  --ls-color-file-sync-pending: rgb(var(--tn-yellow));
+  --ls-color-file-sync-idle: rgb(var(--tn-green));
+  --color-base-00: rgb(var(--tn-crust));
+  --color-base-10: rgb(var(--tn-mantle));
+  --color-base-20: rgb(var(--tn-base));
+  --color-base-30: rgb(var(--tn-surface0));
+  --color-base-40: rgb(var(--tn-surface1));
+  --color-base-50: rgb(var(--tn-surface2));
+  --color-base-60: rgb(var(--tn-overlay0));
+  --color-base-70: rgb(var(--tn-overlay1));
+  --color-base-80: rgb(var(--tn-overlay2));
+  --color-base-90: rgb(var(--tn-subtext0));
+  --color-base-100: rgb(var(--tn-text));
+  /* Color swatches */
+  --tn-wb-color-gray: rgb(var(--tn-overlay2));
+  --tn-wb-color-red: rgb(var(--tn-red));
+  --tn-wb-color-yellow: rgb(var(--tn-yellow));
+  --tn-wb-color-green: rgb(var(--tn-green));
+  --tn-wb-color-blue: rgb(var(--tn-blue));
+  --tn-wb-color-purple: rgb(var(--tn-mauve));
+  --tn-wb-color-pink: rgb(var(--tn-pink));
+  /* Whiteboard object colors */
+  --tn-wb-background-color-gray: color-mix(in srgb, var(--tn-wb-color-gray), rgb(var(--tn-base)) 70%);
+  --tn-wb-background-color-red: color-mix(in srgb, var(--tn-wb-color-red), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-yellow: color-mix(in srgb, var(--tn-wb-color-yellow), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-green: color-mix(in srgb, var(--tn-wb-color-green), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-blue: color-mix(in srgb, var(--tn-wb-color-blue), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-purple: color-mix(in srgb, var(--tn-wb-color-purple), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-pink: color-mix(in srgb, var(--tn-wb-color-pink), rgb(var(--tn-base)) 60%);
+  --tn-wb-stroke-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-stroke-color-red: var(--tn-wb-color-red);
+  --tn-wb-stroke-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-stroke-color-green: var(--tn-wb-color-green);
+  --tn-wb-stroke-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-stroke-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-stroke-color-pink: var(--tn-wb-color-pink);
+  /* Pen path color */
+  --tn-wb-text-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-text-color-red: var(--tn-wb-color-red);
+  --tn-wb-text-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-text-color-green: var(--tn-wb-color-green);
+  --tn-wb-text-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-text-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-text-color-pink: var(--tn-wb-color-pink);
+  /* Shape label color */
+  --tn-wb-shape-label-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-shape-label-color-red: var(--tn-wb-color-red);
+  --tn-wb-shape-label-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-shape-label-color-green: var(--tn-wb-color-green);
+  --tn-wb-shape-label-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-shape-label-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-shape-label-color-pink: var(--tn-wb-color-pink);
+  --tn-wb-button-selected-foreground: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-selected-background: var(--tn-surface0);
+  --tn-wb-button-foreground: var(--tn-text);
+  --tn-wb-button-menu-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-wb-button-type-tag-background-active: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-type-tag-background-inactive: var(--tn-surface0);
+  --tn-wb-button-type-tag-foreground: var(--tn-text);
+  --tn-wb-quick-links-button: var(--tn-accent, var(--tn-blue));
+  --tn-wb-quick-links-button-hover: var(--tn-sky);
+  --tn-wb-layout-button-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-tl-select-input-select-item: var(--tn-link-text-hover-color);
+  --tn-tl-selectFill: var(--tn-accent, var(--tn-blue));
+  --tn-tl-selectStroke: var(--tn-accent, var(--tn-blue));
+  /* logseq variables for whiteboard */
+  /* Shape background color */
+  --ls-wb-background-color-gray: var(--tn-wb-background-color-gray);
+  --ls-wb-background-color-red: var(--tn-wb-background-color-red);
+  --ls-wb-background-color-yellow: var(--tn-wb-background-color-yellow);
+  --ls-wb-background-color-green: var(--tn-wb-background-color-green);
+  --ls-wb-background-color-blue: var(--tn-wb-background-color-blue);
+  --ls-wb-background-color-purple: var(--tn-wb-background-color-purple);
+  --ls-wb-background-color-pink: var(--tn-wb-background-color-pink);
+  /* Shape outline color */
+  --ls-wb-stroke-color-gray: var(--tn-wb-stroke-color-gray);
+  --ls-wb-stroke-color-red: var(--tn-wb-stroke-color-red);
+  --ls-wb-stroke-color-yellow: var(--tn-wb-stroke-color-yellow);
+  --ls-wb-stroke-color-green: var(--tn-wb-stroke-color-green);
+  --ls-wb-stroke-color-blue: var(--tn-wb-stroke-color-blue);
+  --ls-wb-stroke-color-purple: var(--tn-wb-stroke-color-purple);
+  --ls-wb-stroke-color-pink: var(--tn-wb-stroke-color-pink);
+  /* Pen path color */
+  --ls-wb-text-color-gray: var(--tn-wb-text-color-gray);
+  --ls-wb-text-color-red: var(--tn-wb-text-color-red);
+  --ls-wb-text-color-yellow: var(--tn-wb-text-color-yellow);
+  --ls-wb-text-color-green: var(--tn-wb-text-color-green);
+  --ls-wb-text-color-blue: var(--tn-wb-text-color-blue);
+  --ls-wb-text-color-purple: var(--tn-wb-text-color-purple);
+  --ls-wb-text-color-pink: var(--tn-wb-text-color-pink);
+  --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+  --ls-wb-text-color-default: var(--ls-primary-text-color);
+  --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+  --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+  --ls-whiteboard-select-background-selected: var(--tn-color-level-5);
+  background-color: var(--ls-primary-background-color);
+  color: var(--ls-primary-text-color);
+}
+html.whiteboard-day div.dashboard-card .tl-button:hover, html.whiteboard-day div.whiteboard-page .tl-button:hover {
+  background-color: var(--ls-menu-hover-color);
+}
+html.whiteboard-day div.dashboard-card .dashboard-card-title, html.whiteboard-day div.whiteboard-page .dashboard-card-title {
+  color: rgb(var(--tn-text));
+}
+html.whiteboard-day .tl-select-input-content {
+  --tn-base: 225, 226, 231;
+  --tn-mantle: 208, 213, 227;
+  --tn-crust: 193, 201, 223;
+  --tn-surface0: 196, 200, 218;
+  --tn-surface1: 168, 174, 203;
+  --tn-surface2: 161, 166, 197;
+  --tn-overlay0: 137, 144, 179;
+  --tn-overlay1: 132, 140, 181;
+  --tn-overlay2: 104, 112, 154;
+  --tn-subtext0: 97, 114, 176;
+  --tn-subtext1: 97, 114, 176;
+  --tn-text: 55, 96, 191;
+  --tn-rosewater: 46, 88, 87;
+  --tn-flamingo: 152, 84, 241;
+  --tn-pink: 210, 0, 101;
+  --tn-mauve: 120, 71, 189;
+  --tn-red: 245, 42, 101;
+  --tn-maroon: 198, 67, 67;
+  --tn-peach: 177, 92, 0;
+  --tn-yellow: 140, 108, 62;
+  --tn-green: 88, 117, 57;
+  --tn-teal: 56, 112, 104;
+  --tn-sky: 0, 113, 151;
+  --tn-sapphire: 24, 128, 146;
+  --tn-blue: 46, 125, 233;
+  --tn-lavender: 0, 106, 131;
+  --tn-primary-background-color: rgb(var(--tn-base));
+  --tn-secondary-background-color: rgb(var(--tn-mantle));
+  --tn-tertiary-background-color: rgb(var(--tn-crust));
+  --tn-quaternary-background-color: rgb(var(--tn-surface0));
+  --tn-color-level-1: var(--color-base-10);
+  --tn-color-level-2: var(--color-base-20);
+  --tn-color-level-3: var(--color-base-30);
+  --tn-color-level-4: var(--color-base-40);
+  --tn-color-level-5: var(--color-base-50);
+  --tn-color-level-6: var(--color-base-60);
+  --tn-active-primary-color: rgb(var(--tn-accent));
+  --tn-active-secondary-color: rgb(var(--tn-accent), 0.9);
+  --tn-table-tr-even-background-color: var(--tn-secondary-background-color);
+  --tn-block-properties-background-color: var(--tn-secondary-background-color);
+  --tn-page-properties-background-color: var(--tn-secondary-background-color);
+  --tn-block-ref-link-text-color: rgb(var(--tn-subtext0));
+  --tn-search-background-color: var(--tn-primary-background-color);
+  --tn-border-color: rgb(var(--tn-surface0));
+  --tn-secondary-border-color: rgb(var(--tn-surface0));
+  --tn-tertiary-border-color: rgba(var(--tn-surface0), 0.10);
+  --tn-guideline-color: rgb(var(--tn-surface1));
+  --tn-menu-hover-color: var(--tn-color-level-3);
+  --tn-primary-text-color: rgb(var(--tn-text));
+  --tn-secondary-text-color: rgb(var(--tn-subtext0));
+  --tn-title-text-color: rgb(var(--tn-subtext1));
+  --tn-link-text-color: rgb(var(--tn-accent, var(--tn-teal)));
+  --tn-link-text-hover-color: rgb(var(--tn-accent, var(--tn-mauve)));
+  --tn-link-ref-text-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-link-ref-text-hover-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-tag-text-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-tag-text-hover-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-slide-background-color: var(--tn-primary-background-color);
+  --tn-block-bullet-border-color: rgba(var(--tn-accent, var(--tn-flamingo)), 0.4);
+  --tn-block-bullet-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-block-highlight-color: var(--color-base-30);
+  --tn-selection-background-color: rgba(var(--tn-yellow), 0.9);
+  --tn-selection-text-color: var(--color-base-00);
+  --tn-page-checkbox-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-page-checkbox-border-color: var(--tn-primary-background-color);
+  --tn-page-blockquote-color: var(--tn-primary-text-color);
+  --tn-page-blockquote-bg-color: var(--tn-secondary-background-color);
+  --tn-page-blockquote-border-color: var(--tn-border-color);
+  --tn-page-inline-code-color: var(--tn-primary-text-color);
+  --tn-page-inline-code-bg-color: var(--color-base-10);
+  --tn-scrollbar-foreground-color: rgba(var(--tn-text), 0.2);
+  --tn-scrollbar-background-color: rgba(var(--tn-text), 0.05);
+  --tn-scrollbar-thumb-hover-color: rgba(var(--tn-text), 0.2);
+  --tn-head-text-color: var(--tn-link-text-color);
+  --tn-cloze-text-color: rgb(var(--tn-accent));
+  --tn-icon-color: var(--tn-link-text-color);
+  --tn-search-icon-color: var(--tn-link-text-color);
+  --tn-a-chosen-bg: var(--tn-quaternary-background-color);
+  --tn-right-sidebar-code-bg-color: var(--color-base-30);
+  --tn-pie-bg-color: var(--tn-primary-background-color);
+  --tn-pie-fg-color: var(--tn-secondary-background-color);
+  --tn-highlight-color-gray: rgb(var(--tn-overlay2));
+  --tn-highlight-color-red: rgb(var(--tn-red));
+  --tn-highlight-color-yellow: rgb(var(--tn-yellow));
+  --tn-highlight-color-green: rgb(var(--tn-green));
+  --tn-highlight-color-blue: rgb(var(--tn-blue));
+  --tn-highlight-color-purple: rgb(var(--tn-mauve));
+  --tn-highlight-color-pink: rgb(var(--tn-pink));
+  --tn-error-text-color: var(--color-red-100);
+  --tn-error-background-color: rgb(var(--tn-red));
+  --tn-warning-text-color: var(--color-yellow-100);
+  --tn-warning-background-color: rgb(var(--tn-yellow));
+  --tn-success-text-color: var(--color-green-100);
+  --tn-success-background-color: rgb(var(--tn-green));
+  --tn-focus-ring-color: rgb(var(--tn-overlay2));
+  --tn-header-button-background: rgb(var(--tn-text));
+  --tn-error-color: var(--tn-red);
+  --tn-warning-color: var(--tn-peach);
+  --tn-success-color: var(--tn-green);
+  --tn-info-color: var(--tn-yellow);
+  --tn-switch-background: var(--color-base-50);
+  --tn-switch-handle-color: var(--tn-accent, var(--tn-blue));
+  --tn-button-background: var(--tn-accent, var(--tn-blue));
+  --tn-button-text: var(--color-base-10);
+  --tn-tooltip-background: var(--tn-tertiary-background-color);
+  --tn-tooltip-text: rgb(var(--tn-text));
+  --tn-search-input-placeholder: rgb(var(--tn-text));
+  --tn-header-icon: rgb(var(--tn-accent));
+  --tn-header-icon-background: var(--tn-menu-hover-color);
+  --tn-text-highlight: rgb(var(--tn-yellow));
+  --tn-bullet-thread-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-dropdown-border-color: var(--color-base-50);
+  --tn-text-bold: var(--tn-primary-text-color);
+  --tn-text-heading: var(--tn-primary-text-color);
+  --tn-text-italics: var(--tn-accent, var(--tn-green));
+  --tn-text-underline: var(--tn-primary-text-color);
+  --tn-text-strikethrough: var(--tn-accent, var(--tn-maroon));
+  --tn-blockquote-line: var(--tn-accent);
+  --tn-active-setting: var(--tn-accent, var(--tn-blue));
+  --tn-priority-bg-color: var(--tn-crust);
+  --tn-priority-todo: var(--tn-teal);
+  --tn-priority-doing: var(--tn-blue);
+  --tn-priority-done: var(--tn-green);
+  --tn-priority-now: var(--tn-teal);
+  --tn-priority-later: var(--tn-yellow);
+  --tn-priority-waiting: var(--tn-maroon);
+  --tn-priority-a: var(--tn-red);
+  --tn-priority-b: var(--tn-yellow);
+  --tn-priority-c: var(--tn-green);
+  --tn-marker-border-radius: 4px;
+  --tn-checkbox-color: var(--tn-accent, var(--tn-teal));
+  --tn-marker-size: 16px;
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+  --color-level-1: var(--tn-color-level-1);
+  --color-level-2: var(--tn-color-level-2);
+  --color-level-3: var(--tn-color-level-3);
+  --color-level-4: var(--tn-color-level-4);
+  --color-level-5: var(--tn-color-level-5);
+  --color-level-6: var(--tn-color-level-6);
+  --ls-active-primary-color: var(--tn-active-primary-color);
+  --ls-active-secondary-color: var(--tn-active-secondary-color);
+  --ls-table-tr-even-background-color: var(--tn-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--tn-block-properties-background-color);
+  --ls-page-properties-background-color: var(--tn-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--tn-block-ref-link-text-color);
+  --ls-search-background-color: var(--tn-search-background-color);
+  --ls-border-color: var(--tn-border-color);
+  --ls-secondary-border-color: var(--tn-secondary-border-color);
+  --ls-tertiary-border-color: var(--tn-tertiary-border-color);
+  --ls-guideline-color: var(--tn-guideline-color);
+  --ls-menu-hover-color: var(--tn-menu-hover-color);
+  --ls-primary-text-color: var(--tn-primary-text-color);
+  --ls-secondary-text-color: var(--tn-secondary-text-color);
+  --ls-title-text-color: var(--tn-title-text-color);
+  --ls-link-text-color: var(--tn-link-text-color);
+  --ls-link-text-hover-color: var(--tn-link-text-hover-color);
+  --ls-link-ref-text-color: var(--tn-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--tn-link-ref-text-hover-color);
+  --ls-tag-text-color: var(--tn-tag-text-color);
+  --ls-tag-text-hover-color: var(--tn-tag-text-hover-color);
+  --ls-slide-background-color: var(--tn-slide-background-color);
+  --ls-block-bullet-border-color: var(--tn-block-bullet-border-color);
+  --ls-block-bullet-color: var(--tn-block-bullet-color);
+  --ls-block-highlight-color: var(--tn-block-highlight-color);
+  --ls-selection-background-color: var(--tn-selection-background-color);
+  --ls-selection-text-color: var(--tn-selection-text-color);
+  --ls-page-checkbox-color: var(--tn-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--tn-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--tn-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--tn-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--tn-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--tn-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--tn-page-inline-code-bg-color);
+  --ls-page-mark-color: var(--tn-base);
+  --ls-scrollbar-foreground-color: var(--tn-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--tn-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--tn-scrollbar-thumb-hover-color);
+  --ls-head-text-color: var(--tn-head-text-color);
+  --ls-cloze-text-color: var(--tn-cloze-text-color);
+  --ls-icon-color: var(--tn-icon-color);
+  --ls-search-icon-color: var(--tn-search-icon-color);
+  --ls-a-chosen-bg: var(--tn-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--tn-right-sidebar-code-bg-color);
+  --ls-pie-bg-color: var(--tn-pie-bg-color);
+  --ls-pie-fg-color: var(--tn-pie-fg-color);
+  --ls-highlight-color-gray: var(--tn-highlight-color-gray);
+  --ls-highlight-color-red: var(--tn-highlight-color-red);
+  --ls-highlight-color-yellow: var(--tn-highlight-color-yellow);
+  --ls-highlight-color-green: var(--tn-highlight-color-green);
+  --ls-highlight-color-blue: var(--tn-highlight-color-blue);
+  --ls-highlight-color-purple: var(--tn-highlight-color-purple);
+  --ls-highlight-color-pink: var(--tn-highlight-color-pink);
+  --ls-error-text-color: var(--tn-error-text-color);
+  --ls-error-background-color: var(--tn-error-background-color);
+  --ls-warning-text-color: var(--tn-warning-text-color);
+  --ls-warning-background-color: var(--tn-warning-background-color);
+  --ls-success-text-color: var(--tn-success-text-color);
+  --ls-success-background-color: var(--tn-success-background-color);
+  --ls-focus-ring-color: var(--tn-focus-ring-color);
+  --ls-header-button-background: var(--tn-header-button-background);
+  --ls-left-sidebar-active-background: var(--tn-color-level-4);
+  --ls-color-file-sync-error: rgb(var(--tn-red));
+  --ls-color-file-sync-pending: rgb(var(--tn-yellow));
+  --ls-color-file-sync-idle: rgb(var(--tn-green));
+  --color-base-00: rgb(var(--tn-crust));
+  --color-base-10: rgb(var(--tn-mantle));
+  --color-base-20: rgb(var(--tn-base));
+  --color-base-30: rgb(var(--tn-surface0));
+  --color-base-40: rgb(var(--tn-surface1));
+  --color-base-50: rgb(var(--tn-surface2));
+  --color-base-60: rgb(var(--tn-overlay0));
+  --color-base-70: rgb(var(--tn-overlay1));
+  --color-base-80: rgb(var(--tn-overlay2));
+  --color-base-90: rgb(var(--tn-subtext0));
+  --color-base-100: rgb(var(--tn-text));
+  /* Color swatches */
+  --tn-wb-color-gray: rgb(var(--tn-overlay2));
+  --tn-wb-color-red: rgb(var(--tn-red));
+  --tn-wb-color-yellow: rgb(var(--tn-yellow));
+  --tn-wb-color-green: rgb(var(--tn-green));
+  --tn-wb-color-blue: rgb(var(--tn-blue));
+  --tn-wb-color-purple: rgb(var(--tn-mauve));
+  --tn-wb-color-pink: rgb(var(--tn-pink));
+  /* Whiteboard object colors */
+  --tn-wb-background-color-gray: color-mix(in srgb, var(--tn-wb-color-gray), rgb(var(--tn-base)) 70%);
+  --tn-wb-background-color-red: color-mix(in srgb, var(--tn-wb-color-red), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-yellow: color-mix(in srgb, var(--tn-wb-color-yellow), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-green: color-mix(in srgb, var(--tn-wb-color-green), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-blue: color-mix(in srgb, var(--tn-wb-color-blue), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-purple: color-mix(in srgb, var(--tn-wb-color-purple), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-pink: color-mix(in srgb, var(--tn-wb-color-pink), rgb(var(--tn-base)) 60%);
+  --tn-wb-stroke-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-stroke-color-red: var(--tn-wb-color-red);
+  --tn-wb-stroke-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-stroke-color-green: var(--tn-wb-color-green);
+  --tn-wb-stroke-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-stroke-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-stroke-color-pink: var(--tn-wb-color-pink);
+  /* Pen path color */
+  --tn-wb-text-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-text-color-red: var(--tn-wb-color-red);
+  --tn-wb-text-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-text-color-green: var(--tn-wb-color-green);
+  --tn-wb-text-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-text-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-text-color-pink: var(--tn-wb-color-pink);
+  /* Shape label color */
+  --tn-wb-shape-label-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-shape-label-color-red: var(--tn-wb-color-red);
+  --tn-wb-shape-label-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-shape-label-color-green: var(--tn-wb-color-green);
+  --tn-wb-shape-label-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-shape-label-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-shape-label-color-pink: var(--tn-wb-color-pink);
+  --tn-wb-button-selected-foreground: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-selected-background: var(--tn-surface0);
+  --tn-wb-button-foreground: var(--tn-text);
+  --tn-wb-button-menu-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-wb-button-type-tag-background-active: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-type-tag-background-inactive: var(--tn-surface0);
+  --tn-wb-button-type-tag-foreground: var(--tn-text);
+  --tn-wb-quick-links-button: var(--tn-accent, var(--tn-blue));
+  --tn-wb-quick-links-button-hover: var(--tn-sky);
+  --tn-wb-layout-button-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-tl-select-input-select-item: var(--tn-link-text-hover-color);
+  --tn-tl-selectFill: var(--tn-accent, var(--tn-blue));
+  --tn-tl-selectStroke: var(--tn-accent, var(--tn-blue));
+  /* logseq variables for whiteboard */
+  /* Shape background color */
+  --ls-wb-background-color-gray: var(--tn-wb-background-color-gray);
+  --ls-wb-background-color-red: var(--tn-wb-background-color-red);
+  --ls-wb-background-color-yellow: var(--tn-wb-background-color-yellow);
+  --ls-wb-background-color-green: var(--tn-wb-background-color-green);
+  --ls-wb-background-color-blue: var(--tn-wb-background-color-blue);
+  --ls-wb-background-color-purple: var(--tn-wb-background-color-purple);
+  --ls-wb-background-color-pink: var(--tn-wb-background-color-pink);
+  /* Shape outline color */
+  --ls-wb-stroke-color-gray: var(--tn-wb-stroke-color-gray);
+  --ls-wb-stroke-color-red: var(--tn-wb-stroke-color-red);
+  --ls-wb-stroke-color-yellow: var(--tn-wb-stroke-color-yellow);
+  --ls-wb-stroke-color-green: var(--tn-wb-stroke-color-green);
+  --ls-wb-stroke-color-blue: var(--tn-wb-stroke-color-blue);
+  --ls-wb-stroke-color-purple: var(--tn-wb-stroke-color-purple);
+  --ls-wb-stroke-color-pink: var(--tn-wb-stroke-color-pink);
+  /* Pen path color */
+  --ls-wb-text-color-gray: var(--tn-wb-text-color-gray);
+  --ls-wb-text-color-red: var(--tn-wb-text-color-red);
+  --ls-wb-text-color-yellow: var(--tn-wb-text-color-yellow);
+  --ls-wb-text-color-green: var(--tn-wb-text-color-green);
+  --ls-wb-text-color-blue: var(--tn-wb-text-color-blue);
+  --ls-wb-text-color-purple: var(--tn-wb-text-color-purple);
+  --ls-wb-text-color-pink: var(--tn-wb-text-color-pink);
+  --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+  --ls-wb-text-color-default: var(--ls-primary-text-color);
+  --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+  --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+  --ls-whiteboard-select-background-selected: var(--tn-color-level-5);
+}
+html.whiteboard-day .tl-tooltip-content {
+  --tn-base: 225, 226, 231;
+  --tn-mantle: 208, 213, 227;
+  --tn-crust: 193, 201, 223;
+  --tn-surface0: 196, 200, 218;
+  --tn-surface1: 168, 174, 203;
+  --tn-surface2: 161, 166, 197;
+  --tn-overlay0: 137, 144, 179;
+  --tn-overlay1: 132, 140, 181;
+  --tn-overlay2: 104, 112, 154;
+  --tn-subtext0: 97, 114, 176;
+  --tn-subtext1: 97, 114, 176;
+  --tn-text: 55, 96, 191;
+  --tn-rosewater: 46, 88, 87;
+  --tn-flamingo: 152, 84, 241;
+  --tn-pink: 210, 0, 101;
+  --tn-mauve: 120, 71, 189;
+  --tn-red: 245, 42, 101;
+  --tn-maroon: 198, 67, 67;
+  --tn-peach: 177, 92, 0;
+  --tn-yellow: 140, 108, 62;
+  --tn-green: 88, 117, 57;
+  --tn-teal: 56, 112, 104;
+  --tn-sky: 0, 113, 151;
+  --tn-sapphire: 24, 128, 146;
+  --tn-blue: 46, 125, 233;
+  --tn-lavender: 0, 106, 131;
+  --tn-primary-background-color: rgb(var(--tn-base));
+  --tn-secondary-background-color: rgb(var(--tn-mantle));
+  --tn-tertiary-background-color: rgb(var(--tn-crust));
+  --tn-quaternary-background-color: rgb(var(--tn-surface0));
+  --tn-color-level-1: var(--color-base-10);
+  --tn-color-level-2: var(--color-base-20);
+  --tn-color-level-3: var(--color-base-30);
+  --tn-color-level-4: var(--color-base-40);
+  --tn-color-level-5: var(--color-base-50);
+  --tn-color-level-6: var(--color-base-60);
+  --tn-active-primary-color: rgb(var(--tn-accent));
+  --tn-active-secondary-color: rgb(var(--tn-accent), 0.9);
+  --tn-table-tr-even-background-color: var(--tn-secondary-background-color);
+  --tn-block-properties-background-color: var(--tn-secondary-background-color);
+  --tn-page-properties-background-color: var(--tn-secondary-background-color);
+  --tn-block-ref-link-text-color: rgb(var(--tn-subtext0));
+  --tn-search-background-color: var(--tn-primary-background-color);
+  --tn-border-color: rgb(var(--tn-surface0));
+  --tn-secondary-border-color: rgb(var(--tn-surface0));
+  --tn-tertiary-border-color: rgba(var(--tn-surface0), 0.10);
+  --tn-guideline-color: rgb(var(--tn-surface1));
+  --tn-menu-hover-color: var(--tn-color-level-3);
+  --tn-primary-text-color: rgb(var(--tn-text));
+  --tn-secondary-text-color: rgb(var(--tn-subtext0));
+  --tn-title-text-color: rgb(var(--tn-subtext1));
+  --tn-link-text-color: rgb(var(--tn-accent, var(--tn-teal)));
+  --tn-link-text-hover-color: rgb(var(--tn-accent, var(--tn-mauve)));
+  --tn-link-ref-text-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-link-ref-text-hover-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-tag-text-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-tag-text-hover-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-slide-background-color: var(--tn-primary-background-color);
+  --tn-block-bullet-border-color: rgba(var(--tn-accent, var(--tn-flamingo)), 0.4);
+  --tn-block-bullet-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-block-highlight-color: var(--color-base-30);
+  --tn-selection-background-color: rgba(var(--tn-yellow), 0.9);
+  --tn-selection-text-color: var(--color-base-00);
+  --tn-page-checkbox-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-page-checkbox-border-color: var(--tn-primary-background-color);
+  --tn-page-blockquote-color: var(--tn-primary-text-color);
+  --tn-page-blockquote-bg-color: var(--tn-secondary-background-color);
+  --tn-page-blockquote-border-color: var(--tn-border-color);
+  --tn-page-inline-code-color: var(--tn-primary-text-color);
+  --tn-page-inline-code-bg-color: var(--color-base-10);
+  --tn-scrollbar-foreground-color: rgba(var(--tn-text), 0.2);
+  --tn-scrollbar-background-color: rgba(var(--tn-text), 0.05);
+  --tn-scrollbar-thumb-hover-color: rgba(var(--tn-text), 0.2);
+  --tn-head-text-color: var(--tn-link-text-color);
+  --tn-cloze-text-color: rgb(var(--tn-accent));
+  --tn-icon-color: var(--tn-link-text-color);
+  --tn-search-icon-color: var(--tn-link-text-color);
+  --tn-a-chosen-bg: var(--tn-quaternary-background-color);
+  --tn-right-sidebar-code-bg-color: var(--color-base-30);
+  --tn-pie-bg-color: var(--tn-primary-background-color);
+  --tn-pie-fg-color: var(--tn-secondary-background-color);
+  --tn-highlight-color-gray: rgb(var(--tn-overlay2));
+  --tn-highlight-color-red: rgb(var(--tn-red));
+  --tn-highlight-color-yellow: rgb(var(--tn-yellow));
+  --tn-highlight-color-green: rgb(var(--tn-green));
+  --tn-highlight-color-blue: rgb(var(--tn-blue));
+  --tn-highlight-color-purple: rgb(var(--tn-mauve));
+  --tn-highlight-color-pink: rgb(var(--tn-pink));
+  --tn-error-text-color: var(--color-red-100);
+  --tn-error-background-color: rgb(var(--tn-red));
+  --tn-warning-text-color: var(--color-yellow-100);
+  --tn-warning-background-color: rgb(var(--tn-yellow));
+  --tn-success-text-color: var(--color-green-100);
+  --tn-success-background-color: rgb(var(--tn-green));
+  --tn-focus-ring-color: rgb(var(--tn-overlay2));
+  --tn-header-button-background: rgb(var(--tn-text));
+  --tn-error-color: var(--tn-red);
+  --tn-warning-color: var(--tn-peach);
+  --tn-success-color: var(--tn-green);
+  --tn-info-color: var(--tn-yellow);
+  --tn-switch-background: var(--color-base-50);
+  --tn-switch-handle-color: var(--tn-accent, var(--tn-blue));
+  --tn-button-background: var(--tn-accent, var(--tn-blue));
+  --tn-button-text: var(--color-base-10);
+  --tn-tooltip-background: var(--tn-tertiary-background-color);
+  --tn-tooltip-text: rgb(var(--tn-text));
+  --tn-search-input-placeholder: rgb(var(--tn-text));
+  --tn-header-icon: rgb(var(--tn-accent));
+  --tn-header-icon-background: var(--tn-menu-hover-color);
+  --tn-text-highlight: rgb(var(--tn-yellow));
+  --tn-bullet-thread-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-dropdown-border-color: var(--color-base-50);
+  --tn-text-bold: var(--tn-primary-text-color);
+  --tn-text-heading: var(--tn-primary-text-color);
+  --tn-text-italics: var(--tn-accent, var(--tn-green));
+  --tn-text-underline: var(--tn-primary-text-color);
+  --tn-text-strikethrough: var(--tn-accent, var(--tn-maroon));
+  --tn-blockquote-line: var(--tn-accent);
+  --tn-active-setting: var(--tn-accent, var(--tn-blue));
+  --tn-priority-bg-color: var(--tn-crust);
+  --tn-priority-todo: var(--tn-teal);
+  --tn-priority-doing: var(--tn-blue);
+  --tn-priority-done: var(--tn-green);
+  --tn-priority-now: var(--tn-teal);
+  --tn-priority-later: var(--tn-yellow);
+  --tn-priority-waiting: var(--tn-maroon);
+  --tn-priority-a: var(--tn-red);
+  --tn-priority-b: var(--tn-yellow);
+  --tn-priority-c: var(--tn-green);
+  --tn-marker-border-radius: 4px;
+  --tn-checkbox-color: var(--tn-accent, var(--tn-teal));
+  --tn-marker-size: 16px;
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+  --color-level-1: var(--tn-color-level-1);
+  --color-level-2: var(--tn-color-level-2);
+  --color-level-3: var(--tn-color-level-3);
+  --color-level-4: var(--tn-color-level-4);
+  --color-level-5: var(--tn-color-level-5);
+  --color-level-6: var(--tn-color-level-6);
+  --ls-active-primary-color: var(--tn-active-primary-color);
+  --ls-active-secondary-color: var(--tn-active-secondary-color);
+  --ls-table-tr-even-background-color: var(--tn-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--tn-block-properties-background-color);
+  --ls-page-properties-background-color: var(--tn-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--tn-block-ref-link-text-color);
+  --ls-search-background-color: var(--tn-search-background-color);
+  --ls-border-color: var(--tn-border-color);
+  --ls-secondary-border-color: var(--tn-secondary-border-color);
+  --ls-tertiary-border-color: var(--tn-tertiary-border-color);
+  --ls-guideline-color: var(--tn-guideline-color);
+  --ls-menu-hover-color: var(--tn-menu-hover-color);
+  --ls-primary-text-color: var(--tn-primary-text-color);
+  --ls-secondary-text-color: var(--tn-secondary-text-color);
+  --ls-title-text-color: var(--tn-title-text-color);
+  --ls-link-text-color: var(--tn-link-text-color);
+  --ls-link-text-hover-color: var(--tn-link-text-hover-color);
+  --ls-link-ref-text-color: var(--tn-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--tn-link-ref-text-hover-color);
+  --ls-tag-text-color: var(--tn-tag-text-color);
+  --ls-tag-text-hover-color: var(--tn-tag-text-hover-color);
+  --ls-slide-background-color: var(--tn-slide-background-color);
+  --ls-block-bullet-border-color: var(--tn-block-bullet-border-color);
+  --ls-block-bullet-color: var(--tn-block-bullet-color);
+  --ls-block-highlight-color: var(--tn-block-highlight-color);
+  --ls-selection-background-color: var(--tn-selection-background-color);
+  --ls-selection-text-color: var(--tn-selection-text-color);
+  --ls-page-checkbox-color: var(--tn-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--tn-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--tn-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--tn-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--tn-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--tn-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--tn-page-inline-code-bg-color);
+  --ls-page-mark-color: var(--tn-base);
+  --ls-scrollbar-foreground-color: var(--tn-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--tn-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--tn-scrollbar-thumb-hover-color);
+  --ls-head-text-color: var(--tn-head-text-color);
+  --ls-cloze-text-color: var(--tn-cloze-text-color);
+  --ls-icon-color: var(--tn-icon-color);
+  --ls-search-icon-color: var(--tn-search-icon-color);
+  --ls-a-chosen-bg: var(--tn-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--tn-right-sidebar-code-bg-color);
+  --ls-pie-bg-color: var(--tn-pie-bg-color);
+  --ls-pie-fg-color: var(--tn-pie-fg-color);
+  --ls-highlight-color-gray: var(--tn-highlight-color-gray);
+  --ls-highlight-color-red: var(--tn-highlight-color-red);
+  --ls-highlight-color-yellow: var(--tn-highlight-color-yellow);
+  --ls-highlight-color-green: var(--tn-highlight-color-green);
+  --ls-highlight-color-blue: var(--tn-highlight-color-blue);
+  --ls-highlight-color-purple: var(--tn-highlight-color-purple);
+  --ls-highlight-color-pink: var(--tn-highlight-color-pink);
+  --ls-error-text-color: var(--tn-error-text-color);
+  --ls-error-background-color: var(--tn-error-background-color);
+  --ls-warning-text-color: var(--tn-warning-text-color);
+  --ls-warning-background-color: var(--tn-warning-background-color);
+  --ls-success-text-color: var(--tn-success-text-color);
+  --ls-success-background-color: var(--tn-success-background-color);
+  --ls-focus-ring-color: var(--tn-focus-ring-color);
+  --ls-header-button-background: var(--tn-header-button-background);
+  --ls-left-sidebar-active-background: var(--tn-color-level-4);
+  --ls-color-file-sync-error: rgb(var(--tn-red));
+  --ls-color-file-sync-pending: rgb(var(--tn-yellow));
+  --ls-color-file-sync-idle: rgb(var(--tn-green));
+  --color-base-00: rgb(var(--tn-crust));
+  --color-base-10: rgb(var(--tn-mantle));
+  --color-base-20: rgb(var(--tn-base));
+  --color-base-30: rgb(var(--tn-surface0));
+  --color-base-40: rgb(var(--tn-surface1));
+  --color-base-50: rgb(var(--tn-surface2));
+  --color-base-60: rgb(var(--tn-overlay0));
+  --color-base-70: rgb(var(--tn-overlay1));
+  --color-base-80: rgb(var(--tn-overlay2));
+  --color-base-90: rgb(var(--tn-subtext0));
+  --color-base-100: rgb(var(--tn-text));
+  /* Color swatches */
+  --tn-wb-color-gray: rgb(var(--tn-overlay2));
+  --tn-wb-color-red: rgb(var(--tn-red));
+  --tn-wb-color-yellow: rgb(var(--tn-yellow));
+  --tn-wb-color-green: rgb(var(--tn-green));
+  --tn-wb-color-blue: rgb(var(--tn-blue));
+  --tn-wb-color-purple: rgb(var(--tn-mauve));
+  --tn-wb-color-pink: rgb(var(--tn-pink));
+  /* Whiteboard object colors */
+  --tn-wb-background-color-gray: color-mix(in srgb, var(--tn-wb-color-gray), rgb(var(--tn-base)) 70%);
+  --tn-wb-background-color-red: color-mix(in srgb, var(--tn-wb-color-red), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-yellow: color-mix(in srgb, var(--tn-wb-color-yellow), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-green: color-mix(in srgb, var(--tn-wb-color-green), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-blue: color-mix(in srgb, var(--tn-wb-color-blue), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-purple: color-mix(in srgb, var(--tn-wb-color-purple), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-pink: color-mix(in srgb, var(--tn-wb-color-pink), rgb(var(--tn-base)) 60%);
+  --tn-wb-stroke-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-stroke-color-red: var(--tn-wb-color-red);
+  --tn-wb-stroke-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-stroke-color-green: var(--tn-wb-color-green);
+  --tn-wb-stroke-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-stroke-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-stroke-color-pink: var(--tn-wb-color-pink);
+  /* Pen path color */
+  --tn-wb-text-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-text-color-red: var(--tn-wb-color-red);
+  --tn-wb-text-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-text-color-green: var(--tn-wb-color-green);
+  --tn-wb-text-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-text-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-text-color-pink: var(--tn-wb-color-pink);
+  /* Shape label color */
+  --tn-wb-shape-label-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-shape-label-color-red: var(--tn-wb-color-red);
+  --tn-wb-shape-label-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-shape-label-color-green: var(--tn-wb-color-green);
+  --tn-wb-shape-label-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-shape-label-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-shape-label-color-pink: var(--tn-wb-color-pink);
+  --tn-wb-button-selected-foreground: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-selected-background: var(--tn-surface0);
+  --tn-wb-button-foreground: var(--tn-text);
+  --tn-wb-button-menu-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-wb-button-type-tag-background-active: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-type-tag-background-inactive: var(--tn-surface0);
+  --tn-wb-button-type-tag-foreground: var(--tn-text);
+  --tn-wb-quick-links-button: var(--tn-accent, var(--tn-blue));
+  --tn-wb-quick-links-button-hover: var(--tn-sky);
+  --tn-wb-layout-button-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-tl-select-input-select-item: var(--tn-link-text-hover-color);
+  --tn-tl-selectFill: var(--tn-accent, var(--tn-blue));
+  --tn-tl-selectStroke: var(--tn-accent, var(--tn-blue));
+  /* logseq variables for whiteboard */
+  /* Shape background color */
+  --ls-wb-background-color-gray: var(--tn-wb-background-color-gray);
+  --ls-wb-background-color-red: var(--tn-wb-background-color-red);
+  --ls-wb-background-color-yellow: var(--tn-wb-background-color-yellow);
+  --ls-wb-background-color-green: var(--tn-wb-background-color-green);
+  --ls-wb-background-color-blue: var(--tn-wb-background-color-blue);
+  --ls-wb-background-color-purple: var(--tn-wb-background-color-purple);
+  --ls-wb-background-color-pink: var(--tn-wb-background-color-pink);
+  /* Shape outline color */
+  --ls-wb-stroke-color-gray: var(--tn-wb-stroke-color-gray);
+  --ls-wb-stroke-color-red: var(--tn-wb-stroke-color-red);
+  --ls-wb-stroke-color-yellow: var(--tn-wb-stroke-color-yellow);
+  --ls-wb-stroke-color-green: var(--tn-wb-stroke-color-green);
+  --ls-wb-stroke-color-blue: var(--tn-wb-stroke-color-blue);
+  --ls-wb-stroke-color-purple: var(--tn-wb-stroke-color-purple);
+  --ls-wb-stroke-color-pink: var(--tn-wb-stroke-color-pink);
+  /* Pen path color */
+  --ls-wb-text-color-gray: var(--tn-wb-text-color-gray);
+  --ls-wb-text-color-red: var(--tn-wb-text-color-red);
+  --ls-wb-text-color-yellow: var(--tn-wb-text-color-yellow);
+  --ls-wb-text-color-green: var(--tn-wb-text-color-green);
+  --ls-wb-text-color-blue: var(--tn-wb-text-color-blue);
+  --ls-wb-text-color-purple: var(--tn-wb-text-color-purple);
+  --ls-wb-text-color-pink: var(--tn-wb-text-color-pink);
+  --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+  --ls-wb-text-color-default: var(--ls-primary-text-color);
+  --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+  --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+  --ls-whiteboard-select-background-selected: var(--tn-color-level-5);
+}
+
+/* Above related to whiteboard latte override feature */
+.light-theme, .white-theme, html[data-theme=light],
+.dark-theme, html[data-theme=dark],
+html:not(.whiteboard-day),
+:root:not([data-color]),
+:root[data-color=none],
+:root[data-color=logseq] {
+  /* Color swatches */
+  --tn-wb-color-gray: rgb(var(--tn-overlay2));
+  --tn-wb-color-red: rgb(var(--tn-red));
+  --tn-wb-color-yellow: rgb(var(--tn-yellow));
+  --tn-wb-color-green: rgb(var(--tn-green));
+  --tn-wb-color-blue: rgb(var(--tn-blue));
+  --tn-wb-color-purple: rgb(var(--tn-mauve));
+  --tn-wb-color-pink: rgb(var(--tn-pink));
+  /* Whiteboard object colors */
+  --tn-wb-background-color-gray: color-mix(in srgb, var(--tn-wb-color-gray), rgb(var(--tn-base)) 70%);
+  --tn-wb-background-color-red: color-mix(in srgb, var(--tn-wb-color-red), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-yellow: color-mix(in srgb, var(--tn-wb-color-yellow), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-green: color-mix(in srgb, var(--tn-wb-color-green), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-blue: color-mix(in srgb, var(--tn-wb-color-blue), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-purple: color-mix(in srgb, var(--tn-wb-color-purple), rgb(var(--tn-base)) 60%);
+  --tn-wb-background-color-pink: color-mix(in srgb, var(--tn-wb-color-pink), rgb(var(--tn-base)) 60%);
+  --tn-wb-stroke-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-stroke-color-red: var(--tn-wb-color-red);
+  --tn-wb-stroke-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-stroke-color-green: var(--tn-wb-color-green);
+  --tn-wb-stroke-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-stroke-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-stroke-color-pink: var(--tn-wb-color-pink);
+  /* Pen path color */
+  --tn-wb-text-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-text-color-red: var(--tn-wb-color-red);
+  --tn-wb-text-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-text-color-green: var(--tn-wb-color-green);
+  --tn-wb-text-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-text-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-text-color-pink: var(--tn-wb-color-pink);
+  /* Shape label color */
+  --tn-wb-shape-label-color-gray: var(--tn-wb-color-gray);
+  --tn-wb-shape-label-color-red: var(--tn-wb-color-red);
+  --tn-wb-shape-label-color-yellow: var(--tn-wb-color-yellow);
+  --tn-wb-shape-label-color-green: var(--tn-wb-color-green);
+  --tn-wb-shape-label-color-blue: var(--tn-wb-color-blue);
+  --tn-wb-shape-label-color-purple: var(--tn-wb-color-purple);
+  --tn-wb-shape-label-color-pink: var(--tn-wb-color-pink);
+  --tn-wb-button-selected-foreground: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-selected-background: var(--tn-surface0);
+  --tn-wb-button-foreground: var(--tn-text);
+  --tn-wb-button-menu-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-wb-button-type-tag-background-active: var(--tn-accent, var(--tn-mauve));
+  --tn-wb-button-type-tag-background-inactive: var(--tn-surface0);
+  --tn-wb-button-type-tag-foreground: var(--tn-text);
+  --tn-wb-quick-links-button: var(--tn-accent, var(--tn-blue));
+  --tn-wb-quick-links-button-hover: var(--tn-sky);
+  --tn-wb-layout-button-foreground: var(--tn-accent, var(--tn-teal));
+  --tn-tl-select-input-select-item: var(--tn-link-text-hover-color);
+  --tn-tl-selectFill: var(--tn-accent, var(--tn-blue));
+  --tn-tl-selectStroke: var(--tn-accent, var(--tn-blue));
+  /* logseq variables for whiteboard */
+  /* Shape background color */
+  --ls-wb-background-color-gray: var(--tn-wb-background-color-gray);
+  --ls-wb-background-color-red: var(--tn-wb-background-color-red);
+  --ls-wb-background-color-yellow: var(--tn-wb-background-color-yellow);
+  --ls-wb-background-color-green: var(--tn-wb-background-color-green);
+  --ls-wb-background-color-blue: var(--tn-wb-background-color-blue);
+  --ls-wb-background-color-purple: var(--tn-wb-background-color-purple);
+  --ls-wb-background-color-pink: var(--tn-wb-background-color-pink);
+  /* Shape outline color */
+  --ls-wb-stroke-color-gray: var(--tn-wb-stroke-color-gray);
+  --ls-wb-stroke-color-red: var(--tn-wb-stroke-color-red);
+  --ls-wb-stroke-color-yellow: var(--tn-wb-stroke-color-yellow);
+  --ls-wb-stroke-color-green: var(--tn-wb-stroke-color-green);
+  --ls-wb-stroke-color-blue: var(--tn-wb-stroke-color-blue);
+  --ls-wb-stroke-color-purple: var(--tn-wb-stroke-color-purple);
+  --ls-wb-stroke-color-pink: var(--tn-wb-stroke-color-pink);
+  /* Pen path color */
+  --ls-wb-text-color-gray: var(--tn-wb-text-color-gray);
+  --ls-wb-text-color-red: var(--tn-wb-text-color-red);
+  --ls-wb-text-color-yellow: var(--tn-wb-text-color-yellow);
+  --ls-wb-text-color-green: var(--tn-wb-text-color-green);
+  --ls-wb-text-color-blue: var(--tn-wb-text-color-blue);
+  --ls-wb-text-color-purple: var(--tn-wb-text-color-purple);
+  --ls-wb-text-color-pink: var(--tn-wb-text-color-pink);
+  --ls-wb-stroke-color-default: var(--ls-secondary-border-color);
+  --ls-wb-text-color-default: var(--ls-primary-text-color);
+  --ls-wb-background-color-default: var(--ls-tertiary-background-color);
+  --ls-whiteboard-tooltip-background: var(--ls-secondary-background-color);
+  --ls-whiteboard-select-background-selected: var(--tn-color-level-5);
+}
+
+html:not(html[data-color]) .tl-select-input-select-item[data-state=checked],
+html[data-theme=light][data-color=logseq] .tl-select-input-select-item[data-state=checked],
+html[data-theme=dark][data-color=logseq] .tl-select-input-select-item[data-state=checked],
+html[data-color=none] .tl-select-input-select-item[data-state=checked] {
+  background: rgb(var(--tn-wb-button-selected-background));
+  color: var(--tn-link-text-hover-color);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-gray-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-gray-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-gray-500,
+html[data-color=none] div.whiteboard-page .bg-gray-500 {
+  background-color: var(--tn-wb-color-gray);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-red-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-red-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-red-500,
+html[data-color=none] div.whiteboard-page .bg-red-500 {
+  background-color: var(--tn-wb-color-red);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-yellow-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-yellow-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-yellow-500,
+html[data-color=none] div.whiteboard-page .bg-yellow-500 {
+  background-color: var(--tn-wb-color-yellow);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-green-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-green-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-green-500,
+html[data-color=none] div.whiteboard-page .bg-green-500 {
+  background-color: var(--tn-wb-color-green);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-blue-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-blue-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-blue-500,
+html[data-color=none] div.whiteboard-page .bg-blue-500 {
+  background-color: var(--tn-wb-color-blue);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-purple-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-purple-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-purple-500,
+html[data-color=none] div.whiteboard-page .bg-purple-500 {
+  background-color: var(--tn-wb-color-purple);
+}
+html:not(html[data-color]) div.whiteboard-page .bg-pink-500,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .bg-pink-500,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .bg-pink-500,
+html[data-color=none] div.whiteboard-page .bg-pink-500 {
+  background-color: var(--tn-wb-color-pink);
+}
+html:not(html[data-color]) div.whiteboard-page .tl-button[data-selected=true],
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-button[data-selected=true],
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-button[data-selected=true],
+html[data-color=none] div.whiteboard-page .tl-button[data-selected=true] {
+  background: rgb(var(--tn-wb-button-selected-background));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-button[data-selected=true] i,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-button[data-selected=true] i,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-button[data-selected=true] i,
+html[data-color=none] div.whiteboard-page .tl-button[data-selected=true] i {
+  color: rgb(var(--tn-wb-button-selected-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .ti,
+html:not(html[data-color]) div.whiteboard-page .tie,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .ti,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tie,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .ti,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tie,
+html[data-color=none] div.whiteboard-page .ti,
+html[data-color=none] div.whiteboard-page .tie {
+  color: rgb(var(--tn-wb-button-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-context-bar .ti,
+html:not(html[data-color]) div.whiteboard-page .tl-context-bar .tie,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-context-bar .ti,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-context-bar .tie,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-context-bar .ti,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-context-bar .tie,
+html[data-color=none] div.whiteboard-page .tl-context-bar .ti,
+html[data-color=none] div.whiteboard-page .tl-context-bar .tie {
+  color: rgb(var(--tn-wb-button-menu-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-type-tag,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-type-tag,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-type-tag,
+html[data-color=none] div.whiteboard-page .tl-type-tag {
+  background-color: rgb(var(--tn-wb-button-type-tag-background-inactive));
+  border-color: rgb(var(--tn-wb-button-type-tag-background-inactive));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-type-tag .tie,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-type-tag .tie,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-type-tag .tie,
+html[data-color=none] div.whiteboard-page .tl-type-tag .tie {
+  color: rgb(var(--tn-wb-button-type-tag-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true],
+html[data-theme=light][data-color=logseq] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true],
+html[data-theme=dark][data-color=logseq] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true],
+html[data-color=none] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true] {
+  background-color: rgba(var(--tn-wb-button-type-tag-background-active), 0.8);
+  border-color: rgb(var(--tn-wb-button-type-tag-background-active));
+}
+html:not(html[data-color]) div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true] .tie,
+html[data-theme=light][data-color=logseq] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true] .tie,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true] .tie,
+html[data-color=none] div.whiteboard-page html[data-theme=dark] .tl-type-tag[data-active=true] .tie {
+  color: rgb(var(--tn-wb-button-type-tag-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-menu,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-menu,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-menu,
+html[data-color=none] div.whiteboard-page .tl-menu {
+  background-color: var(--tn-secondary-background-color);
+}
+html:not(html[data-color]) div.whiteboard-page .tl-menu-item i,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-menu-item i,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-menu-item i,
+html[data-color=none] div.whiteboard-page .tl-menu-item i {
+  color: rgb(var(--tn-wb-button-menu-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-quick-links-row:first-child,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-quick-links-row:first-child,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-quick-links-row:first-child,
+html[data-color=none] div.whiteboard-page .tl-quick-links-row:first-child {
+  background-color: rgb(var(--tn-wb-quick-links-button));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-quick-links-row:first-child :hover,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-quick-links-row:first-child :hover,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-quick-links-row:first-child :hover,
+html[data-color=none] div.whiteboard-page .tl-quick-links-row:first-child :hover {
+  background-color: rgb(var(--tn-wb-quick-links-button-hover));
+}
+html:not(html[data-color]) div.whiteboard-page i[class*=ti-layout-],
+html[data-theme=light][data-color=logseq] div.whiteboard-page i[class*=ti-layout-],
+html[data-theme=dark][data-color=logseq] div.whiteboard-page i[class*=ti-layout-],
+html[data-color=none] div.whiteboard-page i[class*=ti-layout-] {
+  color: rgb(var(--tn-wb-layout-button-foreground));
+}
+html:not(html[data-color]) div.whiteboard-page .tl-container,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-container,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-container,
+html[data-color=none] div.whiteboard-page .tl-container {
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+}
+html:not(html[data-color]) div.whiteboard-page .tl-button:hover,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-button:hover,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-button:hover,
+html[data-color=none] div.whiteboard-page .tl-button:hover {
+  background-color: var(--tn-tertiary-background-color);
+}
+html:not(html[data-color]) div.whiteboard-page .tl-text-label-inner-wrapper,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .tl-text-label-inner-wrapper,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .tl-text-label-inner-wrapper,
+html[data-color=none] div.whiteboard-page .tl-text-label-inner-wrapper {
+  --ls-wb-text-color-gray: var(--tn-wb-shape-label-color-gray);
+  --ls-wb-text-color-red: var(--tn-wb-shape-label-color-red);
+  --ls-wb-text-color-yellow: var(--tn-wb-shape-label-color-yellow);
+  --ls-wb-text-color-green: var(--tn-wb-shape-label-color-green);
+  --ls-wb-text-color-blue: var(--tn-wb-shape-label-color-blue);
+  --ls-wb-text-color-purple: var(--tn-wb-shape-label-color-purple);
+  --ls-wb-text-color-pink: var(--tn-wb-shape-label-color-pink);
+}
+html:not(html[data-color]) div.whiteboard-page .logseq-tldraw,
+html[data-theme=light][data-color=logseq] div.whiteboard-page .logseq-tldraw,
+html[data-theme=dark][data-color=logseq] div.whiteboard-page .logseq-tldraw,
+html[data-color=none] div.whiteboard-page .logseq-tldraw {
+  --tl-selectFill: rgba(var(--tn-tl-selectFill), 0.05);
+  --tl-selectStroke: rgb(var(--tn-tl-selectStroke));
+}
+
+:root:not([data-color]), :root[data-color=none], :root[data-color=logseq] {
+  --tn-cm-theme: 'tokyonight-moon';
+  --tn-base: 34, 36, 54;
+  --tn-mantle: 30, 32, 48;
+  --tn-crust: 25, 27, 41;
+  --tn-surface0: 47, 51, 77;
+  --tn-surface1: 59, 66, 97;
+  --tn-surface2: 68, 74, 115;
+  --tn-overlay0: 84, 92, 126;
+  --tn-overlay1: 99, 109, 166;
+  --tn-overlay2: 115, 122, 162;
+  --tn-subtext0: 130, 139, 184;
+  --tn-subtext1: 130, 139, 184;
+  --tn-text: 200, 211, 245;
+  --tn-rosewater: 180, 249, 248;
+  --tn-flamingo: 192, 153, 255;
+  --tn-pink: 255, 0, 124;
+  --tn-mauve: 252, 167, 234;
+  --tn-red: 255, 117, 127;
+  --tn-maroon: 197, 59, 83;
+  --tn-peach: 255, 150, 108;
+  --tn-yellow: 255, 199, 119;
+  --tn-green: 195, 232, 141;
+  --tn-teal: 79, 214, 190;
+  --tn-sky: 134, 225, 252;
+  --tn-sapphire: 101, 188, 255;
+  --tn-blue: 130, 170, 255;
+  --tn-lavender: 137, 221, 255;
+}
+
+.form-checkbox:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='rgb(34, 36, 54)' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E") !important;
+}

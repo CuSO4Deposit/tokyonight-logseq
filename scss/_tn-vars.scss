@@ -1,0 +1,150 @@
+@mixin variables {
+  // following are custom tn variables mapped to logseq variables
+  --tn-primary-background-color: rgb(var(--tn-base));
+  --tn-secondary-background-color: rgb(var(--tn-mantle));
+  --tn-tertiary-background-color: rgb(var(--tn-crust));
+  --tn-quaternary-background-color: rgb(var(--tn-surface0));
+
+  --tn-color-level-1: var(--color-base-10);
+  --tn-color-level-2: var(--color-base-20);
+  --tn-color-level-3: var(--color-base-30);
+  --tn-color-level-4: var(--color-base-40);
+  --tn-color-level-5: var(--color-base-50);
+  --tn-color-level-6: var(--color-base-60);
+
+  --tn-active-primary-color: rgb(var(--tn-accent));
+  --tn-active-secondary-color: rgb(var(--tn-accent), 0.9);
+
+  --tn-table-tr-even-background-color: var(--tn-secondary-background-color);
+  --tn-block-properties-background-color: var(--tn-secondary-background-color);
+  --tn-page-properties-background-color: var(--tn-secondary-background-color);
+  --tn-block-ref-link-text-color: rgb(var(--tn-subtext0));
+  --tn-search-background-color: var(--tn-primary-background-color);
+
+  --tn-border-color: rgb(var(--tn-surface0));
+  --tn-secondary-border-color: rgb(var(--tn-surface0));
+  --tn-tertiary-border-color: rgba(var(--tn-surface0), 0.10);
+
+  --tn-guideline-color: rgb(var(--tn-surface1));
+  --tn-menu-hover-color: var(--tn-color-level-3);
+  --tn-primary-text-color: rgb(var(--tn-text));
+  --tn-secondary-text-color: rgb(var(--tn-subtext0));
+  --tn-title-text-color: rgb(var(--tn-subtext1));
+
+  --tn-link-text-color: rgb(var(--tn-accent, var(--tn-teal)));
+  --tn-link-text-hover-color: rgb(var(--tn-accent, var(--tn-mauve))); // add underline on hover
+  --tn-link-ref-text-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-link-ref-text-hover-color: rgb(var(--tn-accent, var(--tn-blue))); // add underline on hover
+  --tn-tag-text-color: rgb(var(--tn-accent, var(--tn-maroon)));
+  --tn-tag-text-hover-color: rgb(var(--tn-accent, var(--tn-maroon))); // add underline on hover
+
+  --tn-slide-background-color: var(--tn-primary-background-color);
+
+  --tn-block-bullet-border-color: rgba(var(--tn-accent, var(--tn-flamingo)), 0.4);
+  --tn-block-bullet-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+  --tn-block-highlight-color: var(--color-base-30);
+
+  --tn-selection-background-color: rgba(var(--tn-yellow), 0.9);
+  --tn-selection-text-color: var(--color-base-00);
+
+  --tn-page-checkbox-color: rgb(var(--tn-accent, var(--tn-blue)));
+  --tn-page-checkbox-border-color: var(--tn-primary-background-color);
+  --tn-page-blockquote-color: var(--tn-primary-text-color);
+  --tn-page-blockquote-bg-color: var(--tn-secondary-background-color);
+  --tn-page-blockquote-border-color: var(--tn-border-color);
+  --tn-page-inline-code-color: var(--tn-primary-text-color);
+  --tn-page-inline-code-bg-color: var(--color-base-10);
+
+  --tn-scrollbar-foreground-color: rgba(var(--tn-text), 0.2);
+  --tn-scrollbar-background-color: rgba(var(--tn-text), 0.05);
+  --tn-scrollbar-thumb-hover-color: rgba(var(--tn-text), 0.2);
+
+  --tn-head-text-color: var(--tn-link-text-color);
+  --tn-cloze-text-color: rgb(var(--tn-accent));
+  --tn-icon-color: var(--tn-link-text-color);
+  --tn-search-icon-color: var(--tn-link-text-color);
+  --tn-a-chosen-bg: var(--tn-quaternary-background-color);
+  --tn-right-sidebar-code-bg-color: var(--color-base-30);
+
+  --tn-pie-bg-color: var(--tn-primary-background-color);
+  --tn-pie-fg-color: var(--tn-secondary-background-color);
+
+  --tn-highlight-color-gray: rgb(var(--tn-overlay2));
+  --tn-highlight-color-red: rgb(var(--tn-red));
+  --tn-highlight-color-yellow: rgb(var(--tn-yellow));
+  --tn-highlight-color-green: rgb(var(--tn-green));
+  --tn-highlight-color-blue: rgb(var(--tn-blue));
+  --tn-highlight-color-purple: rgb(var(--tn-mauve));
+  --tn-highlight-color-pink: rgb(var(--tn-pink));
+
+  --tn-error-text-color: var(--color-red-100);
+  --tn-error-background-color: rgb(var(--tn-red));
+
+  --tn-warning-text-color: var(--color-yellow-100);
+  --tn-warning-background-color: rgb(var(--tn-yellow));
+
+  --tn-success-text-color: var(--color-green-100);
+  --tn-success-background-color: rgb(var(--tn-green));
+
+  --tn-focus-ring-color: rgb(var(--tn-overlay2));
+  --tn-header-button-background: rgb(var(--tn-text));
+
+  --tn-error-color: var(--tn-red);
+  --tn-warning-color: var(--tn-peach);
+  --tn-success-color: var(--tn-green);
+  --tn-info-color: var(--tn-yellow);
+
+  // following used in _custom.scss
+
+  // Switches
+  --tn-switch-background: var(--color-base-50);
+  --tn-switch-handle-color: var(--tn-accent, var(--tn-blue));
+
+  // Buttons
+  --tn-button-background: var(--tn-accent, var(--tn-blue));
+  --tn-button-text: var(--color-base-10);
+
+  --tn-tooltip-background: var(--tn-tertiary-background-color);
+  --tn-tooltip-text: rgb(var(--tn-text));
+
+  --tn-search-input-placeholder: rgb(var(--tn-text));
+
+  // Header
+  --tn-header-icon: rgb(var(--tn-accent));
+  --tn-header-icon-background: var(--tn-menu-hover-color);
+
+  // Markdown
+  --tn-text-highlight: rgb(var(--tn-yellow));
+  --tn-bullet-thread-color: rgb(var(--tn-accent, var(--tn-flamingo)));
+
+  --tn-dropdown-border-color: var(--color-base-50);
+
+  // Full accent overrides
+  --tn-text-bold: var(--tn-primary-text-color);
+  --tn-text-heading: var(--tn-primary-text-color);
+  --tn-text-italics: var(--tn-accent, var(--tn-green));
+  --tn-text-underline: var(--tn-primary-text-color);
+  --tn-text-strikethrough: var(--tn-accent, var(--tn-maroon));
+  --tn-blockquote-line: var(--tn-accent);
+  --tn-active-setting: var(--tn-accent, var(--tn-blue));
+
+  // priorities variables
+  --tn-priority-bg-color: var(--tn-crust);
+  --tn-priority-todo: var(--tn-teal);
+  --tn-priority-doing: var(--tn-blue);
+  --tn-priority-done: var(--tn-green);
+  --tn-priority-now: var(--tn-teal);
+  --tn-priority-later: var(--tn-yellow);
+  --tn-priority-waiting: var(--tn-maroon);
+  --tn-priority-a: var(--tn-red);
+  --tn-priority-b: var(--tn-yellow);
+  --tn-priority-c: var(--tn-green);
+
+  --tn-marker-border-radius: 4px;
+  --tn-checkbox-color: var(--tn-accent, var(--tn-teal));
+  --tn-marker-size: 16px;
+}
+
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+  @include variables;
+}

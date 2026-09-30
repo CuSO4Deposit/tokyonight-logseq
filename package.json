@@ -1,0 +1,65 @@
+{
+  "name": "logseq-tokyonight",
+  "version": "0.1.0",
+  "description": "🌃 Tokyo Night theme for Logseq",
+  "main": "index.html",
+  "scripts": {
+    "start": "sass --watch scss:.",
+    "build": "sass --no-charset --no-source-map scss:.",
+    "clean": "rimraf tokyonight-*.css*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuSO4Deposit/tokyonight-logseq.git"
+  },
+  "keywords": [
+    "logseq",
+    "logseq-theme",
+    "theme",
+    "tokyonight",
+    "tokyo-night"
+  ],
+  "author": "CuSO4Deposit",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^6.0.0",
+    "sass": "^1.55.0"
+  },
+  "logseq": {
+    "themes": [
+      {
+        "name": "Tokyo Night",
+        "url": "./tokyonight-night.css",
+        "description": "Tokyo Night",
+        "mode": "dark"
+      },
+      {
+        "name": "Tokyo Night Storm",
+        "url": "./tokyonight-storm.css",
+        "description": "Tokyo Night Storm",
+        "mode": "dark"
+      },
+      {
+        "name": "Tokyo Night Moon",
+        "url": "./tokyonight-moon.css",
+        "description": "Tokyo Night Moon",
+        "mode": "dark"
+      },
+      {
+        "name": "Tokyo Night Day",
+        "url": "./tokyonight-day.css",
+        "description": "Tokyo Night Day",
+        "mode": "light"
+      },
+      {
+        "name": "Tokyo Night OLED",
+        "url": "./tokyonight-oled.css",
+        "description": "Tokyo Night OLED",
+        "mode": "dark"
+      }
+    ],
+    "title": "Tokyo Night",
+    "id": "logseq-tokyonight",
+    "icon": "./assets/icon.png"
+  }
+}

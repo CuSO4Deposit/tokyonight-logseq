@@ -1,0 +1,127 @@
+@mixin variables {
+  --ls-primary-background-color: var(--tn-primary-background-color);
+  --ls-secondary-background-color: var(--tn-secondary-background-color);
+  --ls-tertiary-background-color: var(--tn-tertiary-background-color);
+  --ls-quaternary-background-color: var(--tn-quaternary-background-color);
+
+  --color-level-1: var(--tn-color-level-1);
+  --color-level-2: var(--tn-color-level-2);
+  --color-level-3: var(--tn-color-level-3);
+  --color-level-4: var(--tn-color-level-4);
+  --color-level-5: var(--tn-color-level-5);
+  --color-level-6: var(--tn-color-level-6);
+
+  --ls-active-primary-color: var(--tn-active-primary-color);
+  --ls-active-secondary-color: var(--tn-active-secondary-color);
+
+  --ls-table-tr-even-background-color: var(--tn-table-tr-even-background-color);
+  --ls-block-properties-background-color: var(--tn-block-properties-background-color);
+  --ls-page-properties-background-color: var(--tn-page-properties-background-color);
+  --ls-block-ref-link-text-color: var(--tn-block-ref-link-text-color);
+  --ls-search-background-color: var(--tn-search-background-color);
+
+  --ls-border-color: var(--tn-border-color);
+  --ls-secondary-border-color: var(--tn-secondary-border-color);
+  --ls-tertiary-border-color: var(--tn-tertiary-border-color);
+
+  --ls-guideline-color: var(--tn-guideline-color);
+  --ls-menu-hover-color: var(--tn-menu-hover-color);
+  --ls-primary-text-color: var(--tn-primary-text-color);
+  --ls-secondary-text-color: var(--tn-secondary-text-color);
+  --ls-title-text-color: var(--tn-title-text-color);
+
+  --ls-link-text-color: var(--tn-link-text-color);
+  --ls-link-text-hover-color: var(--tn-link-text-hover-color);
+  --ls-link-ref-text-color: var(--tn-link-ref-text-color);
+  --ls-link-ref-text-hover-color: var(--tn-link-ref-text-hover-color);
+
+  --ls-tag-text-color: var(--tn-tag-text-color);
+  --ls-tag-text-hover-color: var(--tn-tag-text-hover-color);
+
+  --ls-slide-background-color: var(--tn-slide-background-color);
+
+  --ls-block-bullet-border-color: var(--tn-block-bullet-border-color);
+  --ls-block-bullet-color: var(--tn-block-bullet-color);
+  --ls-block-highlight-color: var(--tn-block-highlight-color);
+
+  --ls-selection-background-color: var(--tn-selection-background-color);
+  --ls-selection-text-color: var(--tn-selection-text-color);
+
+  --ls-page-checkbox-color: var(--tn-page-checkbox-color);
+  --ls-page-checkbox-border-color: var(--tn-page-checkbox-border-color);
+  --ls-page-blockquote-color: var(--tn-page-blockquote-color);
+  --ls-page-blockquote-bg-color: var(--tn-page-blockquote-bg-color);
+  --ls-page-blockquote-border-color: var(--tn-page-blockquote-border-color);
+  --ls-page-inline-code-color: var(--tn-page-inline-code-color);
+  --ls-page-inline-code-bg-color: var(--tn-page-inline-code-bg-color);
+
+  --ls-page-mark-color: var(--tn-base);
+
+  --ls-scrollbar-foreground-color: var(--tn-scrollbar-foreground-color);
+  --ls-scrollbar-background-color: var(--tn-scrollbar-background-color);
+  --ls-scrollbar-thumb-hover-color: var(--tn-scrollbar-thumb-hover-color);
+
+  --ls-head-text-color: var(--tn-head-text-color);
+  --ls-cloze-text-color: var(--tn-cloze-text-color);
+  --ls-icon-color: var(--tn-icon-color);
+  --ls-search-icon-color: var(--tn-search-icon-color);
+  --ls-a-chosen-bg: var(--tn-a-chosen-bg);
+  --ls-right-sidebar-code-bg-color: var(--tn-right-sidebar-code-bg-color);
+
+  --ls-pie-bg-color: var(--tn-pie-bg-color);
+  --ls-pie-fg-color: var(--tn-pie-fg-color);
+
+  --ls-highlight-color-gray: var(--tn-highlight-color-gray);
+  --ls-highlight-color-red: var(--tn-highlight-color-red);
+  --ls-highlight-color-yellow: var(--tn-highlight-color-yellow);
+  --ls-highlight-color-green: var(--tn-highlight-color-green);
+  --ls-highlight-color-blue: var(--tn-highlight-color-blue);
+  --ls-highlight-color-purple: var(--tn-highlight-color-purple);
+  --ls-highlight-color-pink: var(--tn-highlight-color-pink);
+
+  --ls-error-text-color: var(--tn-error-text-color);
+  --ls-error-background-color: var(--tn-error-background-color);
+
+  --ls-warning-text-color: var(--tn-warning-text-color);
+  --ls-warning-background-color: var(--tn-warning-background-color);
+
+  --ls-success-text-color: var(--tn-success-text-color);
+  --ls-success-background-color: var(--tn-success-background-color);
+
+  --ls-focus-ring-color: var(--tn-focus-ring-color);
+  --ls-header-button-background: var(--tn-header-button-background);
+
+  --ls-left-sidebar-active-background: var(--tn-color-level-4);
+
+  --ls-color-file-sync-error: rgb(var(--tn-red));
+  --ls-color-file-sync-pending: rgb(var(--tn-yellow));
+  --ls-color-file-sync-idle: rgb(var(--tn-green));
+}
+
+// Source: https://github.com/logseq/logseq/blob/master/resources/css/common.css
+html:not(html[data-color]),
+html[data-theme='dark'][data-color='logseq'],
+html[data-theme='light'][data-color='logseq'],
+html[data-theme='dark'],
+html[data-theme='light'],
+html[data-color='none'] {
+  @include variables;
+}
+
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+  --ls-error-color: var(--tn-error-color);
+  --ls-warning-color: var(--tn-warning-color);
+  --ls-success-color: var(--tn-success-color);
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+html:not(html[data-color]), html[data-color='logseq'], html[data-color='none'] {
+    background-color: var(--tn-primary-background-color);
+  }
+
+  html[data-theme='light'] {
+    background-color: transparent;
+  }
+}

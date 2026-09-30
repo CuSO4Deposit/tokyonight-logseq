@@ -1,0 +1,18 @@
+@mixin variables {
+  // darkest -> lightest (mapped onto Logseq's base scale)
+  --color-base-00: rgb(var(--tn-crust));
+  --color-base-10: rgb(var(--tn-mantle));
+  --color-base-20: rgb(var(--tn-base));
+  --color-base-30: rgb(var(--tn-surface0));
+  --color-base-40: rgb(var(--tn-surface1));
+  --color-base-50: rgb(var(--tn-surface2));
+  --color-base-60: rgb(var(--tn-overlay0));
+  --color-base-70: rgb(var(--tn-overlay1));
+  --color-base-80: rgb(var(--tn-overlay2));
+  --color-base-90: rgb(var(--tn-subtext0));
+  --color-base-100: rgb(var(--tn-text));
+}
+
+:root:not([data-color]), :root[data-color='none'], :root[data-color='logseq'] {
+  @include variables;
+}

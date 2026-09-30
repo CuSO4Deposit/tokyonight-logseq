@@ -1,0 +1,161 @@
+// CodeMirror theme for Logseq's built-in editor themes (solarized / lsradix).
+// Colors are mapped from the Tokyo Night palette so the editor matches the
+// rest of the app.
+
+div.cm-s-solarized.CodeMirror,
+div.cm-s-lsradix.CodeMirror,
+.cm-s-solarized,
+.cm-s-lsradix {
+  &.cm-s-light,
+  &.cm-s-dark {
+    background-color: var(--tn-secondary-background-color);
+    color: var(--tn-primary-text-color);
+    text-shadow: unset;
+    box-shadow: inset 7px 0 12px -6px var(--tn-secondary-background-color);
+
+    &.CodeMirror,
+    .CodeMirror-gutters {
+      background-color: var(--tn-secondary-background-color);
+      border: none;
+    }
+
+    .CodeMirror-linenumber {
+      color: rgb(var(--tn-overlay1));
+      text-shadow: unset;
+    }
+
+    .CodeMirror-cursor {
+      border-left: 2px solid rgb(var(--tn-lavender)) !important;
+    }
+
+    .CodeMirror-selected,
+    div.CodeMirror-selected {
+      background-color: var(--tn-selection-background-color) !important;
+    }
+
+    .CodeMirror-focused .CodeMirror-selected {
+      background-color: var(--tn-selection-background-color) !important;
+    }
+
+    .CodeMirror-activeline-background {
+      background-color: var(--tn-color-level-2);
+    }
+
+    .CodeMirror-matchingbracket {
+      color: rgb(var(--tn-sapphire)) !important;
+      font-weight: bold;
+    }
+
+    .CodeMirror-nonmatchingbracket {
+      color: rgb(var(--tn-red)) !important;
+    }
+
+    .cm-keyword {
+      color: rgb(var(--tn-mauve));
+    }
+
+    .cm-atom,
+    .cm-number,
+    .cm-literal {
+      color: rgb(var(--tn-peach));
+    }
+
+    .cm-def {
+      color: rgb(var(--tn-blue));
+    }
+
+    .cm-variable {
+      color: var(--tn-primary-text-color);
+    }
+
+    .cm-variable-2,
+    .cm-variable-3,
+    .cm-property {
+      color: rgb(var(--tn-sky));
+    }
+
+    .cm-type {
+      color: rgb(var(--tn-yellow));
+    }
+
+    .cm-builtin {
+      color: rgb(var(--tn-teal));
+    }
+
+    .cm-comment {
+      color: rgb(var(--tn-overlay1));
+      font-style: italic;
+    }
+
+    .cm-string {
+      color: rgb(var(--tn-green));
+    }
+
+    .cm-string-2 {
+      color: rgb(var(--tn-teal));
+    }
+
+    .cm-meta,
+    .cm-qualifier {
+      color: rgb(var(--tn-lavender));
+    }
+
+    .cm-operator {
+      color: rgb(var(--tn-lavender));
+    }
+
+    .cm-bracket {
+      color: rgb(var(--tn-text));
+    }
+
+    .cm-tag {
+      color: rgb(var(--tn-red));
+    }
+
+    .cm-attribute {
+      color: rgb(var(--tn-yellow));
+    }
+
+    .cm-header {
+      color: var(--tn-primary-text-color);
+      font-weight: bold;
+    }
+
+    .cm-quote {
+      color: rgb(var(--tn-overlay1));
+      font-style: italic;
+    }
+
+    .cm-hr {
+      color: rgb(var(--tn-overlay0));
+    }
+
+    .cm-link {
+      color: rgb(var(--tn-blue));
+      text-decoration: underline;
+    }
+
+    .cm-error {
+      color: var(--tn-primary-background-color);
+      background-color: rgb(var(--tn-red));
+    }
+
+    .cm-negative {
+      color: rgb(var(--tn-red));
+    }
+
+    .cm-positive {
+      color: rgb(var(--tn-green));
+    }
+  }
+}
+
+.embed.embed-page .cm-s-solarized {
+  &.cm-s-dark,
+  &.cm-s-light {
+    &.CodeMirror,
+    .CodeMirror-gutters {
+      background-color: var(--tn-tertiary-background-color);
+    }
+  }
+}

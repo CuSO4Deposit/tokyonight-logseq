@@ -1,0 +1,38 @@
+name: Build theme
+on:
+  push:
+    tags:
+      - "*"
+env:
+  PLUGIN_NAME: logseq-tokyonight
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build
+        id: build
+        run: |
+          npm i && npm run build # sass -> css
+          mkdir ${{ env.PLUGIN_NAME }} # folder for zip
+          mkdir ${{ env.PLUGIN_NAME }}/assets # folder for icon
+          cp assets/icon.png ${{ env.PLUGIN_NAME }}/assets
+          cp README.md package.json index.html index.js tokyonight-night.css tokyonight-storm.css tokyonight-moon.css tokyonight-day.css tokyonight-oled.css ${{ env.PLUGIN_NAME }}
+          zip -r ${{ env.PLUGIN_NAME }}-${{ github.ref_name }}.zip ${{ env.PLUGIN_NAME }}
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        id: create_release
+        with:
+          draft: true
+          files: |
+            package.json
+            ${{ env.PLUGIN_NAME }}-${{ github.ref_name }}.zip
+            tokyonight-night.css
+            tokyonight-storm.css
+            tokyonight-moon.css
+            tokyonight-day.css
+            tokyonight-oled.css
