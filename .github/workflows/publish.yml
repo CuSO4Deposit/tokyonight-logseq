@@ -3,6 +3,8 @@ on:
   push:
     tags:
       - "*"
+permissions:
+  contents: write
 env:
   PLUGIN_NAME: logseq-tokyonight
 jobs:
