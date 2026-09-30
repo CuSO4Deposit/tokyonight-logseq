@@ -16,9 +16,7 @@ A clean, dark theme for Logseq based on the [Tokyo Night](https://github.com/fol
 
 ## Preview
 
-| Tokyo Night (dark)                         | Tokyo Night Day (light)                      |
-| ------------------------------------------ | -------------------------------------------- |
-| ![Tokyo Night](./assets/preview-night.png) | ![Tokyo Night Day](./assets/preview-day.png) |
+![Tokyo Night for Logseq](./assets/preview-night.png)
 
 ## Usage
 
