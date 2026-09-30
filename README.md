@@ -77,7 +77,14 @@ The theme is a Logseq theme plugin, so it is published the same way as any plugi
 1. Push this repo to GitHub.
 2. Tag a release. The `.github/workflows/publish.yml` workflow builds the CSS, zips the plugin, and attaches `logseq-tokyonight-<tag>.zip` to a draft release.
 3. Publish the release (make sure the zip is attached, not just "Source code").
-4. Fork [`logseq/marketplace`](https://github.com/logseq/marketplace) and add `packages/logseq-tokyonight/manifest.json`:
+4. Fork [`logseq/marketplace`](https://github.com/logseq/marketplace) and add a package directory with **two** files:
+
+   ```
+   packages/logseq-tokyonight/manifest.json
+   packages/logseq-tokyonight/icon.png
+   ```
+
+   The `icon` field is resolved relative to the marketplace package directory (e.g. `packages/logseq-tokyonight/icon.png`), not against your theme repo, so the icon must be committed there too. Copy `assets/icon.png` from this repo.
 
    ```json
    {
